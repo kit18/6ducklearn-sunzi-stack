@@ -1,0 +1,50 @@
+# 6DuckLearn Sunzi Strategy Stack
+
+Public strategy skills for modern business diagnosis, decision review, and Sunzi-inspired consulting.
+
+This repository is intentionally standalone. It is shaped by the install-flow clarity and validation ethos of public agent-skill stacks, but it does not copy `gstack` content and it does not expose private 6DuckLearn product code.
+
+## Included Skills
+
+- `sunzi-strategy-consultant`: a style-derived modern business consultant for terrain, actors, incentives, timing, restraint, and board-ready decision memos.
+- `strategic-situation-analysis`: first-principles situation diagnosis using the canonical Thirty-Six Stratagems as ethical lenses.
+- `strategy-analyst-review`: a quality gate for proposed strategies, lens choices, risks, falsifiers, and kill criteria.
+
+## Install
+
+Copy the `skills/*` directories into an agent host that supports local skills, or point your internal skill loader at this repository.
+
+Example local copy:
+
+```bash
+cp -R skills/* ~/.codex/skills/
+```
+
+Use only the public files in this repo. Hosted 6DuckLearn agent profiles, private memory, approvals, OAuth, billing, and runtime execution remain on `https://6ducklearn.com`.
+
+## Source Grounding
+
+The Thirty-Six Stratagems reference is grounded in the public-domain Wikisource text for `三十六計`:
+
+https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88
+
+The source stories are used for mechanism checks and analogy quality. They are not moral permission to deceive, manipulate, coerce, violate law, or exploit vulnerable people.
+
+## Templates
+
+- [Decision memo template](./references/decision-memo-template.md)
+- [Business war-room template](./references/business-war-room-template.md)
+- [Ethical strategy guardrails](./references/ethical-strategy-guardrails.md)
+- [Sunzi business consultant soul notes](./references/sunzi-business-consultant-soul.md)
+
+## Validate
+
+```bash
+npm test
+```
+
+Validation checks expected skills, frontmatter, local references, all-36 coverage, licenses, and leakage patterns.
+
+## License
+
+Validation scripts are Apache-2.0. Skill text, references, and docs are CC BY 4.0. See [LICENSE-CONTENT](./LICENSE-CONTENT) and [TRADEMARK.md](./TRADEMARK.md).
