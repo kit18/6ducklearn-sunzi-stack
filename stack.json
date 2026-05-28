@@ -1,0 +1,59 @@
+{
+  "name": "6ducklearn-sunzi-stack",
+  "version": "0.1.0",
+  "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
+  "canonical_source": "6DuckLearn",
+  "consultant_model": "style-derived modern business strategy consultant",
+  "runtime_soul_md": "projection-only",
+  "license": "Apache-2.0 for validation scripts",
+  "content_license": "CC BY 4.0 for skills, references, examples, and docs",
+  "skills": [
+    {
+      "name": "strategic-situation-analysis",
+      "path": "skills/strategic-situation-analysis/SKILL.md",
+      "purpose": "First-principles strategic diagnosis with source-grounded Thirty-Six Stratagems lenses."
+    },
+    {
+      "name": "strategy-analyst-review",
+      "path": "skills/strategy-analyst-review/SKILL.md",
+      "purpose": "Quality gate for evidence, falsifiers, ethics, second-order effects, metrics, and kill criteria."
+    },
+    {
+      "name": "sunzi-strategy-consultant",
+      "path": "skills/sunzi-strategy-consultant/SKILL.md",
+      "purpose": "Modern Sunzi-style strategy consultant workflow for business decisions."
+    }
+  ],
+  "references": [
+    "references/decision-memo-template.md",
+    "references/business-war-room-template.md",
+    "references/ethical-strategy-guardrails.md",
+    "references/sunzi-business-consultant-soul.md",
+    "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
+  ],
+  "examples": [
+    "examples/ecommerce-growth-decision-memo.md",
+    "examples/market-risk-no-trade-review.md",
+    "examples/strategy-analyst-review-sample.md"
+  ],
+  "behavior_gates": {
+    "ecommerce": [
+      "Block fake scarcity, fake reviews, hidden fees, deceptive discounts, and unsupported claims.",
+      "Prefer checkout friction, inventory truth, contribution margin, and customer trust over theatrical growth."
+    ],
+    "market_risk": [
+      "Analytical only; not financial advice.",
+      "Reframe manipulation requests into detection, defense, compliance, or no-trade analysis."
+    ],
+    "strategy_review": [
+      "Separate evidence from interpretation.",
+      "Force a competing diagnosis, a do-nothing or retreat option, metrics, and kill criteria."
+    ]
+  },
+  "public_boundaries": [
+    "No private 6DuckLearn product code.",
+    "No secrets, customer data, private memory, billing logic, OAuth flows, or hosted runtime internals.",
+    "No literal historical-persona claim.",
+    "Classical stratagems are diagnostic analogies, not permission for deception or harm."
+  ]
+}

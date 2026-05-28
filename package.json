@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "validate": "node scripts/validate-stack.mjs",
     "test": "node scripts/validate-stack.mjs"
   },
   "engines": {
     "node": ">=20"
   }
 }
-

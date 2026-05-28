@@ -18,6 +18,17 @@ const expectedReferences = [
   'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md',
 ];
 
+const expectedDocs = [
+  'docs/INSTALL.md',
+  'docs/ADOPTION-CHECKLIST.md',
+];
+
+const expectedExamples = [
+  'examples/ecommerce-growth-decision-memo.md',
+  'examples/market-risk-no-trade-review.md',
+  'examples/strategy-analyst-review-sample.md',
+];
+
 const stratagemNames = [
   '瞞天過海',
   '圍魏救趙',
@@ -76,6 +87,15 @@ function fail(message) {
 
 function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), 'utf8');
+}
+
+function readJson(relativePath) {
+  try {
+    return JSON.parse(read(relativePath));
+  } catch (error) {
+    fail(`${relativePath} must be valid JSON: ${error.message}`);
+    return {};
+  }
 }
 
 function fileExists(relativePath) {
@@ -141,7 +161,7 @@ function validateSkills() {
 }
 
 function validateReferences() {
-  for (const relativePath of expectedReferences) {
+  for (const relativePath of [...expectedReferences, ...expectedDocs, ...expectedExamples, 'stack.json']) {
     if (!fileExists(relativePath)) {
       fail(`missing ${relativePath}`);
     }
@@ -156,6 +176,81 @@ function validateReferences() {
     const matches = sourceRef.match(new RegExp(stratagemName, 'g')) ?? [];
     if (matches.length !== 1) {
       fail(`${stratagemName} must appear exactly once in source-story reference; found ${matches.length}`);
+    }
+  }
+}
+
+function validateExamples() {
+  const exampleExpectations = [
+    {
+      path: 'examples/ecommerce-growth-decision-memo.md',
+      required: ['fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion'],
+    },
+    {
+      path: 'examples/market-risk-no-trade-review.md',
+      required: ['not financial advice', 'no-trade', 'manipulation', 'detection and defense'],
+    },
+    {
+      path: 'examples/strategy-analyst-review-sample.md',
+      required: ['Verdict: revise', 'Evidence Audit', 'Competing Diagnosis', 'Kill'],
+    },
+  ];
+
+  for (const expectation of exampleExpectations) {
+    const content = read(expectation.path);
+    for (const phrase of expectation.required) {
+      if (!content.includes(phrase)) {
+        fail(`${expectation.path} must include behavior-gate phrase: ${phrase}`);
+      }
+    }
+  }
+}
+
+function validateStackManifest() {
+  const stack = readJson('stack.json');
+  const packageJson = readJson('package.json');
+
+  if (stack.name !== packageJson.name) {
+    fail('stack.json name must match package.json name');
+  }
+  if (stack.version !== packageJson.version) {
+    fail('stack.json version must match package.json version');
+  }
+  if (stack.public_repo !== 'https://github.com/kit18/6ducklearn-sunzi-stack') {
+    fail('stack.json public_repo must point to the public GitHub repo');
+  }
+  if (stack.runtime_soul_md !== 'projection-only') {
+    fail('stack.json must state runtime_soul_md is projection-only');
+  }
+
+  const manifestSkillNames = (stack.skills ?? []).map((skill) => skill.name).sort();
+  if (JSON.stringify(manifestSkillNames) !== JSON.stringify([...expectedSkills].sort())) {
+    fail('stack.json skills must match expected skills');
+  }
+
+  for (const skill of stack.skills ?? []) {
+    if (!skill.path || !fileExists(skill.path)) {
+      fail(`stack.json skill path is missing: ${skill.path}`);
+    }
+  }
+
+  for (const relativePath of [...expectedReferences, ...expectedExamples]) {
+    if (![...(stack.references ?? []), ...(stack.examples ?? [])].includes(relativePath)) {
+      fail(`stack.json must list ${relativePath}`);
+    }
+  }
+
+  const behaviorGates = stack.behavior_gates ?? {};
+  for (const gate of ['ecommerce', 'market_risk', 'strategy_review']) {
+    if (!Array.isArray(behaviorGates[gate]) || behaviorGates[gate].length < 2) {
+      fail(`stack.json behavior_gates.${gate} must contain at least two checks`);
+    }
+  }
+
+  const boundaries = JSON.stringify(stack.public_boundaries ?? []);
+  for (const required of ['No private 6DuckLearn product code', 'No secrets', 'No literal historical-persona claim']) {
+    if (!boundaries.includes(required)) {
+      fail(`stack.json public_boundaries must include ${required}`);
     }
   }
 }
@@ -192,6 +287,8 @@ function validateLeakage() {
 
 validateSkills();
 validateReferences();
+validateExamples();
+validateStackManifest();
 validateLicenses();
 validateLeakage();
 
