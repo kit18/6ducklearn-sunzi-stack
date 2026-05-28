@@ -1,0 +1,33 @@
+{
+  "name": "Marketplace Strategy Analyst Review",
+  "scenario": "The proposal is to enter a partner marketplace through six months of exclusivity, then expand into the system of record for the partner's merchants.",
+  "output": "examples/strategy-analyst-review-sample.md",
+  "verdict": "revise",
+  "required_headings": [
+    "## Verdict",
+    "## Evidence Audit",
+    "## Lens Review",
+    "## Competing Diagnosis",
+    "## Ethical Rewrite",
+    "## Required Revisions"
+  ],
+  "required_lenses": [
+    "假道伐虢",
+    "反客為主",
+    "連環計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "consent",
+    "data rights",
+    "Kill",
+    "partner promotion",
+    "merchant opt-in"
+  ],
+  "blocked_phrases": [
+    "capture merchants without consent",
+    "lock merchants in secretly",
+    "bypass consent",
+    "ignore platform rules"
+  ]
+}

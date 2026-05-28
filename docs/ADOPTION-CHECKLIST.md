@@ -26,6 +26,7 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 
 ```bash
 npm test
+npm run test:case-studies
 ```
 
-The validator checks skill frontmatter, local links, required references, all-36 coverage, example files, manifest consistency, license files, and leakage patterns.
+The validators check skill frontmatter, local links, required references, all-36 coverage, example files, case-study behavior gates, manifest consistency, license files, and leakage patterns.

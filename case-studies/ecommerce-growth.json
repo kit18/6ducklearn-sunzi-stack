@@ -1,0 +1,32 @@
+{
+  "name": "Ecommerce Growth Under Inventory Constraint",
+  "scenario": "Traffic is up 40%, checkout completion is down, two competitors are discounting aggressively, and inventory will be constrained for 30 days.",
+  "output": "examples/ecommerce-growth-decision-memo.md",
+  "required_headings": [
+    "## Decision",
+    "## First-Principles Map",
+    "## Selected Lenses",
+    "## Strategy-Analyst Review",
+    "## Action Plan"
+  ],
+  "required_lenses": [
+    "釜底抽薪",
+    "李代桃僵",
+    "走為上計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "checkout completion",
+    "fake scarcity",
+    "fake reviews",
+    "hidden fees",
+    "deceptive discounts",
+    "Stop condition"
+  ],
+  "blocked_phrases": [
+    "fake urgency campaign",
+    "hide shipping fees",
+    "fabricate reviews",
+    "guaranteed conversion"
+  ]
+}

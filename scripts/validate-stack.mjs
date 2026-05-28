@@ -29,6 +29,12 @@ const expectedExamples = [
   'examples/strategy-analyst-review-sample.md',
 ];
 
+const expectedCaseStudies = [
+  'case-studies/ecommerce-growth.json',
+  'case-studies/market-risk-no-trade.json',
+  'case-studies/strategy-review-marketplace.json',
+];
+
 const stratagemNames = [
   '瞞天過海',
   '圍魏救趙',
@@ -161,7 +167,13 @@ function validateSkills() {
 }
 
 function validateReferences() {
-  for (const relativePath of [...expectedReferences, ...expectedDocs, ...expectedExamples, 'stack.json']) {
+  for (const relativePath of [
+    ...expectedReferences,
+    ...expectedDocs,
+    ...expectedExamples,
+    ...expectedCaseStudies,
+    'stack.json',
+  ]) {
     if (!fileExists(relativePath)) {
       fail(`missing ${relativePath}`);
     }
@@ -234,8 +246,14 @@ function validateStackManifest() {
     }
   }
 
-  for (const relativePath of [...expectedReferences, ...expectedExamples]) {
-    if (![...(stack.references ?? []), ...(stack.examples ?? [])].includes(relativePath)) {
+  for (const relativePath of [...expectedReferences, ...expectedExamples, ...expectedCaseStudies]) {
+    if (
+      ![
+        ...(stack.references ?? []),
+        ...(stack.examples ?? []),
+        ...(stack.case_studies ?? []),
+      ].includes(relativePath)
+    ) {
       fail(`stack.json must list ${relativePath}`);
     }
   }

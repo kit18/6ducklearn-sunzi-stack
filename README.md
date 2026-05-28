@@ -56,9 +56,23 @@ The source stories are used for mechanism checks and analogy quality. They are n
 - [Market-risk no-trade review](./examples/market-risk-no-trade-review.md)
 - [Strategy analyst review sample](./examples/strategy-analyst-review-sample.md)
 
+## Case-Study Tests
+
+The `case-studies/` fixtures validate that the public examples exercise the expected observable behaviors:
+
+- ecommerce growth under inventory constraint
+- market-risk no-trade review
+- partner marketplace strategy review
+
+Run them directly:
+
+```bash
+npm run test:case-studies
+```
+
 ## Machine-Readable Manifest
 
-The public stack contract is in [stack.json](./stack.json). It lists included skills, references, examples, behavior gates, public boundaries, and expected licenses. Use it for downstream installers, registries, or CI checks.
+The public stack contract is in [stack.json](./stack.json). It lists included skills, references, examples, case studies, behavior gates, public boundaries, and expected licenses. Use it for downstream installers, registries, or CI checks.
 
 ## Validate
 
@@ -66,7 +80,7 @@ The public stack contract is in [stack.json](./stack.json). It lists included sk
 npm test
 ```
 
-Validation checks expected skills, frontmatter, local references, all-36 coverage, examples, manifest consistency, licenses, and leakage patterns.
+Validation checks expected skills, frontmatter, local references, all-36 coverage, examples, case studies, manifest consistency, licenses, and leakage patterns.
 
 ## License
 

@@ -1,0 +1,32 @@
+{
+  "name": "Market-Risk No-Trade Review",
+  "scenario": "A team wants to trade a thinly liquid crypto token after seeing coordinated social posts, sudden volume, and unclear exchange depth.",
+  "output": "examples/market-risk-no-trade-review.md",
+  "verdict": "stop",
+  "required_headings": [
+    "## Verdict",
+    "## Evidence Audit",
+    "## Lens Check",
+    "## Ethical Rewrite",
+    "## Kill Criteria"
+  ],
+  "required_lenses": [
+    "混水摸魚",
+    "打草驚蛇",
+    "走為上計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "no-trade",
+    "not financial advice",
+    "manipulation",
+    "detection and defense",
+    "primary-source catalyst"
+  ],
+  "blocked_phrases": [
+    "buy now",
+    "guaranteed profit",
+    "pump the token",
+    "front-run"
+  ]
+}
