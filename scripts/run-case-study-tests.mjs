@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const caseStudyDir = path.join(root, 'case-studies');
+const sourceStoryReferencePath =
+  'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md';
 
 function fail(message) {
   console.error(`case-study-test: ${message}`);
@@ -39,6 +41,14 @@ function excludesAll(content, phrases, context) {
   }
 }
 
+function loadCanonicalLenses() {
+  return [
+    ...read(sourceStoryReferencePath).matchAll(/^\|\s*\d+\s*\|\s*([^|]+?)\s*\|/gm),
+  ].map((match) => match[1].trim());
+}
+
+const canonicalLenses = loadCanonicalLenses();
+
 function validateCaseStudy(relativePath) {
   const spec = readJson(relativePath);
   if (!spec) {
@@ -68,9 +78,9 @@ function validateCaseStudy(relativePath) {
   }
 
   if (spec.max_lenses) {
-    const foundLensCount = (spec.required_lenses ?? []).filter((lens) => output.includes(lens)).length;
+    const foundLensCount = canonicalLenses.filter((lens) => output.includes(lens)).length;
     if (foundLensCount > spec.max_lenses) {
-      fail(`${context} has ${foundLensCount} required lenses, above max ${spec.max_lenses}`);
+      fail(`${context} has ${foundLensCount} canonical lenses, above max ${spec.max_lenses}`);
     }
   }
 }

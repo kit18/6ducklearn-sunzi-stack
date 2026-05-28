@@ -55,6 +55,7 @@ The source stories are used for mechanism checks and analogy quality. They are n
 - [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md)
 - [Market-risk no-trade review](./examples/market-risk-no-trade-review.md)
 - [Strategy analyst review sample](./examples/strategy-analyst-review-sample.md)
+- [Unsafe manipulation reframe](./examples/unsafe-manipulation-reframe.md)
 
 ## Case-Study Tests
 
@@ -63,6 +64,7 @@ The `case-studies/` fixtures validate that the public examples exercise the expe
 - ecommerce growth under inventory constraint
 - market-risk no-trade review
 - partner marketplace strategy review
+- unsafe manipulation reframe
 
 Run them directly:
 

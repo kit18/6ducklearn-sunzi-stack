@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -34,12 +34,14 @@
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",
     "examples/market-risk-no-trade-review.md",
-    "examples/strategy-analyst-review-sample.md"
+    "examples/strategy-analyst-review-sample.md",
+    "examples/unsafe-manipulation-reframe.md"
   ],
   "case_studies": [
     "case-studies/ecommerce-growth.json",
     "case-studies/market-risk-no-trade.json",
-    "case-studies/strategy-review-marketplace.json"
+    "case-studies/strategy-review-marketplace.json",
+    "case-studies/unsafe-manipulation-reframe.json"
   ],
   "behavior_gates": {
     "ecommerce": [

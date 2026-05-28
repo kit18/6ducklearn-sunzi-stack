@@ -27,12 +27,14 @@ const expectedExamples = [
   'examples/ecommerce-growth-decision-memo.md',
   'examples/market-risk-no-trade-review.md',
   'examples/strategy-analyst-review-sample.md',
+  'examples/unsafe-manipulation-reframe.md',
 ];
 
 const expectedCaseStudies = [
   'case-studies/ecommerce-growth.json',
   'case-studies/market-risk-no-trade.json',
   'case-studies/strategy-review-marketplace.json',
+  'case-studies/unsafe-manipulation-reframe.json',
 ];
 
 const stratagemNames = [
@@ -221,6 +223,11 @@ function validateExamples() {
 function validateStackManifest() {
   const stack = readJson('stack.json');
   const packageJson = readJson('package.json');
+  const discoveredCaseStudies = fs
+    .readdirSync(path.join(root, 'case-studies'))
+    .filter((entry) => entry.endsWith('.json'))
+    .map((entry) => `case-studies/${entry}`)
+    .sort();
 
   if (stack.name !== packageJson.name) {
     fail('stack.json name must match package.json name');
@@ -256,6 +263,10 @@ function validateStackManifest() {
     ) {
       fail(`stack.json must list ${relativePath}`);
     }
+  }
+
+  if (JSON.stringify([...(stack.case_studies ?? [])].sort()) !== JSON.stringify(discoveredCaseStudies)) {
+    fail('stack.json case_studies must list every case-studies/*.json file');
   }
 
   const behaviorGates = stack.behavior_gates ?? {};
