@@ -1,0 +1,31 @@
+{
+  "name": "Operations Supply-Chain Bottleneck Diagnosis",
+  "scenario": "A multi-site manufacturer has volatile demand, late supplier updates, rising energy cost, and planners who discover inventory shortages after customer commitments are already made.",
+  "output": "examples/operations-supply-chain-decision-memo.md",
+  "required_headings": [
+    "## Decision",
+    "## First-Principles Map",
+    "## Selected Lenses",
+    "## Strategy-Analyst Review",
+    "## Evidence Ledger",
+    "## Action Plan"
+  ],
+  "required_lenses": [
+    "釜底抽薪",
+    "以逸待勞",
+    "連環計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "Physical bottleneck",
+    "information bottleneck",
+    "decision latency",
+    "supplier-update",
+    "Stop condition"
+  ],
+  "blocked_phrases": [
+    "just add a dashboard",
+    "hide shortage risk",
+    "guaranteed savings"
+  ]
+}

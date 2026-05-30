@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -24,22 +24,42 @@
       "purpose": "Modern Sunzi-style strategy consultant workflow for business decisions."
     }
   ],
+  "agents": [
+    {
+      "name": "sunzi-strategy-consultant",
+      "path": "agents/sunzi-strategy-consultant.yaml",
+      "purpose": "Host-neutral public agent profile for the modern style-derived Sunzi business strategy consultant.",
+      "entrypoint": "AGENTS.md"
+    }
+  ],
   "references": [
     "references/decision-memo-template.md",
     "references/business-war-room-template.md",
     "references/ethical-strategy-guardrails.md",
+    "references/ethical-use-guardrails.md",
+    "references/thirty-six-stratagems-matrix.md",
+    "references/domain-adapters.md",
+    "references/market-signal-forensics.md",
+    "references/strategy-output-template.md",
+    "references/consulting-case-validation-corpus.md",
     "references/sunzi-business-consultant-soul.md",
     "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
   ],
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",
+    "examples/operations-supply-chain-decision-memo.md",
+    "examples/ai-transformation-decision-memo.md",
+    "examples/macro-public-sector-decision-memo.md",
     "examples/market-risk-no-trade-review.md",
     "examples/strategy-analyst-review-sample.md",
     "examples/unsafe-manipulation-reframe.md"
   ],
   "case_studies": [
+    "case-studies/ai-transformation.json",
     "case-studies/ecommerce-growth.json",
+    "case-studies/macro-public-sector.json",
     "case-studies/market-risk-no-trade.json",
+    "case-studies/operations-supply-chain.json",
     "case-studies/strategy-review-marketplace.json",
     "case-studies/unsafe-manipulation-reframe.json"
   ],
@@ -47,6 +67,18 @@
     "ecommerce": [
       "Block fake scarcity, fake reviews, hidden fees, deceptive discounts, and unsupported claims.",
       "Prefer checkout friction, inventory truth, contribution margin, and customer trust over theatrical growth."
+    ],
+    "operations": [
+      "Name the physical bottleneck and information bottleneck before recommending tools.",
+      "Define decision latency, process behavior change, and a stop condition."
+    ],
+    "ai_transformation": [
+      "Use a dual-track plan: quick ROI use cases plus capability foundations.",
+      "Require human fallback, governance, adoption telemetry, and quality gates."
+    ],
+    "macro_public_sector": [
+      "Name the policy or economic transmission mechanism.",
+      "Define the governance vehicle, leading metrics, lagging metrics, and community/trust tradeoffs."
     ],
     "market_risk": [
       "Analytical only; not financial advice.",

@@ -38,6 +38,14 @@ Traffic is up 40%, checkout completion is down, two competitors are discounting 
 - Ethical rewrite: use honest stock notices and clear shipping terms, not fake scarcity, fake reviews, hidden fees, or deceptive discounts.
 - Kill criterion: stop discount tests if contribution margin drops below target or refund/support volume rises for two consecutive days.
 
+## Evidence Ledger
+
+| Source / artifact | Claim supported | Quality | Missing / next check |
+|---|---|---|---|
+| Checkout event logs | checkout completion is the likely control metric | Medium | Device, payment, and SKU-level split |
+| Inventory forecast | 30-day constraint limits broad promotion | Medium | Replenishment confidence |
+| Support/refund tickets | Trust risk can show up before revenue data | Low | Complaint categories after changes |
+
 ## Action Plan
 
 1. First reversible move: audit checkout events by device, payment method, shipping option, and SKU stockout.

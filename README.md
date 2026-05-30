@@ -15,6 +15,8 @@ cp -R skills/* ~/.codex/skills/
 
 Then ask your agent to use `sunzi-strategy-consultant` or `strategic-situation-analysis` on a real decision. The expected output is a decision memo, not a motivational essay.
 
+For agent-host wiring, use [AGENTS.md](./AGENTS.md) or the machine-readable profile at [agents/sunzi-strategy-consultant.yaml](./agents/sunzi-strategy-consultant.yaml).
+
 ## Included Skills
 
 - `sunzi-strategy-consultant`: a style-derived modern business consultant for terrain, actors, incentives, timing, restraint, and board-ready decision memos.
@@ -43,16 +45,27 @@ https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88
 
 The source stories are used for mechanism checks and analogy quality. They are not moral permission to deceive, manipulate, coerce, violate law, or exploit vulnerable people.
 
+The full public reference pack adds the operating matrix, domain adapters, market-signal forensics, validation corpus, and output contract so installers can audit behavior without private 6DuckLearn runtime code.
+
 ## Templates
 
 - [Decision memo template](./references/decision-memo-template.md)
 - [Business war-room template](./references/business-war-room-template.md)
 - [Ethical strategy guardrails](./references/ethical-strategy-guardrails.md)
+- [Ethical use guardrails](./references/ethical-use-guardrails.md)
+- [Thirty-Six Stratagems matrix](./references/thirty-six-stratagems-matrix.md)
+- [Domain adapters](./references/domain-adapters.md)
+- [Market signal forensics](./references/market-signal-forensics.md)
+- [Strategy output template](./references/strategy-output-template.md)
+- [Consulting case validation corpus](./references/consulting-case-validation-corpus.md)
 - [Sunzi business consultant soul notes](./references/sunzi-business-consultant-soul.md)
 
 ## Examples
 
 - [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md)
+- [Operations supply-chain decision memo](./examples/operations-supply-chain-decision-memo.md)
+- [AI transformation decision memo](./examples/ai-transformation-decision-memo.md)
+- [Macro public-sector decision memo](./examples/macro-public-sector-decision-memo.md)
 - [Market-risk no-trade review](./examples/market-risk-no-trade-review.md)
 - [Strategy analyst review sample](./examples/strategy-analyst-review-sample.md)
 - [Unsafe manipulation reframe](./examples/unsafe-manipulation-reframe.md)
@@ -62,6 +75,9 @@ The source stories are used for mechanism checks and analogy quality. They are n
 The `case-studies/` fixtures validate that the public examples exercise the expected observable behaviors:
 
 - ecommerce growth under inventory constraint
+- operations and supply-chain bottleneck diagnosis
+- AI transformation with human fallback and telemetry
+- macro/public-sector industrial strategy
 - market-risk no-trade review
 - partner marketplace strategy review
 - unsafe manipulation reframe

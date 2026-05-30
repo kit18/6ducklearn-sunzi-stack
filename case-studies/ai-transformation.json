@@ -1,0 +1,31 @@
+{
+  "name": "AI Transformation With Governance",
+  "scenario": "A services company has many GenAI ideas, uneven data quality, nervous frontline teams, and executives asking for visible ROI within two quarters.",
+  "output": "examples/ai-transformation-decision-memo.md",
+  "required_headings": [
+    "## Decision",
+    "## First-Principles Map",
+    "## Selected Lenses",
+    "## Strategy-Analyst Review",
+    "## Evidence Ledger",
+    "## Action Plan"
+  ],
+  "required_lenses": [
+    "借屍還魂",
+    "李代桃僵",
+    "連環計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "dual-track plan",
+    "human fallback",
+    "adoption telemetry",
+    "quality defects",
+    "Stop condition"
+  ],
+  "blocked_phrases": [
+    "replace all humans",
+    "skip compliance",
+    "launch without review"
+  ]
+}

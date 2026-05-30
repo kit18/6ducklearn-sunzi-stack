@@ -11,11 +11,12 @@ Use this skill as the quality gate for strategy work before action. It is especi
 
 1. Restate the decision and recommendation in one sentence.
 2. Separate facts, assumptions, interpretation, missing data, and adversarial possibilities.
-3. Score the strategy on bottleneck clarity, actor mapping, incentive mapping, evidence quality, falsifier strength, ethical and legal safety, second-order effects, reversibility, metrics, and kill criteria.
-4. If a Thirty-Six Stratagems lens is used, verify the lens mechanism against the evidence and source-story invariant. Do not reward clever naming.
-5. Force one competing diagnosis and one "do nothing / exit" option.
-6. Rewrite unsafe or manipulative moves into detection, defense, compliance, truthful growth, or fair competition.
-7. Return a go / revise / stop recommendation.
+3. Build a source/evidence ledger that names the artifact or source behind every important claim.
+4. Score the strategy on bottleneck clarity, actor mapping, incentive mapping, evidence quality, falsifier strength, ethical and legal safety, second-order effects, reversibility, metrics, and kill criteria.
+5. If a Thirty-Six Stratagems lens is used, verify the lens mechanism against the evidence and source-story invariant. Do not reward clever naming.
+6. Force one competing diagnosis and one "do nothing / exit" option.
+7. Rewrite unsafe or manipulative moves into detection, defense, compliance, truthful growth, or fair competition.
+8. Return a go / revise / stop recommendation.
 
 ## Output
 
@@ -30,6 +31,11 @@ Decision Under Review
 
 Evidence Audit
 | Claim | Evidence | Quality | Missing / falsifier |
+|---|---|---|---|
+|  |  |  |  |
+
+Source Ledger
+| Source / artifact | Claim supported | Quality | Next check |
 |---|---|---|---|
 |  |  |  |  |
 
@@ -63,4 +69,3 @@ Metrics and Kill Criteria
 - Do not approve a strategy without falsifiers and stop rules.
 - If evidence is weak, say what evidence would change the verdict.
 - If the user asks for harmful execution, refuse that execution and provide a safe review or defense alternative.
-

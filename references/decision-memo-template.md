@@ -34,6 +34,11 @@ Selected Lenses
 |---|---|---|---|
 |  |  |  |  |
 
+Evidence Ledger
+| Source / artifact | Claim supported | Quality | Missing / next check |
+|---|---|---|---|
+|  |  |  |  |
+
 Recommendation
 1. First reversible move:
 2. Sequence:
@@ -48,4 +53,3 @@ Red Lines
 - Market/manipulation:
 - Stop condition:
 ```
-

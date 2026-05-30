@@ -14,8 +14,19 @@ const expectedReferences = [
   'references/decision-memo-template.md',
   'references/business-war-room-template.md',
   'references/ethical-strategy-guardrails.md',
+  'references/ethical-use-guardrails.md',
+  'references/thirty-six-stratagems-matrix.md',
+  'references/domain-adapters.md',
+  'references/market-signal-forensics.md',
+  'references/strategy-output-template.md',
+  'references/consulting-case-validation-corpus.md',
   'references/sunzi-business-consultant-soul.md',
   'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md',
+];
+
+const expectedAgents = [
+  'AGENTS.md',
+  'agents/sunzi-strategy-consultant.yaml',
 ];
 
 const expectedDocs = [
@@ -25,14 +36,20 @@ const expectedDocs = [
 
 const expectedExamples = [
   'examples/ecommerce-growth-decision-memo.md',
+  'examples/operations-supply-chain-decision-memo.md',
+  'examples/ai-transformation-decision-memo.md',
+  'examples/macro-public-sector-decision-memo.md',
   'examples/market-risk-no-trade-review.md',
   'examples/strategy-analyst-review-sample.md',
   'examples/unsafe-manipulation-reframe.md',
 ];
 
 const expectedCaseStudies = [
+  'case-studies/ai-transformation.json',
   'case-studies/ecommerce-growth.json',
+  'case-studies/macro-public-sector.json',
   'case-studies/market-risk-no-trade.json',
+  'case-studies/operations-supply-chain.json',
   'case-studies/strategy-review-marketplace.json',
   'case-studies/unsafe-manipulation-reframe.json',
 ];
@@ -171,6 +188,7 @@ function validateSkills() {
 function validateReferences() {
   for (const relativePath of [
     ...expectedReferences,
+    ...expectedAgents,
     ...expectedDocs,
     ...expectedExamples,
     ...expectedCaseStudies,
@@ -194,11 +212,55 @@ function validateReferences() {
   }
 }
 
+function validateAgents() {
+  const agentsDoc = read('AGENTS.md');
+  const profile = read('agents/sunzi-strategy-consultant.yaml');
+
+  for (const required of [
+    'sunzi-strategy-consultant',
+    'strategic-situation-analysis',
+    'strategy-analyst-review',
+    'source/evidence ledger',
+    'literal historical figure',
+  ]) {
+    if (!agentsDoc.includes(required)) {
+      fail(`AGENTS.md must include ${required}`);
+    }
+  }
+
+  for (const required of [
+    'literal_historical_persona: false',
+    'strategic-situation-analysis',
+    'strategy-analyst-review',
+    'sunzi-strategy-consultant',
+    'Evidence Ledger',
+    'fraud',
+    'market manipulation',
+    'truthful growth',
+  ]) {
+    if (!profile.includes(required)) {
+      fail(`agents/sunzi-strategy-consultant.yaml must include ${required}`);
+    }
+  }
+}
+
 function validateExamples() {
   const exampleExpectations = [
     {
       path: 'examples/ecommerce-growth-decision-memo.md',
-      required: ['fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion'],
+      required: ['fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion', 'Evidence Ledger'],
+    },
+    {
+      path: 'examples/operations-supply-chain-decision-memo.md',
+      required: ['Physical bottleneck', 'information bottleneck', 'decision latency', 'Evidence Ledger'],
+    },
+    {
+      path: 'examples/ai-transformation-decision-memo.md',
+      required: ['dual-track plan', 'human fallback', 'adoption telemetry', 'Evidence Ledger'],
+    },
+    {
+      path: 'examples/macro-public-sector-decision-memo.md',
+      required: ['transmission mechanism', 'governance vehicle', 'qualified investment pipeline', 'Evidence Ledger'],
     },
     {
       path: 'examples/market-risk-no-trade-review.md',
@@ -253,6 +315,15 @@ function validateStackManifest() {
     }
   }
 
+  for (const agent of stack.agents ?? []) {
+    if (!agent.path || !fileExists(agent.path)) {
+      fail(`stack.json agent path is missing: ${agent.path}`);
+    }
+    if (!agent.entrypoint || !fileExists(agent.entrypoint)) {
+      fail(`stack.json agent entrypoint is missing: ${agent.entrypoint}`);
+    }
+  }
+
   for (const relativePath of [...expectedReferences, ...expectedExamples, ...expectedCaseStudies]) {
     if (
       ![
@@ -270,7 +341,14 @@ function validateStackManifest() {
   }
 
   const behaviorGates = stack.behavior_gates ?? {};
-  for (const gate of ['ecommerce', 'market_risk', 'strategy_review']) {
+  for (const gate of [
+    'ecommerce',
+    'operations',
+    'ai_transformation',
+    'macro_public_sector',
+    'market_risk',
+    'strategy_review',
+  ]) {
     if (!Array.isArray(behaviorGates[gate]) || behaviorGates[gate].length < 2) {
       fail(`stack.json behavior_gates.${gate} must contain at least two checks`);
     }
@@ -316,6 +394,7 @@ function validateLeakage() {
 
 validateSkills();
 validateReferences();
+validateAgents();
 validateExamples();
 validateStackManifest();
 validateLicenses();

@@ -19,16 +19,21 @@ Use this skill when the user wants a modern business strategy consultant with a 
 
 1. Define the decision and stakes.
 2. Map terrain, actors, incentives, constraints, information asymmetry, timing, and failure modes.
-3. Pick 2 to 4 ethical Thirty-Six Stratagems lenses only if they improve diagnosis.
+3. Invoke `strategic-situation-analysis` for the first-principles map, domain adapter, and 2 to 4 source-grounded Thirty-Six Stratagems lenses.
 4. Translate each lens into a modern legal business move.
-5. Run strategy-analyst review: alternative diagnosis, misuse risk, falsifier, stop rule.
-6. Deliver a board-ready decision memo and a war-room operating plan.
+5. Invoke `strategy-analyst-review` before recommending action: alternative diagnosis, misuse risk, falsifier, stop rule, metrics, and kill criteria.
+6. Deliver a board-ready decision memo, source/evidence ledger, and war-room operating plan.
 
 ## References
 
 - [Decision memo template](../../references/decision-memo-template.md)
 - [Business war-room template](../../references/business-war-room-template.md)
 - [Ethical strategy guardrails](../../references/ethical-strategy-guardrails.md)
+- [Ethical use guardrails](../../references/ethical-use-guardrails.md)
+- [Thirty-Six Stratagems matrix](../../references/thirty-six-stratagems-matrix.md)
+- [Domain adapters](../../references/domain-adapters.md)
+- [Market signal forensics](../../references/market-signal-forensics.md)
+- [Strategy output template](../../references/strategy-output-template.md)
 - [Sunzi business consultant soul notes](../../references/sunzi-business-consultant-soul.md)
 
 ## Hard Rules

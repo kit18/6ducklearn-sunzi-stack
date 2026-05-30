@@ -1,0 +1,31 @@
+{
+  "name": "Macro Public-Sector Industrial Strategy",
+  "scenario": "A regional government wants to attract advanced manufacturing investment, but investors cite slow permits, unclear workforce pipelines, and weak supplier depth.",
+  "output": "examples/macro-public-sector-decision-memo.md",
+  "required_headings": [
+    "## Decision",
+    "## First-Principles Map",
+    "## Selected Lenses",
+    "## Strategy-Analyst Review",
+    "## Evidence Ledger",
+    "## Action Plan"
+  ],
+  "required_lenses": [
+    "借刀殺人",
+    "樹上開花",
+    "釜底抽薪"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "transmission mechanism",
+    "governance vehicle",
+    "permit-cycle",
+    "qualified investment pipeline",
+    "Stop condition"
+  ],
+  "blocked_phrases": [
+    "hide community risks",
+    "blank-check subsidies",
+    "guaranteed jobs"
+  ]
+}

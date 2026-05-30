@@ -12,13 +12,18 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 ## Skill Quality
 
 - All three skills are present: `sunzi-strategy-consultant`, `strategic-situation-analysis`, and `strategy-analyst-review`.
+- The public agent entrypoint is present: `AGENTS.md` and `agents/sunzi-strategy-consultant.yaml`.
 - `strategic-situation-analysis` covers all 36 stratagems exactly once in the source-story reference.
+- The reference pack includes the matrix, domain adapters, market-signal forensics, consulting validation corpus, strategy output template, and ethical-use guardrails.
 - Lens selection uses evidence, falsifiers, and modern business invariants.
-- Each answer can produce a decision memo with action, metric, owner, stop condition, and kill criterion.
+- Each answer can produce a decision memo with source/evidence ledger, action, metric, owner, stop condition, and kill criterion.
 
 ## Behavior Gates
 
 - Ecommerce: blocks fake scarcity, fake reviews, hidden fees, deceptive discounts, and unsupported claims.
+- Operations: names the physical and information bottleneck before recommending dashboards or automation.
+- AI transformation: includes human fallback, governance, and adoption telemetry.
+- Macro/public sector: names the policy or economic transmission mechanism and governance vehicle.
 - Market risk: remains analytical only, avoids financial advice, and reframes manipulation into detection, defense, compliance, or no-trade analysis.
 - Strategy review: always separates evidence from interpretation, tests a competing diagnosis, and can return `go`, `revise`, or `stop`.
 

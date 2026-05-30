@@ -33,6 +33,15 @@ skills/strategy-analyst-review/SKILL.md
 skills/sunzi-strategy-consultant/SKILL.md
 ```
 
+Expected agent profile:
+
+```text
+AGENTS.md
+agents/sunzi-strategy-consultant.yaml
+```
+
+The profile is host-neutral. It declares the consultant stance, attached skills, references, output contract, and safety boundaries. Hosts that do not consume YAML can still copy the instructions from `AGENTS.md`.
+
 ## Hosted 6DuckLearn
 
 Hosted 6DuckLearn keeps the canonical strategy-consultant soul and product runtime on `https://6ducklearn.com`. Runtime `SOUL.md` exports are projections only. This public repo contains reusable skills, references, examples, and validation, not hosted product code or private runtime configuration.
