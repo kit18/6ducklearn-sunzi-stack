@@ -1,6 +1,6 @@
 # 6DuckLearn Sunzi Strategy Stack
 
-Public strategy skills for modern business diagnosis, decision review, and Sunzi-inspired consulting.
+Public strategy skills for modern business diagnosis, stakeholder stress-reaction simulation, decision review, and Sunzi-inspired consulting.
 
 This repository is intentionally standalone. It is shaped by the install-flow clarity and validation ethos of public agent-skill stacks, but it does not copy `gstack` content and it does not expose private 6DuckLearn product code.
 
@@ -13,15 +13,20 @@ npm test
 cp -R skills/* ~/.codex/skills/
 ```
 
-Then ask your agent to use `sunzi-strategy-consultant` or `strategic-situation-analysis` on a real decision. The expected output is a decision memo, not a motivational essay.
+Then ask your agent to use `sunzi-strategy-consultant`, `strategic-situation-analysis`, or `sunzi-stakeholder-ssr` on a real decision. The expected output is a decision memo or labeled synthetic SSR artifact, not a motivational essay.
 
 For agent-host wiring, use [AGENTS.md](./AGENTS.md) or the machine-readable profile at [agents/sunzi-strategy-consultant.yaml](./agents/sunzi-strategy-consultant.yaml).
 
 ## Included Skills
 
 - `sunzi-strategy-consultant`: a style-derived modern business consultant for terrain, actors, incentives, timing, restraint, and board-ready decision memos.
+- `sunzi-decision-review`: a root applied-use skill for everyday and professional decisions, negotiation, workplace conflict, defensive tactic detection, waiting, preparation, and retreat.
+- `sunzi-stakeholder-ssr`: the cross-domain stakeholder stress-reaction simulation skill for growth, operations, product/API, pricing, policy, migration, outage, and executive-strategy pressure tests.
 - `strategic-situation-analysis`: first-principles situation diagnosis using the canonical Thirty-Six Stratagems as ethical lenses.
 - `strategy-analyst-review`: a quality gate for proposed strategies, lens choices, risks, falsifiers, and kill criteria.
+- `sunzi-growth-review`: a growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling.
+- `sunzi-operations-sop-review`: an operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability.
+- `sunzi-prd-review`: a product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions.
 
 ## Install Options
 
@@ -54,7 +59,12 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Ethical strategy guardrails](./references/ethical-strategy-guardrails.md)
 - [Ethical use guardrails](./references/ethical-use-guardrails.md)
 - [Thirty-Six Stratagems matrix](./references/thirty-six-stratagems-matrix.md)
+- [Applied use case map](./references/applied-use-case-map.md)
+- [Stakeholder Stress-Reaction Simulation](./references/stakeholder-stress-reaction.md)
+- [SSR evaluation scenarios](./references/ssr-evaluation-scenarios.md)
+- [Real-life DoD case map](./references/real-life-dod-case-map.md)
 - [Domain adapters](./references/domain-adapters.md)
+- [Domain review contracts](./references/domain-review-contracts.md)
 - [Market signal forensics](./references/market-signal-forensics.md)
 - [Strategy output template](./references/strategy-output-template.md)
 - [Consulting case validation corpus](./references/consulting-case-validation-corpus.md)
@@ -63,17 +73,30 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 ## Examples
 
 - [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md)
+- [Career negotiation decision review](./examples/career-negotiation-decision-review.md)
+- [API migration stakeholder SSR](./examples/api-migration-ssr.md)
+- [Growth community stakeholder SSR](./examples/growth-community-ssr.md)
+- [Operations billing stakeholder SSR](./examples/operations-billing-ssr.md)
+- [Real-life DoD case simulations](./examples/dod-case-simulations.md)
 - [Operations supply-chain decision memo](./examples/operations-supply-chain-decision-memo.md)
 - [AI transformation decision memo](./examples/ai-transformation-decision-memo.md)
 - [Macro public-sector decision memo](./examples/macro-public-sector-decision-memo.md)
 - [Market-risk no-trade review](./examples/market-risk-no-trade-review.md)
 - [Strategy analyst review sample](./examples/strategy-analyst-review-sample.md)
 - [Unsafe manipulation reframe](./examples/unsafe-manipulation-reframe.md)
+- [Growth loop review](./examples/growth-loop-review.md)
+- [Operations SOP review](./examples/operations-sop-review.md)
+- [Product value PRD review](./examples/product-value-prd-review.md)
 
 ## Case-Study Tests
 
 The `case-studies/` fixtures validate that the public examples exercise the expected observable behaviors:
 
+- career negotiation and daily/professional decision review
+- top-10 real-life DoD simulations for growth, operations, management, negotiation, platform migration, pricing, career moves, and AI transformation
+- API migration stakeholder stress-reaction simulation
+- growth/community stakeholder stress-reaction simulation
+- operations/billing stakeholder stress-reaction simulation
 - ecommerce growth under inventory constraint
 - operations and supply-chain bottleneck diagnosis
 - AI transformation with human fallback and telemetry
@@ -81,6 +104,9 @@ The `case-studies/` fixtures validate that the public examples exercise the expe
 - market-risk no-trade review
 - partner marketplace strategy review
 - unsafe manipulation reframe
+- growth loop review under trust constraint
+- operations SOP review for billing escalations
+- product-value PRD review for partner automation
 
 Run them directly:
 
@@ -98,7 +124,7 @@ The public stack contract is in [stack.json](./stack.json). It lists included sk
 npm test
 ```
 
-Validation checks expected skills, frontmatter, local references, all-36 coverage, examples, case studies, manifest consistency, licenses, and leakage patterns.
+Validation checks expected skills, frontmatter, local references, all-36 coverage, examples, SSR evaluation coverage, case studies, manifest consistency, licenses, and leakage patterns.
 
 ## License
 

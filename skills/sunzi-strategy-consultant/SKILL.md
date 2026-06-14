@@ -20,9 +20,17 @@ Use this skill when the user wants a modern business strategy consultant with a 
 1. Define the decision and stakes.
 2. Map terrain, actors, incentives, constraints, information asymmetry, timing, and failure modes.
 3. Invoke `strategic-situation-analysis` for the first-principles map, domain adapter, and 2 to 4 source-grounded Thirty-Six Stratagems lenses.
-4. Translate each lens into a modern legal business move.
-5. Invoke `strategy-analyst-review` before recommending action: alternative diagnosis, misuse risk, falsifier, stop rule, metrics, and kill criteria.
-6. Deliver a board-ready decision memo, source/evidence ledger, and war-room operating plan.
+4. Route daily or professional choices through `sunzi-decision-review` when the user needs to act, negotiate, wait, defend, observe, or retreat.
+5. Route stakeholder stress-reaction simulation through `sunzi-stakeholder-ssr` when the user needs synthetic persona reactions, internal complaints, executive escalation, stakeholder objections, growth backlash, operations burden, pricing concerns, or technical blind spots.
+6. Run DoD calibration when the decision resembles a public real-life pattern: select the closest case from the Real-life DoD case map, copy its source anchor, compare the recommendation against its Definition Of Done, and state the Evidence Needed Next.
+7. Route domain review when the artifact calls for it:
+   - `sunzi-growth-review` for growth loops, GTM experiments, ecommerce conversion, community distribution, lifecycle, referrals, and acquisition.
+   - `sunzi-operations-sop-review` for SOPs, runbooks, operating cadences, support workflows, incidents, QA routines, and supply-chain processes.
+   - `sunzi-prd-review` for PRDs, product requirements, SDK/API/event contracts, acceptance criteria, QA coverage, and release phases.
+8. Translate each lens into a modern legal business move.
+9. Treat SSR outputs as hypothesis, not proof; use them to name the next evidence check.
+10. Invoke `strategy-analyst-review` before recommending action: alternative diagnosis, misuse risk, falsifier, stop rule, metrics, and kill criteria.
+11. Deliver a board-ready decision memo, source/evidence ledger, and war-room operating plan.
 
 ## References
 
@@ -31,7 +39,12 @@ Use this skill when the user wants a modern business strategy consultant with a 
 - [Ethical strategy guardrails](../../references/ethical-strategy-guardrails.md)
 - [Ethical use guardrails](../../references/ethical-use-guardrails.md)
 - [Thirty-Six Stratagems matrix](../../references/thirty-six-stratagems-matrix.md)
+- [Applied use case map](../../references/applied-use-case-map.md)
+- [Stakeholder Stress-Reaction Simulation](../../references/stakeholder-stress-reaction.md)
+- [SSR evaluation scenarios](../../references/ssr-evaluation-scenarios.md)
+- [Real-life DoD case map](../../references/real-life-dod-case-map.md)
 - [Domain adapters](../../references/domain-adapters.md)
+- [Domain review contracts](../../references/domain-review-contracts.md)
 - [Market signal forensics](../../references/market-signal-forensics.md)
 - [Strategy output template](../../references/strategy-output-template.md)
 - [Sunzi business consultant soul notes](../../references/sunzi-business-consultant-soul.md)

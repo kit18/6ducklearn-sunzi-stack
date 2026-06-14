@@ -1,0 +1,43 @@
+{
+  "name": "DoD Case 3 Manager Delegation Under Pressure",
+  "scenario": "A manager needs to delegate critical launch work during a deadline without creating confusion, hidden overload, or unclear accountability.",
+  "dod_contract": {
+    "case_number": 3,
+    "case_name": "Manager Delegation Under Pressure",
+    "source_anchor": "Sun Tzu: The Art of War for Managers",
+    "domain": "company operation and people management",
+    "evidence_needed_next": [
+      "Current work-in-progress",
+      "Decision log",
+      "open risks",
+      "Capacity check"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 3: Manager Delegation Under Pressure",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "以逸待勞",
+    "擒賊擒王",
+    "連環計"
+  ],
+  "required_phrases": [
+    "The Art of War for Managers",
+    "hypothesis, not proof",
+    "decision rights",
+    "owner",
+    "backup",
+    "audit trail"
+  ],
+  "blocked_phrases": [
+    "blame frontline",
+    "no owner needed",
+    "skip escalation"
+  ]
+}

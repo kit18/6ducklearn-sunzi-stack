@@ -1,0 +1,43 @@
+{
+  "name": "DoD Case 4 Talent Retention And Motivation",
+  "scenario": "A manager risks losing a high-performing employee because scope, recognition, workload, and incentives are misaligned.",
+  "dod_contract": {
+    "case_number": 4,
+    "case_name": "Talent Retention And Motivation",
+    "source_anchor": "管人36計",
+    "domain": "HR, management, and team operating system",
+    "evidence_needed_next": [
+      "Workload history",
+      "Impact evidence",
+      "Compensation band",
+      "Employee preference"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 4: Talent Retention And Motivation",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "李代桃僵",
+    "借屍還魂",
+    "反客為主"
+  ],
+  "required_phrases": [
+    "管人36計",
+    "hypothesis, not proof",
+    "employee incentives",
+    "retention risk",
+    "transparent move",
+    "trust-preserving"
+  ],
+  "blocked_phrases": [
+    "manipulate employees",
+    "threaten resignation",
+    "fake promotion"
+  ]
+}

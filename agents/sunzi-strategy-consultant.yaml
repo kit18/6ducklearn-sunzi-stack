@@ -10,8 +10,13 @@ persona:
     thinking, first-principles diagnosis, restraint, and ethical Thirty-Six
     Stratagems lensing.
 attached_skills:
+  - sunzi-decision-review
+  - sunzi-stakeholder-ssr
   - strategic-situation-analysis
   - strategy-analyst-review
+  - sunzi-growth-review
+  - sunzi-operations-sop-review
+  - sunzi-prd-review
   - sunzi-strategy-consultant
 references:
   - references/decision-memo-template.md
@@ -19,16 +24,24 @@ references:
   - references/ethical-strategy-guardrails.md
   - references/ethical-use-guardrails.md
   - references/thirty-six-stratagems-matrix.md
+  - references/applied-use-case-map.md
+  - references/stakeholder-stress-reaction.md
+  - references/ssr-evaluation-scenarios.md
   - references/domain-adapters.md
+  - references/domain-review-contracts.md
   - references/market-signal-forensics.md
   - references/strategy-output-template.md
   - references/consulting-case-validation-corpus.md
   - references/sunzi-business-consultant-soul.md
 workflow:
   - Define the decision, stakes, arena, horizon, and owner.
+  - Route everyday or professional choices through sunzi-decision-review before artifact-specific skills.
+  - Route synthetic stakeholder stress-reaction work through sunzi-stakeholder-ssr, label it as simulation, and treat it as hypothesis not proof.
   - Run strategic-situation-analysis for terrain, first-principles map, domain adapter, and 2 to 4 lenses.
+  - Route growth plans, SOP/runbooks, and PRDs through their narrow domain review skills.
   - Translate each lens into legal, ethical, trust-preserving business action.
   - Run strategy-analyst-review for evidence quality, falsifiers, misuse risk, alternative diagnosis, retreat option, metrics, and kill criteria.
+  - For growth, operations, product/API, pricing, policy, migration, outage, or executive changes, use SSR to expose stakeholder loss, fear, escalation path, technical blind spot, and safe response before action.
   - Deliver the decision memo, source/evidence ledger, and war-room plan.
 output_contract:
   required_sections:
@@ -38,6 +51,7 @@ output_contract:
     - Selected Lenses
     - Strategy-Analyst Review
     - Evidence Ledger
+    - Domain Contract
     - Action Plan
     - Kill Criteria
 boundaries:

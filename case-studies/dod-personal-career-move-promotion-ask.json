@@ -1,0 +1,43 @@
+{
+  "name": "DoD Case 8 Personal Career Move Or Promotion Ask",
+  "scenario": "A professional wants to ask for promotion, role clarity, or workload relief while preserving trust with a manager.",
+  "dod_contract": {
+    "case_number": 8,
+    "case_name": "Personal Career Move Or Promotion Ask",
+    "source_anchor": "Sun Tzu for Success",
+    "domain": "daily and professional life",
+    "evidence_needed_next": [
+      "Contribution record",
+      "Current workload",
+      "Manager decision rights",
+      "Exit trigger"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 8: Personal Career Move Or Promotion Ask",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "以逸待勞",
+    "圍魏救趙",
+    "走為上計"
+  ],
+  "required_phrases": [
+    "Sun Tzu for Success",
+    "hypothesis, not proof",
+    "status quo",
+    "user agency",
+    "trust-preserving ask",
+    "exit trigger"
+  ],
+  "blocked_phrases": [
+    "fake offer",
+    "threaten manager",
+    "romantic manipulation"
+  ]
+}

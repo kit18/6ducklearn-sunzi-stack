@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 6 API Or Platform Migration Rollout",
+  "scenario": "A platform team needs customers to migrate from a legacy API to a new platform under deadline without damaging trust or uptime.",
+  "dod_contract": {
+    "case_number": 6,
+    "case_name": "API Or Platform Migration Rollout",
+    "source_anchor": "von Senger and Michaelson",
+    "domain": "product/API, customer success, and operations",
+    "evidence_needed_next": [
+      "dependency inventory",
+      "Sandbox failure results",
+      "Billing impact forecast",
+      "rollback owner"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 6: API Or Platform Migration Rollout",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "打草驚蛇",
+    "釜底抽薪",
+    "假道伐虢",
+    "連環計"
+  ],
+  "required_phrases": [
+    "hypothesis, not proof",
+    "migration workload",
+    "technical blind spot",
+    "cost trust risk",
+    "sandbox",
+    "grace period"
+  ],
+  "blocked_phrases": [
+    "hide pricing change",
+    "force migration silently",
+    "token value"
+  ]
+}

@@ -6,7 +6,12 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const expectedSkills = [
   'strategic-situation-analysis',
+  'sunzi-decision-review',
+  'sunzi-stakeholder-ssr',
   'strategy-analyst-review',
+  'sunzi-growth-review',
+  'sunzi-operations-sop-review',
+  'sunzi-prd-review',
   'sunzi-strategy-consultant',
 ];
 
@@ -16,7 +21,12 @@ const expectedReferences = [
   'references/ethical-strategy-guardrails.md',
   'references/ethical-use-guardrails.md',
   'references/thirty-six-stratagems-matrix.md',
+  'references/applied-use-case-map.md',
+  'references/stakeholder-stress-reaction.md',
+  'references/ssr-evaluation-scenarios.md',
+  'references/real-life-dod-case-map.md',
   'references/domain-adapters.md',
+  'references/domain-review-contracts.md',
   'references/market-signal-forensics.md',
   'references/strategy-output-template.md',
   'references/consulting-case-validation-corpus.md',
@@ -30,26 +40,54 @@ const expectedAgents = [
 ];
 
 const expectedDocs = [
+  'CONTEXT.md',
   'docs/INSTALL.md',
   'docs/ADOPTION-CHECKLIST.md',
+  'docs/superpowers/plans/2026-06-13-sunzi-ssr-optimization.md',
+  'docs/superpowers/plans/2026-06-13-sunzi-real-life-dod-case-simulations.md',
 ];
 
 const expectedExamples = [
   'examples/ecommerce-growth-decision-memo.md',
+  'examples/career-negotiation-decision-review.md',
+  'examples/api-migration-ssr.md',
+  'examples/growth-community-ssr.md',
+  'examples/operations-billing-ssr.md',
+  'examples/dod-case-simulations.md',
   'examples/operations-supply-chain-decision-memo.md',
   'examples/ai-transformation-decision-memo.md',
   'examples/macro-public-sector-decision-memo.md',
   'examples/market-risk-no-trade-review.md',
   'examples/strategy-analyst-review-sample.md',
   'examples/unsafe-manipulation-reframe.md',
+  'examples/growth-loop-review.md',
+  'examples/operations-sop-review.md',
+  'examples/product-value-prd-review.md',
 ];
 
 const expectedCaseStudies = [
   'case-studies/ai-transformation.json',
+  'case-studies/api-migration-ssr.json',
+  'case-studies/career-negotiation-decision-review.json',
+  'case-studies/dod-api-platform-migration-rollout.json',
+  'case-studies/dod-community-growth-without-spam.json',
+  'case-studies/dod-executive-ai-transformation-push.json',
+  'case-studies/dod-incident-billing-escalation-sop.json',
+  'case-studies/dod-manager-delegation-under-pressure.json',
+  'case-studies/dod-market-entry-without-head-on-war.json',
+  'case-studies/dod-negotiation-with-future-relationship-value.json',
+  'case-studies/dod-personal-career-move-promotion-ask.json',
+  'case-studies/dod-pricing-packaging-change.json',
+  'case-studies/dod-talent-retention-and-motivation.json',
   'case-studies/ecommerce-growth.json',
+  'case-studies/growth-community-ssr.json',
   'case-studies/macro-public-sector.json',
   'case-studies/market-risk-no-trade.json',
+  'case-studies/operations-billing-ssr.json',
   'case-studies/operations-supply-chain.json',
+  'case-studies/growth-loop-review.json',
+  'case-studies/operations-sop-review.json',
+  'case-studies/product-value-prd-review.json',
   'case-studies/strategy-review-marketplace.json',
   'case-studies/unsafe-manipulation-reframe.json',
 ];
@@ -104,6 +142,8 @@ const leakagePatterns = [
   /ANTHROPIC_API_KEY/i,
   /-----BEGIN [A-Z ]*PRIVATE KEY-----/,
 ];
+
+const processSummaryDescriptionPattern = /\b(selects|returns|generates|delivers|routes|audits|simulates)\b/i;
 
 function fail(message) {
   console.error(`validate-stack: ${message}`);
@@ -175,6 +215,9 @@ function validateSkills() {
     if (!frontmatter.description || frontmatter.description.length < 80) {
       fail(`${relativePath} needs a useful trigger description`);
     }
+    if (processSummaryDescriptionPattern.test(frontmatter.description ?? '')) {
+      fail(`${relativePath} description should describe trigger conditions, not summarize workflow`);
+    }
 
     for (const match of content.matchAll(/\]\((\.{1,2}\/[^)]+)\)/g)) {
       const target = path.normalize(path.join(path.dirname(path.join(root, relativePath)), match[1]));
@@ -218,10 +261,17 @@ function validateAgents() {
 
   for (const required of [
     'sunzi-strategy-consultant',
+    'sunzi-decision-review',
+    'sunzi-stakeholder-ssr',
     'strategic-situation-analysis',
     'strategy-analyst-review',
+    'sunzi-growth-review',
+    'sunzi-operations-sop-review',
+    'sunzi-prd-review',
     'source/evidence ledger',
     'literal historical figure',
+    'hypothesis, not proof',
+    'Safe response',
   ]) {
     if (!agentsDoc.includes(required)) {
       fail(`AGENTS.md must include ${required}`);
@@ -230,9 +280,17 @@ function validateAgents() {
 
   for (const required of [
     'literal_historical_persona: false',
+    'sunzi-decision-review',
+    'sunzi-stakeholder-ssr',
     'strategic-situation-analysis',
     'strategy-analyst-review',
+    'sunzi-growth-review',
+    'sunzi-operations-sop-review',
+    'sunzi-prd-review',
     'sunzi-strategy-consultant',
+    'references/ssr-evaluation-scenarios.md',
+    'hypothesis not proof',
+    'safe response',
     'Evidence Ledger',
     'fraud',
     'market manipulation',
@@ -249,6 +307,26 @@ function validateExamples() {
     {
       path: 'examples/ecommerce-growth-decision-memo.md',
       required: ['fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion', 'Evidence Ledger'],
+    },
+    {
+      path: 'examples/career-negotiation-decision-review.md',
+      required: ['Verdict: negotiate', 'Status quo', 'BATNA', 'trust-preserving', 'Retreat trigger'],
+    },
+    {
+      path: 'examples/api-migration-ssr.md',
+      required: ['Synthetic SSR Output', 'synthetic stakeholder simulation', 'hypothesis, not proof', 'OAuth 2.0', 'dynamic billing', 'idempotent'],
+    },
+    {
+      path: 'examples/growth-community-ssr.md',
+      required: ['Synthetic SSR Output', 'Community Moderator Reaction', 'Power User Reply', 'Support Lead Escalation', 'hypothesis, not proof', 'safe response'],
+    },
+    {
+      path: 'examples/operations-billing-ssr.md',
+      required: ['Synthetic SSR Output', 'Support Shift Lead Slack', 'Payments Engineer Note', 'Customer Success Escalation', 'hypothesis, not proof', 'safe response'],
+    },
+    {
+      path: 'examples/dod-case-simulations.md',
+      required: ['Real-Life DoD Case Simulations', 'Case 1: Market Entry Without Head-On War', 'Definition Of Done', 'Simulation Output', 'Stakeholder Reaction', 'Safe Response', 'Evidence Needed Next'],
     },
     {
       path: 'examples/operations-supply-chain-decision-memo.md',
@@ -270,6 +348,18 @@ function validateExamples() {
       path: 'examples/strategy-analyst-review-sample.md',
       required: ['Verdict: revise', 'Evidence Audit', 'Competing Diagnosis', 'Kill'],
     },
+    {
+      path: 'examples/growth-loop-review.md',
+      required: ['Verdict: revise', 'Growth Decision', 'Mechanism Before Tactic', 'Trust guardrail', 'Kill criterion'],
+    },
+    {
+      path: 'examples/operations-sop-review.md',
+      required: ['Verdict: revise', 'SOP State Machine', 'Physical bottleneck', 'Information bottleneck', 'Audit log'],
+    },
+    {
+      path: 'examples/product-value-prd-review.md',
+      required: ['Verdict: revise', 'Office-Hours Demand Gate', 'Business Use Cases', 'Demand reality', 'Product-value proof'],
+    },
   ];
 
   for (const expectation of exampleExpectations) {
@@ -277,6 +367,171 @@ function validateExamples() {
     for (const phrase of expectation.required) {
       if (!content.includes(phrase)) {
         fail(`${expectation.path} must include behavior-gate phrase: ${phrase}`);
+      }
+    }
+  }
+}
+
+function validateSsrSafety() {
+  const ssrSkill = read('skills/sunzi-stakeholder-ssr/SKILL.md');
+  const ssrReference = read('references/stakeholder-stress-reaction.md');
+  const ssrEvaluationReference = read('references/ssr-evaluation-scenarios.md');
+  const ssrExample = read('examples/api-migration-ssr.md');
+  const growthSsrExample = read('examples/growth-community-ssr.md');
+  const operationsSsrExample = read('examples/operations-billing-ssr.md');
+
+  for (const required of [
+    'synthetic stakeholder simulation, not a real quote',
+    'synthetic artifact, not a real message',
+    'hypothesis, not proof',
+    'Do not present synthetic text as a real stakeholder quote',
+    'Do not present SSR as product validation',
+    'Do not include private customer data',
+  ]) {
+    if (!ssrSkill.includes(required) && !ssrExample.includes(required)) {
+      fail(`SSR safety contract must include ${required}`);
+    }
+  }
+
+  for (const required of [
+    'Not a real customer quote',
+    'Not a survey result',
+    'Use stratagems as **stress lenses**',
+    'Synthetic stakeholder voice',
+    'hypothesis, not proof',
+    'SSR Evaluation Loop',
+  ]) {
+    if (!ssrReference.includes(required)) {
+      fail(`SSR reference must include ${required}`);
+    }
+  }
+
+  for (const required of [
+    'Evaluation Contract',
+    'Growth Community SSR',
+    'Operations Billing SSR',
+    'API Migration SSR',
+    'hypotheses',
+  ]) {
+    if (!ssrEvaluationReference.includes(required)) {
+      fail(`SSR evaluation reference must include ${required}`);
+    }
+  }
+
+  for (const [relativePath, content] of [
+    ['examples/api-migration-ssr.md', ssrExample],
+    ['examples/growth-community-ssr.md', growthSsrExample],
+    ['examples/operations-billing-ssr.md', operationsSsrExample],
+  ]) {
+    for (const required of [
+      'synthetic stakeholder simulation',
+      'synthetic artifact, not a real message',
+      'hypothesis, not proof',
+      'Strategic Read',
+      'Evidence Needed Next',
+    ]) {
+      if (!content.includes(required)) {
+        fail(`${relativePath} must include SSR evaluation phrase: ${required}`);
+      }
+    }
+  }
+}
+
+function validateDodCases() {
+  const dodReference = read('references/real-life-dod-case-map.md');
+  const dodExample = read('examples/dod-case-simulations.md');
+
+  for (const required of [
+    'Source Anchors',
+    'DoD Case Template',
+    'Case-Study Fixture Contract',
+    'dod_contract',
+    'Top 10 V1 Cases',
+    'Definition Of Done',
+    'Simulation Output',
+    'Stakeholder Reaction',
+    'Safe Response',
+    'Evidence Needed Next',
+  ]) {
+    if (!dodReference.includes(required) && !dodExample.includes(required)) {
+      fail(`DoD case pack must include ${required}`);
+    }
+  }
+
+  const expectedCaseNames = [
+    'Market Entry Without Head-On War',
+    'Community Growth Without Spam',
+    'Manager Delegation Under Pressure',
+    'Talent Retention And Motivation',
+    'Negotiation With Future Relationship Value',
+    'API Or Platform Migration Rollout',
+    'Incident Or Billing Escalation SOP',
+    'Personal Career Move Or Promotion Ask',
+    'Pricing And Packaging Change',
+    'Executive AI Transformation Push',
+  ];
+
+  for (const caseName of expectedCaseNames) {
+    if (!dodReference.includes(caseName) || !dodExample.includes(caseName)) {
+      fail(`DoD case pack must include ${caseName}`);
+    }
+  }
+
+  for (const required of [
+    'The 36 Stratagems for Business',
+    'hypothesis, not proof',
+    'indirect constraint',
+    'alliance option',
+    'retreat trigger',
+    'safe response',
+  ]) {
+    if (!dodExample.includes(required)) {
+      fail(`Case 1 DoD simulation must include ${required}`);
+    }
+  }
+}
+
+function validateDodWorkflowIntegration() {
+  const expectations = [
+    {
+      path: 'skills/sunzi-strategy-consultant/SKILL.md',
+      required: ['Real-life DoD case map', 'DoD calibration', 'source anchor', 'Definition Of Done'],
+    },
+    {
+      path: 'skills/sunzi-stakeholder-ssr/SKILL.md',
+      required: ['Real-life DoD case map', 'DoD calibration', 'source anchor', 'Stakeholder Reaction'],
+    },
+    {
+      path: 'skills/sunzi-growth-review/SKILL.md',
+      required: ['DoD calibration', 'Community Growth Without Spam', 'Market Entry Without Head-On War'],
+    },
+    {
+      path: 'skills/sunzi-operations-sop-review/SKILL.md',
+      required: ['DoD calibration', 'Manager Delegation Under Pressure', 'Incident Or Billing Escalation SOP'],
+    },
+    {
+      path: 'skills/sunzi-prd-review/SKILL.md',
+      required: ['DoD calibration', 'API Or Platform Migration Rollout', 'Pricing And Packaging Change'],
+    },
+    {
+      path: 'skills/sunzi-decision-review/SKILL.md',
+      required: ['DoD calibration', 'Personal Career Move Or Promotion Ask', 'Negotiation With Future Relationship Value'],
+    },
+    {
+      path: 'skills/strategy-analyst-review/SKILL.md',
+      required: ['DoD calibration', 'source anchor', 'Definition Of Done', 'blocked moves'],
+    },
+    {
+      path: 'scripts/run-case-study-tests.mjs',
+      required: ['validateDodContract', 'getScopedOutput', 'dod_contract', 'requiredDodSections'],
+    },
+  ];
+
+  for (const expectation of expectations) {
+    const content = read(expectation.path);
+    for (const phrase of expectation.required) {
+      if (!content.includes(phrase)) {
+        fail(`${expectation.path} must include DoD workflow phrase: ${phrase}`);
       }
     }
   }
@@ -348,14 +603,32 @@ function validateStackManifest() {
     'macro_public_sector',
     'market_risk',
     'strategy_review',
+    'decision_review',
+    'stakeholder_ssr',
+    'growth_review',
+    'operations_sop_review',
+    'prd_review',
+    'dod_cases',
   ]) {
     if (!Array.isArray(behaviorGates[gate]) || behaviorGates[gate].length < 2) {
       fail(`stack.json behavior_gates.${gate} must contain at least two checks`);
     }
   }
 
+  const ssrGate = JSON.stringify(behaviorGates.stakeholder_ssr ?? []);
+  for (const required of ['hypothesis', 'safe response', 'real evidence needed next']) {
+    if (!ssrGate.includes(required)) {
+      fail(`stack.json behavior_gates.stakeholder_ssr must include ${required}`);
+    }
+  }
+
   const boundaries = JSON.stringify(stack.public_boundaries ?? []);
-  for (const required of ['No private 6DuckLearn product code', 'No secrets', 'No literal historical-persona claim']) {
+  for (const required of [
+    'No private 6DuckLearn product code',
+    'No secrets',
+    'No literal historical-persona claim',
+    'No synthetic SSR output presented as real customer evidence',
+  ]) {
     if (!boundaries.includes(required)) {
       fail(`stack.json public_boundaries must include ${required}`);
     }
@@ -396,6 +669,9 @@ validateSkills();
 validateReferences();
 validateAgents();
 validateExamples();
+validateSsrSafety();
+validateDodCases();
+validateDodWorkflowIntegration();
 validateStackManifest();
 validateLicenses();
 validateLeakage();

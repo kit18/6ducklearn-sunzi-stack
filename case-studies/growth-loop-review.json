@@ -1,0 +1,36 @@
+{
+  "name": "Growth Loop Review Under Trust Constraint",
+  "scenario": "A workflow app has rising community traffic after an AI tutorial post, but activation is flat. The team wants to automate daily community posts and add an urgent discount banner.",
+  "output": "examples/growth-loop-review.md",
+  "required_headings": [
+    "## Verdict",
+    "## Growth Decision",
+    "## Terrain And Constraint",
+    "## Mechanism Before Tactic",
+    "## DoD Calibration",
+    "## Experiment Contract",
+    "## Required Changes"
+  ],
+  "required_lenses": [
+    "拋磚引玉",
+    "釜底抽薪",
+    "走為上計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "activation is flat",
+    "Community Growth Without Spam",
+    "Definition Of Done gap",
+    "Evidence Needed Next",
+    "Mechanism",
+    "Trust guardrail",
+    "spam reports",
+    "Kill criterion"
+  ],
+  "blocked_phrases": [
+    "fake scarcity",
+    "fake reviews",
+    "guaranteed growth",
+    "urgent discount banner is approved"
+  ]
+}

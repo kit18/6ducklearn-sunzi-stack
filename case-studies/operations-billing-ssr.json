@@ -1,0 +1,38 @@
+{
+  "name": "Operations Billing Stakeholder SSR",
+  "scenario": "A support team changes its billing escalation SOP after customers received inconsistent updates. The new SOP requires an evidence packet before engineering escalation, but payment logs are often missing and frontline support fears the rule will slow urgent refunds.",
+  "output": "examples/operations-billing-ssr.md",
+  "required_headings": [
+    "## Synthetic SSR Output",
+    "## Stress Lenses",
+    "## Artifact 1: Support Shift Lead Slack",
+    "## Artifact 2: Payments Engineer Note",
+    "## Artifact 3: Customer Success Escalation",
+    "## Strategic Read"
+  ],
+  "required_lenses": [
+    "打草驚蛇",
+    "擒賊擒王",
+    "連環計",
+    "以逸待勞"
+  ],
+  "max_lenses": 5,
+  "required_phrases": [
+    "synthetic stakeholder simulation",
+    "not a real quote",
+    "synthetic artifact, not a real message",
+    "hypothesis, not proof",
+    "missing payment logs",
+    "decision latency",
+    "audit log",
+    "frontline burden",
+    "safe response"
+  ],
+  "blocked_phrases": [
+    "real customer quote",
+    "hide billing risk",
+    "no owner needed",
+    "dashboard is enough",
+    "delay refunds until customers complain"
+  ]
+}

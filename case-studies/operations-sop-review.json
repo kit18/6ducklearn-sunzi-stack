@@ -1,0 +1,35 @@
+{
+  "name": "Operations SOP Review For Billing Escalations",
+  "scenario": "A support team has an escalation SOP for billing incidents, but tickets sit unresolved when payment logs are missing, support and engineering disagree on priority, and customers receive inconsistent updates.",
+  "output": "examples/operations-sop-review.md",
+  "required_headings": [
+    "## Verdict",
+    "## Operation Under Review",
+    "## SOP State Machine",
+    "## Bottleneck Map",
+    "## Pressure Scenarios",
+    "## DoD Calibration",
+    "## Metrics And Kill Criteria"
+  ],
+  "required_lenses": [
+    "擒賊擒王",
+    "以逸待勞",
+    "釜底抽薪"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "Physical bottleneck",
+    "Information bottleneck",
+    "Incident Or Billing Escalation SOP",
+    "Definition Of Done gap",
+    "Evidence Needed Next",
+    "decision latency",
+    "Audit log",
+    "Kill criterion"
+  ],
+  "blocked_phrases": [
+    "hide billing risk",
+    "no owner needed",
+    "dashboard is enough"
+  ]
+}

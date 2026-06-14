@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 9 Pricing And Packaging Change",
+  "scenario": "A company wants to move a high-use feature into a higher tier and must avoid customer backlash, renewal risk, and trust loss.",
+  "dod_contract": {
+    "case_number": 9,
+    "case_name": "Pricing And Packaging Change",
+    "source_anchor": "von Senger and Michaelson",
+    "domain": "monetization, customer success, and sales",
+    "evidence_needed_next": [
+      "Usage cohorts",
+      "Renewal calendar",
+      "Price sensitivity",
+      "customer interviews"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 9: Pricing And Packaging Change",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "假道伐虢",
+    "反客為主",
+    "釜底抽薪",
+    "走為上計"
+  ],
+  "required_phrases": [
+    "hypothesis, not proof",
+    "bait-and-switch perception",
+    "renewal risk",
+    "buyer escalation",
+    "grandfathering",
+    "evidence needed next"
+  ],
+  "blocked_phrases": [
+    "hidden terms",
+    "surprise fee",
+    "lock customers in secretly"
+  ]
+}

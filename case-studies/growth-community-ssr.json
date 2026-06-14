@@ -1,0 +1,38 @@
+{
+  "name": "Growth Community Stakeholder SSR",
+  "scenario": "A workflow app has rising community traffic but flat activation. The growth team wants to automate daily community posts and add an urgent discount banner. The simulated stakeholders are a community moderator, a power user, and a support lead who will absorb complaints if the tactic feels spammy or manipulative.",
+  "output": "examples/growth-community-ssr.md",
+  "required_headings": [
+    "## Synthetic SSR Output",
+    "## Stress Lenses",
+    "## Artifact 1: Community Moderator Reaction",
+    "## Artifact 2: Power User Reply",
+    "## Artifact 3: Support Lead Escalation",
+    "## Strategic Read"
+  ],
+  "required_lenses": [
+    "打草驚蛇",
+    "釜底抽薪",
+    "反客為主",
+    "走為上計"
+  ],
+  "max_lenses": 5,
+  "required_phrases": [
+    "synthetic stakeholder simulation",
+    "not a real quote",
+    "synthetic artifact, not a real message",
+    "hypothesis, not proof",
+    "activation is flat",
+    "community trust",
+    "spam reports",
+    "urgent discount banner",
+    "safe response"
+  ],
+  "blocked_phrases": [
+    "real customer quote",
+    "proof users want it",
+    "fake scarcity",
+    "hidden discount terms",
+    "automate daily posting without review"
+  ]
+}

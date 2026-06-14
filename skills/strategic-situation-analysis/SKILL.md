@@ -1,6 +1,6 @@
 ---
 name: strategic-situation-analysis
-description: Use when analyzing strategic business, market, trading, growth, ecommerce, macro, operations, or competitive situations where incentives, constraints, timing, deception risk, evidence quality, or second-order effects matter; selects 2-4 source-grounded Thirty-Six Stratagems lenses and returns a decision memo with guardrails and kill criteria.
+description: Use when diagnosing strategic business, market, trading, growth, ecommerce, macro, operations, or competitive situations where incentives, constraints, timing, deception risk, evidence quality, or second-order effects matter.
 ---
 
 # Strategic Situation Analysis
@@ -22,19 +22,26 @@ Core rule: use the Thirty-Six Stratagems as lenses, not as slogans. Evidence com
    - 敗戰: downside, exit, and recovery
 4. Select 2 to 4 canonical lenses from the source-story reference. For each lens, explain why it fits and what evidence would falsify it.
 5. Use the domain adapters to name the domain-specific evidence lanes and output checks.
-6. Translate each lens into a legal, ethical, modern business move.
-7. Run the strategy-analyst review loop:
+6. If the user needs an everyday/professional choice rather than a business artifact, route through `sunzi-decision-review`.
+7. If the user needs synthetic stakeholder reaction artifacts, route through `sunzi-stakeholder-ssr`.
+8. If the user is reviewing a growth plan, SOP/runbook, or PRD/product contract, route the artifact through `sunzi-growth-review`, `sunzi-operations-sop-review`, or `sunzi-prd-review`.
+9. Translate each lens into a legal, ethical, modern business move.
+10. Run the strategy-analyst review loop:
    - Check lens fit against evidence, falsifiers, and source-story mechanism.
    - Identify ethical misuse risk and rewrite unsafe moves as detection, defense, compliance, or fair competition.
    - Force one alternative lens and one "do nothing / retreat" option when the situation is high stakes.
    - Add metrics and kill criteria before any recommendation.
-8. Write the decision memo with a source/evidence ledger.
+11. Write the decision memo with a source/evidence ledger.
 
 ## References
 
 - [Thirty-Six Stratagems source-story reference](./references/thirty-six-stratagems-source-stories.md)
 - [Thirty-Six Stratagems matrix](../../references/thirty-six-stratagems-matrix.md)
+- [Applied use case map](../../references/applied-use-case-map.md)
+- [Stakeholder Stress-Reaction Simulation](../../references/stakeholder-stress-reaction.md)
+- [SSR evaluation scenarios](../../references/ssr-evaluation-scenarios.md)
 - [Domain adapters](../../references/domain-adapters.md)
+- [Domain review contracts](../../references/domain-review-contracts.md)
 - [Market signal forensics](../../references/market-signal-forensics.md)
 - [Strategy output template](../../references/strategy-output-template.md)
 - [Consulting case validation corpus](../../references/consulting-case-validation-corpus.md)

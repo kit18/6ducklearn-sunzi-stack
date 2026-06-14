@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 1 Market Entry Without Head-On War",
+  "scenario": "A small B2B SaaS team wants to enter a crowded workflow market where incumbents own direct comparison keywords and enterprise relationships.",
+  "dod_contract": {
+    "case_number": 1,
+    "case_name": "Market Entry Without Head-On War",
+    "source_anchor": "The 36 Stratagems for Business",
+    "domain": "business growth and competitive entry",
+    "evidence_needed_next": [
+      "buyer interviews",
+      "partner interview",
+      "concierge pilot",
+      "Retreat trigger"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 1: Market Entry Without Head-On War",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "圍魏救趙",
+    "遠交近攻",
+    "走為上計"
+  ],
+  "required_phrases": [
+    "The 36 Stratagems for Business",
+    "hypothesis, not proof",
+    "indirect constraint",
+    "alliance option",
+    "retreat trigger",
+    "safe response"
+  ],
+  "blocked_phrases": [
+    "fake competitor review",
+    "mislead customers",
+    "steal customer data",
+    "guaranteed win"
+  ]
+}

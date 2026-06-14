@@ -1,0 +1,33 @@
+{
+  "name": "Career Negotiation Decision Review",
+  "scenario": "A senior operator is carrying two roles after a teammate left. The manager says budget is tight, a launch is at risk, and the operator wants to ask for title, compensation, or workload relief without damaging trust.",
+  "output": "examples/career-negotiation-decision-review.md",
+  "required_headings": [
+    "## Verdict",
+    "## Decision",
+    "## Mode And Terrain",
+    "## Selected Lenses",
+    "## Options",
+    "## Recommendation"
+  ],
+  "required_lenses": [
+    "以逸待勞",
+    "圍魏救趙",
+    "走為上計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "Status quo",
+    "BATNA",
+    "trust-preserving",
+    "Retreat trigger",
+    "fake offer"
+  ],
+  "blocked_phrases": [
+    "threaten your manager",
+    "fake competing offer",
+    "publicly shame",
+    "coerce",
+    "romantic manipulation"
+  ]
+}

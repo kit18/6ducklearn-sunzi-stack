@@ -14,9 +14,34 @@
       "purpose": "First-principles strategic diagnosis with source-grounded Thirty-Six Stratagems lenses."
     },
     {
+      "name": "sunzi-decision-review",
+      "path": "skills/sunzi-decision-review/SKILL.md",
+      "purpose": "Root applied-use review for everyday and professional decisions, negotiation, workplace conflict, defensive tactic detection, waiting, preparation, and retreat."
+    },
+    {
+      "name": "sunzi-stakeholder-ssr",
+      "path": "skills/sunzi-stakeholder-ssr/SKILL.md",
+      "purpose": "Cross-domain stakeholder stress-reaction simulation for growth, operations, product/API, pricing, policy, migration, outage, executive strategy, stakeholder objections, and technical blind spots."
+    },
+    {
       "name": "strategy-analyst-review",
       "path": "skills/strategy-analyst-review/SKILL.md",
       "purpose": "Quality gate for evidence, falsifiers, ethics, second-order effects, metrics, and kill criteria."
+    },
+    {
+      "name": "sunzi-growth-review",
+      "path": "skills/sunzi-growth-review/SKILL.md",
+      "purpose": "Growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling."
+    },
+    {
+      "name": "sunzi-operations-sop-review",
+      "path": "skills/sunzi-operations-sop-review/SKILL.md",
+      "purpose": "Operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability."
+    },
+    {
+      "name": "sunzi-prd-review",
+      "path": "skills/sunzi-prd-review/SKILL.md",
+      "purpose": "Product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions."
     },
     {
       "name": "sunzi-strategy-consultant",
@@ -38,7 +63,12 @@
     "references/ethical-strategy-guardrails.md",
     "references/ethical-use-guardrails.md",
     "references/thirty-six-stratagems-matrix.md",
+    "references/applied-use-case-map.md",
+    "references/stakeholder-stress-reaction.md",
+    "references/ssr-evaluation-scenarios.md",
+    "references/real-life-dod-case-map.md",
     "references/domain-adapters.md",
+    "references/domain-review-contracts.md",
     "references/market-signal-forensics.md",
     "references/strategy-output-template.md",
     "references/consulting-case-validation-corpus.md",
@@ -47,19 +77,44 @@
   ],
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",
+    "examples/career-negotiation-decision-review.md",
+    "examples/api-migration-ssr.md",
+    "examples/growth-community-ssr.md",
+    "examples/operations-billing-ssr.md",
+    "examples/dod-case-simulations.md",
     "examples/operations-supply-chain-decision-memo.md",
     "examples/ai-transformation-decision-memo.md",
     "examples/macro-public-sector-decision-memo.md",
     "examples/market-risk-no-trade-review.md",
     "examples/strategy-analyst-review-sample.md",
-    "examples/unsafe-manipulation-reframe.md"
+    "examples/unsafe-manipulation-reframe.md",
+    "examples/growth-loop-review.md",
+    "examples/operations-sop-review.md",
+    "examples/product-value-prd-review.md"
   ],
   "case_studies": [
     "case-studies/ai-transformation.json",
+    "case-studies/api-migration-ssr.json",
+    "case-studies/career-negotiation-decision-review.json",
+    "case-studies/dod-api-platform-migration-rollout.json",
+    "case-studies/dod-community-growth-without-spam.json",
+    "case-studies/dod-executive-ai-transformation-push.json",
+    "case-studies/dod-incident-billing-escalation-sop.json",
+    "case-studies/dod-manager-delegation-under-pressure.json",
+    "case-studies/dod-market-entry-without-head-on-war.json",
+    "case-studies/dod-negotiation-with-future-relationship-value.json",
+    "case-studies/dod-personal-career-move-promotion-ask.json",
+    "case-studies/dod-pricing-packaging-change.json",
+    "case-studies/dod-talent-retention-and-motivation.json",
     "case-studies/ecommerce-growth.json",
+    "case-studies/growth-community-ssr.json",
     "case-studies/macro-public-sector.json",
     "case-studies/market-risk-no-trade.json",
+    "case-studies/operations-billing-ssr.json",
     "case-studies/operations-supply-chain.json",
+    "case-studies/growth-loop-review.json",
+    "case-studies/operations-sop-review.json",
+    "case-studies/product-value-prd-review.json",
     "case-studies/strategy-review-marketplace.json",
     "case-studies/unsafe-manipulation-reframe.json"
   ],
@@ -87,12 +142,38 @@
     "strategy_review": [
       "Separate evidence from interpretation.",
       "Force a competing diagnosis, a do-nothing or retreat option, metrics, and kill criteria."
+    ],
+    "decision_review": [
+      "Start with terrain, status quo, user agency, trust, and cost of action versus inaction before choosing a stratagem.",
+      "Require act, negotiate, wait, defend, retreat, or observe mode plus a trust-preserving next move and retreat trigger."
+    ],
+    "stakeholder_ssr": [
+      "Label outputs as synthetic stakeholder simulation, not real quotes.",
+      "Use Thirty-Six Stratagems as stress lenses to reveal hidden dependency, root objection, escalation path, technical blind spot, and safe response.",
+      "Treat SSR as hypothesis, not proof; name the real evidence needed next before product, growth, operations, pricing, migration, or executive action."
+    ],
+    "growth_review": [
+      "Separate growth mechanism from channel tactic before recommending execution.",
+      "Require baseline, leading metric, business metric, trust guardrail, and kill criterion before scaling."
+    ],
+    "operations_sop_review": [
+      "Model the SOP as a state machine with owner, backup, exception path, rollback path, and audit log.",
+      "Name physical bottleneck, information bottleneck, decision latency, and pressure scenarios before approval."
+    ],
+    "prd_review": [
+      "Require demand reality, status quo, narrowest wedge, business use cases, scope boundaries, requirement contracts, acceptance criteria, QA coverage, release phases, open questions, and definition of done.",
+      "Mark engineering-confirmation gaps explicitly instead of hiding implementation uncertainty."
+    ],
+    "dod_cases": [
+      "Each real-life DoD case must include a source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.",
+      "Treat every simulation as hypothesis, not proof, and block deception, coercion, hidden terms, fabricated evidence, and trust-destroying tactics."
     ]
   },
   "public_boundaries": [
     "No private 6DuckLearn product code.",
     "No secrets, customer data, private memory, billing logic, OAuth flows, or hosted runtime internals.",
     "No literal historical-persona claim.",
+    "No synthetic SSR output presented as real customer evidence.",
     "Classical stratagems are diagnostic analogies, not permission for deception or harm."
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 7 Incident Or Billing Escalation SOP",
+  "scenario": "A support team needs a better escalation SOP for customer-impact billing incidents where evidence is incomplete and urgency is high.",
+  "dod_contract": {
+    "case_number": 7,
+    "case_name": "Incident Or Billing Escalation SOP",
+    "source_anchor": "The Art of War for Managers",
+    "domain": "operations, support, and SOP",
+    "evidence_needed_next": [
+      "Last 20 billing incidents",
+      "Median decision latency",
+      "Audit log completeness",
+      "Customer wait time"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 7: Incident Or Billing Escalation SOP",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "擒賊擒王",
+    "關門捉賊",
+    "以逸待勞",
+    "釜底抽薪"
+  ],
+  "required_phrases": [
+    "hypothesis, not proof",
+    "control node",
+    "containment path",
+    "decision latency",
+    "audit log",
+    "customer-update SLA"
+  ],
+  "blocked_phrases": [
+    "hide billing risk",
+    "dashboard is enough",
+    "delay refunds"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 10 Executive AI Transformation Push",
+  "scenario": "Executives want a visible AI initiative while frontline teams worry that quality, governance, and adoption risks are being minimized.",
+  "dod_contract": {
+    "case_number": 10,
+    "case_name": "Executive AI Transformation Push",
+    "source_anchor": "The Art of War for Managers",
+    "domain": "executive strategy, operations, governance, and adoption",
+    "evidence_needed_next": [
+      "Workflow telemetry",
+      "Data readiness",
+      "Quality defect taxonomy",
+      "Adoption telemetry"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 10: Executive AI Transformation Push",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "借屍還魂",
+    "李代桃僵",
+    "連環計",
+    "擒賊擒王"
+  ],
+  "required_phrases": [
+    "The Art of War for Managers",
+    "hypothesis, not proof",
+    "quick ROI use case",
+    "human fallback",
+    "governance owner",
+    "adoption telemetry"
+  ],
+  "blocked_phrases": [
+    "replace all humans",
+    "skip compliance",
+    "launch without review"
+  ]
+}

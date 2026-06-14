@@ -14,6 +14,7 @@ cp -R skills/* ~/.codex/skills/
 After copying, start a new agent session and ask for one of:
 
 - `sunzi-strategy-consultant` for a full business-strategy memo.
+- `sunzi-stakeholder-ssr` for synthetic stakeholder stress-reaction simulation across growth, operations, product/API, pricing, policy, migration, outage, or executive strategy.
 - `strategic-situation-analysis` for first-principles diagnosis and Thirty-Six Stratagems lens selection.
 - `strategy-analyst-review` for a review gate on an existing memo or plan.
 
@@ -29,6 +30,7 @@ Expected skill roots:
 
 ```text
 skills/strategic-situation-analysis/SKILL.md
+skills/sunzi-stakeholder-ssr/SKILL.md
 skills/strategy-analyst-review/SKILL.md
 skills/sunzi-strategy-consultant/SKILL.md
 ```

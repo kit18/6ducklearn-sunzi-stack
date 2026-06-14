@@ -11,7 +11,8 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 
 ## Skill Quality
 
-- All three skills are present: `sunzi-strategy-consultant`, `strategic-situation-analysis`, and `strategy-analyst-review`.
+- The core skills are present: `sunzi-strategy-consultant`, `strategic-situation-analysis`, `sunzi-stakeholder-ssr`, and `strategy-analyst-review`.
+- Domain adapters are present for decision review, growth review, operations/SOP review, and product-value/PRD review.
 - The public agent entrypoint is present: `AGENTS.md` and `agents/sunzi-strategy-consultant.yaml`.
 - `strategic-situation-analysis` covers all 36 stratagems exactly once in the source-story reference.
 - The reference pack includes the matrix, domain adapters, market-signal forensics, consulting validation corpus, strategy output template, and ethical-use guardrails.
@@ -26,6 +27,8 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 - Macro/public sector: names the policy or economic transmission mechanism and governance vehicle.
 - Market risk: remains analytical only, avoids financial advice, and reframes manipulation into detection, defense, compliance, or no-trade analysis.
 - Strategy review: always separates evidence from interpretation, tests a competing diagnosis, and can return `go`, `revise`, or `stop`.
+- SSR: labels synthetic artifacts, treats simulation as hypothesis not proof, names stakeholder loss/fear/escalation, and recommends a safe response plus real evidence needed next.
+- Real-life DoD cases: each case includes source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.
 
 ## Validation
 

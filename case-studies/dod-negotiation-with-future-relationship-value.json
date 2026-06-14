@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 5 Negotiation With Future Relationship Value",
+  "scenario": "Two professional counterparts need a better agreement while preserving future collaboration and trust.",
+  "dod_contract": {
+    "case_number": 5,
+    "case_name": "Negotiation With Future Relationship Value",
+    "source_anchor": "The 36 Strategies of the Martial Arts",
+    "domain": "workplace negotiation, partnership, and conflict",
+    "evidence_needed_next": [
+      "Counterpart incentives",
+      "User BATNA",
+      "Relationship value",
+      "Retreat trigger"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 5: Negotiation With Future Relationship Value",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "圍魏救趙",
+    "欲擒故縱",
+    "反客為主",
+    "走為上計"
+  ],
+  "required_phrases": [
+    "The 36 Strategies of the Martial Arts",
+    "hypothesis, not proof",
+    "BATNA",
+    "relationship asset",
+    "exact ask",
+    "retreat trigger"
+  ],
+  "blocked_phrases": [
+    "coerce",
+    "public shaming",
+    "fake evidence"
+  ]
+}

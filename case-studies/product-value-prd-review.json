@@ -1,0 +1,37 @@
+{
+  "name": "Product Value PRD Review For Partner Automation",
+  "scenario": "A platform team wants to build a partner-facing automation builder for merchants. The proposal says partners can create workflows faster, but the current PRD mostly describes configuration screens and event payloads. It does not prove which merchant job is painful enough to justify the product.",
+  "output": "examples/product-value-prd-review.md",
+  "required_headings": [
+    "## Verdict",
+    "## Product / PRD Under Review",
+    "## Office-Hours Demand Gate",
+    "## Business Use Cases",
+    "## Requirements Contract",
+    "## DoD Calibration",
+    "## Definition Of Done"
+  ],
+  "required_lenses": [
+    "釜底抽薪",
+    "擒賊擒王",
+    "走為上計"
+  ],
+  "max_lenses": 4,
+  "required_phrases": [
+    "Demand reality",
+    "Status quo",
+    "API Or Platform Migration Rollout",
+    "Definition Of Done gap",
+    "Evidence Needed Next",
+    "Narrowest wedge",
+    "Product-value proof",
+    "pilot merchant"
+  ],
+  "blocked_phrases": [
+    "scope can expand later",
+    "no QA coverage needed",
+    "hidden terms",
+    "deceptive UX",
+    "generic automation builder is ready"
+  ]
+}

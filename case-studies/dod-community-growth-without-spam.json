@@ -1,0 +1,44 @@
+{
+  "name": "DoD Case 2 Community Growth Without Spam",
+  "scenario": "A product team sees community traffic rise after useful educational content and wants to scale distribution without damaging trust.",
+  "dod_contract": {
+    "case_number": 2,
+    "case_name": "Community Growth Without Spam",
+    "source_anchor": "Sun Tzu Strategies for Marketing",
+    "domain": "growth and distribution",
+    "evidence_needed_next": [
+      "Moderator review",
+      "Cohort activation",
+      "Support tags",
+      "stop rule"
+    ]
+  },
+  "output": "examples/dod-case-simulations.md",
+  "required_headings": [
+    "## Case 2: Community Growth Without Spam",
+    "### Definition Of Done",
+    "### Simulation Output",
+    "### Stakeholder Reaction",
+    "### Safe Response",
+    "### Evidence Needed Next"
+  ],
+  "required_lenses": [
+    "拋磚引玉",
+    "打草驚蛇",
+    "釜底抽薪",
+    "走為上計"
+  ],
+  "required_phrases": [
+    "Sun Tzu Strategies for Marketing",
+    "hypothesis, not proof",
+    "community trust",
+    "reversible experiment",
+    "spam reports",
+    "safe response"
+  ],
+  "blocked_phrases": [
+    "fake scarcity",
+    "hidden discount terms",
+    "spam automation"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "API Migration Stakeholder SSR",
+  "scenario": "A platform vendor announces that a legacy API will shut down in three months. Customers must migrate to a modular Open API platform, adopt dynamic billing, and re-implement OAuth 2.0. The simulated stakeholder is a mid-market ecommerce CTO or senior backend engineer with a five-person IT team, overloaded Q3 roadmap, and a checkout flow that has depended on the old API for three years.",
+  "output": "examples/api-migration-ssr.md",
+  "required_headings": [
+    "## Synthetic SSR Output",
+    "## Stress Lenses",
+    "## Artifact 1: Internal Slack Complaint",
+    "## Artifact 2: Short Email To CEO",
+    "## Artifact 3: Hardest Technical Blind Spot",
+    "## Strategic Read"
+  ],
+  "required_lenses": [
+    "打草驚蛇",
+    "釜底抽薪",
+    "假道伐虢",
+    "走為上計"
+  ],
+  "max_lenses": 5,
+  "required_phrases": [
+    "synthetic stakeholder simulation",
+    "not a real quote",
+    "synthetic artifact, not a real message",
+    "OAuth 2.0",
+    "dynamic billing",
+    "checkout",
+    "idempotent",
+    "grace period"
+  ],
+  "blocked_phrases": [
+    "real customer quote",
+    "named real merchant platform",
+    "specific partner brand",
+    "secret",
+    "token value"
+  ]
+}

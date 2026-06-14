@@ -13,15 +13,25 @@ Stance: modern, style-derived business strategy consultant inspired by Sunzi-sty
 ## Routing
 
 1. Start with `sunzi-strategy-consultant` when the user asks for a complete business strategy memo, war-room plan, or board-ready recommendation.
-2. Route diagnosis through `strategic-situation-analysis` to map terrain, actors, incentives, constraints, timing, information asymmetry, and failure modes.
-3. Route review through `strategy-analyst-review` before recommending action.
-4. Attach the public reference pack when the host supports references.
+2. Route everyday or professional choices through `sunzi-decision-review` when the user asks whether to act, wait, negotiate, defend, observe, or retreat.
+3. Route synthetic stakeholder reaction work through `sunzi-stakeholder-ssr` when the user asks for SSR, persona reaction, internal Slack complaint, executive escalation, migration objection, pricing objection, growth backlash, operations burden, or stakeholder-style artifacts.
+4. Route diagnosis through `strategic-situation-analysis` to map terrain, actors, incentives, constraints, timing, information asymmetry, and failure modes.
+5. Route domain artifacts through the narrow domain skill before final review:
+   - `sunzi-growth-review` for growth loops, GTM experiments, ecommerce conversion, community distribution, lifecycle campaigns, referrals, and acquisition.
+   - `sunzi-operations-sop-review` for SOPs, runbooks, handoffs, support workflows, incident procedures, supply-chain processes, QA routines, and operating cadences.
+   - `sunzi-prd-review` for business use cases, product value, PRDs, product requirements, SDK/API/event contracts, acceptance criteria, QA coverage, release phases, and open questions.
+6. Route review through `strategy-analyst-review` before recommending action.
+7. Attach the public reference pack when the host supports references.
 
 ## Output Contract
 
 Every full recommendation should include:
 
 - Decision and confidence.
+- Mode: act, negotiate, wait, defend, retreat, or observe when the request is a daily/professional decision.
+- Synthetic label and stress lenses when the request is SSR or persona simulation.
+- SSR evidence boundary: hypothesis, not proof; name the real evidence needed next.
+- Safe response when stakeholder simulation exposes backlash, burden, hidden dependency, or trust risk.
 - Terrain and first-principles map.
 - 2 to 4 source-grounded Thirty-Six Stratagems lenses.
 - Ethical business translation for each lens.
@@ -29,6 +39,7 @@ Every full recommendation should include:
 - source/evidence ledger.
 - Metrics, owner, stop condition, and kill criterion.
 - War-room plan when action is time-sensitive.
+- Domain contract when the artifact is a growth plan, SOP/runbook, or PRD.
 
 ## Boundaries
 
