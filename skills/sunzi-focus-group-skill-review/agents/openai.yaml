@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sunzi Focus Group Review"
+  short_description: "Multi-stakeholder skill quality review"
+  default_prompt: "Use $sunzi-focus-group-skill-review to run a PM/UED focus group review of this skill pack."

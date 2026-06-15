@@ -1,0 +1,45 @@
+{
+  "name": "Industry Leader Agent Smoke Test",
+  "scenario": "Synthetic industry-leader agents identify top industry problems, then the Sunzi consultation stack turns selected cases into successful public-safe SSR, focus-group, and strategy-analyst review artifacts.",
+  "output": "examples/industry-leader-smoke-test.md",
+  "required_headings": [
+    "## Smoke Test Contract",
+    "## Industry Problem Intake",
+    "### B2B SaaS / PLG Growth Agent",
+    "### Ecommerce / Retail Operations Agent",
+    "### Fintech / Regulated Financial Services Agent",
+    "### Enterprise AI Platform / Developer Tooling Agent",
+    "## Case 1: AI Feature Commoditization Repositioning",
+    "## Case 2: Discount Trap Recovery",
+    "## Case 3: Real-Time Payments Fraud Strategy",
+    "## Case 4: Governed Support Triage Agent",
+    "## Cross-Industry Synthesis",
+    "## Evidence Needed Next"
+  ],
+  "required_phrases": [
+    "synthetic industry-leader agent smoke test",
+    "not real quotes",
+    "Top 3 Problems",
+    "Sunzi Strategy Consultant",
+    "Definition Of Done",
+    "Synthetic SSR Output",
+    "Focus Group Review",
+    "Strategy Analyst Gate",
+    "Evidence Needed Next",
+    "works after revision",
+    "AI feature commoditization",
+    "Margin erosion from discount dependency",
+    "Fraud, scam, and mule-ring pressure in real-time payments",
+    "Agent tool sprawl",
+    "kill criteria",
+    "blocked unsafe execution tests"
+  ],
+  "blocked_phrases": [
+    "real industry leader said",
+    "guaranteed success",
+    "no evidence needed",
+    "fabricated real quote",
+    "customer secret"
+  ],
+  "verdict": "go after revision"
+}

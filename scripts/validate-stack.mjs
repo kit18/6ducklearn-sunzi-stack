@@ -12,6 +12,7 @@ const expectedSkills = [
   'sunzi-growth-review',
   'sunzi-operations-sop-review',
   'sunzi-prd-review',
+  'sunzi-focus-group-skill-review',
   'sunzi-strategy-consultant',
 ];
 
@@ -31,6 +32,8 @@ const expectedReferences = [
   'references/strategy-output-template.md',
   'references/consulting-case-validation-corpus.md',
   'references/sunzi-business-consultant-soul.md',
+  'references/strategy-focus-group-evaluation.md',
+  'skills/sunzi-focus-group-skill-review/references/panel-contract.md',
   'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md',
 ];
 
@@ -63,6 +66,9 @@ const expectedExamples = [
   'examples/growth-loop-review.md',
   'examples/operations-sop-review.md',
   'examples/product-value-prd-review.md',
+  'examples/focus-group-skill-review.md',
+  'examples/focus-group-strategy-evaluation.md',
+  'examples/industry-leader-smoke-test.md',
 ];
 
 const expectedCaseStudies = [
@@ -80,12 +86,15 @@ const expectedCaseStudies = [
   'case-studies/dod-pricing-packaging-change.json',
   'case-studies/dod-talent-retention-and-motivation.json',
   'case-studies/ecommerce-growth.json',
+  'case-studies/focus-group-skill-review.json',
+  'case-studies/focus-group-strategy-evaluation.json',
   'case-studies/growth-community-ssr.json',
   'case-studies/macro-public-sector.json',
   'case-studies/market-risk-no-trade.json',
   'case-studies/operations-billing-ssr.json',
   'case-studies/operations-supply-chain.json',
   'case-studies/growth-loop-review.json',
+  'case-studies/industry-leader-smoke-test.json',
   'case-studies/operations-sop-review.json',
   'case-studies/product-value-prd-review.json',
   'case-studies/strategy-review-marketplace.json',
@@ -268,6 +277,7 @@ function validateAgents() {
     'sunzi-growth-review',
     'sunzi-operations-sop-review',
     'sunzi-prd-review',
+    'sunzi-focus-group-skill-review',
     'source/evidence ledger',
     'literal historical figure',
     'hypothesis, not proof',
@@ -287,6 +297,7 @@ function validateAgents() {
     'sunzi-growth-review',
     'sunzi-operations-sop-review',
     'sunzi-prd-review',
+    'sunzi-focus-group-skill-review',
     'sunzi-strategy-consultant',
     'references/ssr-evaluation-scenarios.md',
     'hypothesis not proof',
@@ -359,6 +370,18 @@ function validateExamples() {
     {
       path: 'examples/product-value-prd-review.md',
       required: ['Verdict: revise', 'Office-Hours Demand Gate', 'Business Use Cases', 'Demand reality', 'Product-value proof'],
+    },
+    {
+      path: 'examples/focus-group-skill-review.md',
+      required: ['synthetic panel simulation', 'not real quotes', 'PM lead', 'UED researcher', 'scorecard', 'dissent', 'Verdict: revise'],
+    },
+    {
+      path: 'examples/focus-group-strategy-evaluation.md',
+      required: ['Source-Grounded Strategy Set', 'Focus Group Method', 'Definition Of Done', 'Evaluation Result', 'Iteration 1', 'Iteration 2', 'works after revision'],
+    },
+    {
+      path: 'examples/industry-leader-smoke-test.md',
+      required: ['synthetic industry-leader agent smoke test', 'Top 3 Problems', 'Sunzi Strategy Consultant', 'Synthetic SSR Output', 'Focus Group Review', 'Strategy Analyst Gate', 'Evidence Needed Next', 'works after revision'],
     },
   ];
 
@@ -537,6 +560,166 @@ function validateDodWorkflowIntegration() {
   }
 }
 
+function validateFocusGroupSkillReview() {
+  const skill = read('skills/sunzi-focus-group-skill-review/SKILL.md');
+  const panel = read('skills/sunzi-focus-group-skill-review/references/panel-contract.md');
+  const example = read('examples/focus-group-skill-review.md');
+  const stack = readJson('stack.json');
+
+  for (const required of [
+    'never rely on one reviewer',
+    'Panel Design',
+    'Stakeholder Simulation',
+    'Cross-Panel Synthesis',
+    'Evidence Needed Next',
+    'not real quotes',
+  ]) {
+    if (!skill.includes(required)) {
+      fail(`sunzi-focus-group-skill-review must include ${required}`);
+    }
+  }
+
+  for (const role of [
+    'PM lead',
+    'UED researcher',
+    'growth leader',
+    'operations/SOP leader',
+    'enterprise buyer',
+    'platform engineer',
+    'trust/safety reviewer',
+    'customer-support lead',
+  ]) {
+    if (!panel.includes(role) || !example.includes(role)) {
+      fail(`focus group review must include panel role ${role}`);
+    }
+  }
+
+  for (const required of [
+    'synthetic panel simulation',
+    'not real quotes',
+    'scorecard',
+    'dissent',
+    'revise',
+  ]) {
+    if (!example.includes(required)) {
+      fail(`focus group review example must include ${required}`);
+    }
+  }
+
+  if (!Array.isArray(stack.behavior_gates?.focus_group_skill_review)) {
+    fail('stack.json behavior_gates.focus_group_skill_review must exist');
+  }
+}
+
+function validateStrategyFocusGroupEvaluation() {
+  const reference = read('references/strategy-focus-group-evaluation.md');
+  const example = read('examples/focus-group-strategy-evaluation.md');
+  const stack = readJson('stack.json');
+
+  for (const required of [
+    'Source Anchors',
+    'Top 10 Strategy Set',
+    'Focus Group Method',
+    'DoD Template',
+    'Safety Boundary',
+    'synthetic panel simulation',
+    'not real quotes',
+  ]) {
+    if (!reference.includes(required)) {
+      fail(`strategy focus group reference must include ${required}`);
+    }
+  }
+
+  for (const caseName of [
+    'Market Entry Without Head-On War',
+    'Community Growth Without Spam',
+    'Manager Delegation Under Pressure',
+    'Talent Retention And Motivation',
+    'Negotiation With Future Relationship Value',
+    'API Or Platform Migration Rollout',
+    'Incident Or Billing Escalation SOP',
+    'Personal Career Move Or Promotion Ask',
+    'Pricing And Packaging Change',
+    'Executive AI Transformation Push',
+  ]) {
+    if (!reference.includes(caseName) || !example.includes(caseName)) {
+      fail(`strategy focus group evaluation must include ${caseName}`);
+    }
+  }
+
+  for (const required of [
+    'Definition Of Done',
+    'Stakeholder Simulation',
+    'Evaluation Result',
+    'Iteration 1',
+    'Iteration 2',
+    'works after revision',
+    'PM lead',
+    'UED researcher',
+    'trust/safety reviewer',
+  ]) {
+    if (!example.includes(required)) {
+      fail(`strategy focus group example must include ${required}`);
+    }
+  }
+
+  if (!Array.isArray(stack.behavior_gates?.strategy_focus_group_evaluation)) {
+    fail('stack.json behavior_gates.strategy_focus_group_evaluation must exist');
+  }
+}
+
+function validateIndustryLeaderSmokeTest() {
+  const example = read('examples/industry-leader-smoke-test.md');
+  const spec = readJson('case-studies/industry-leader-smoke-test.json');
+  const stack = readJson('stack.json');
+
+  for (const industry of [
+    'B2B SaaS / PLG Growth Agent',
+    'Ecommerce / Retail Operations Agent',
+    'Fintech / Regulated Financial Services Agent',
+    'Enterprise AI Platform / Developer Tooling Agent',
+  ]) {
+    if (!example.includes(industry)) {
+      fail(`industry leader smoke test must include ${industry}`);
+    }
+  }
+
+  for (const caseName of [
+    'AI Feature Commoditization Repositioning',
+    'Discount Trap Recovery',
+    'Real-Time Payments Fraud Strategy',
+    'Governed Support Triage Agent',
+  ]) {
+    if (!example.includes(caseName)) {
+      fail(`industry leader smoke test must include case ${caseName}`);
+    }
+  }
+
+  for (const required of [
+    'synthetic industry-leader agent smoke test',
+    'not real quotes',
+    'Top 3 Problems',
+    'Sunzi Strategy Consultant',
+    'Synthetic SSR Output',
+    'Focus Group Review',
+    'Strategy Analyst Gate',
+    'works after revision',
+    'kill criteria',
+  ]) {
+    if (!example.includes(required)) {
+      fail(`industry leader smoke test must include ${required}`);
+    }
+  }
+
+  if (!Array.isArray(spec.required_headings) || spec.required_headings.length < 10) {
+    fail('industry leader smoke test spec must require the industry and case headings');
+  }
+
+  if (!Array.isArray(stack.behavior_gates?.industry_leader_smoke_test)) {
+    fail('stack.json behavior_gates.industry_leader_smoke_test must exist');
+  }
+}
+
 function validateStackManifest() {
   const stack = readJson('stack.json');
   const packageJson = readJson('package.json');
@@ -609,6 +792,9 @@ function validateStackManifest() {
     'operations_sop_review',
     'prd_review',
     'dod_cases',
+    'focus_group_skill_review',
+    'strategy_focus_group_evaluation',
+    'industry_leader_smoke_test',
   ]) {
     if (!Array.isArray(behaviorGates[gate]) || behaviorGates[gate].length < 2) {
       fail(`stack.json behavior_gates.${gate} must contain at least two checks`);
@@ -672,6 +858,9 @@ validateExamples();
 validateSsrSafety();
 validateDodCases();
 validateDodWorkflowIntegration();
+validateFocusGroupSkillReview();
+validateStrategyFocusGroupEvaluation();
+validateIndustryLeaderSmokeTest();
 validateStackManifest();
 validateLicenses();
 validateLeakage();

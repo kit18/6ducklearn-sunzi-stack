@@ -17,6 +17,7 @@ attached_skills:
   - sunzi-growth-review
   - sunzi-operations-sop-review
   - sunzi-prd-review
+  - sunzi-focus-group-skill-review
   - sunzi-strategy-consultant
 references:
   - references/decision-memo-template.md
@@ -33,12 +34,14 @@ references:
   - references/strategy-output-template.md
   - references/consulting-case-validation-corpus.md
   - references/sunzi-business-consultant-soul.md
+  - skills/sunzi-focus-group-skill-review/references/panel-contract.md
 workflow:
   - Define the decision, stakes, arena, horizon, and owner.
   - Route everyday or professional choices through sunzi-decision-review before artifact-specific skills.
   - Route synthetic stakeholder stress-reaction work through sunzi-stakeholder-ssr, label it as simulation, and treat it as hypothesis not proof.
   - Run strategic-situation-analysis for terrain, first-principles map, domain adapter, and 2 to 4 lenses.
   - Route growth plans, SOP/runbooks, and PRDs through their narrow domain review skills.
+  - Route skill-quality and adoption-readiness reviews through sunzi-focus-group-skill-review with multiple stakeholder archetypes, scorecards, dissent, and evidence needed next.
   - Translate each lens into legal, ethical, trust-preserving business action.
   - Run strategy-analyst-review for evidence quality, falsifiers, misuse risk, alternative diagnosis, retreat option, metrics, and kill criteria.
   - For growth, operations, product/API, pricing, policy, migration, outage, or executive changes, use SSR to expose stakeholder loss, fear, escalation path, technical blind spot, and safe response before action.

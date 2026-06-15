@@ -1,0 +1,37 @@
+{
+  "name": "Focus Group Skill Review Multi-Stakeholder Panel",
+  "scenario": "A PM and UED group wants to evaluate whether the Sunzi skill pack is good enough for growth, operations, SOP, PRD, and stakeholder simulation work.",
+  "output": "examples/focus-group-skill-review.md",
+  "required_headings": [
+    "## Panel Design",
+    "## Artifact Under Review",
+    "## Individual Reviews",
+    "## Stakeholder Simulation",
+    "## Cross-Panel Synthesis",
+    "## Decision",
+    "## Recommended Changes",
+    "## Evidence Needed Next"
+  ],
+  "required_phrases": [
+    "PM lead",
+    "UED researcher",
+    "growth leader",
+    "operations/SOP leader",
+    "enterprise buyer",
+    "platform engineer",
+    "trust/safety reviewer",
+    "customer-support lead",
+    "synthetic panel simulation",
+    "not real quotes",
+    "never rely on one reviewer",
+    "scorecard",
+    "dissent",
+    "revise"
+  ],
+  "blocked_phrases": [
+    "single reviewer is enough",
+    "real industry leader said",
+    "guaranteed adoption",
+    "no evidence needed"
+  ]
+}

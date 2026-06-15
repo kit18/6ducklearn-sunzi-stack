@@ -17,6 +17,19 @@ Then ask your agent to use `sunzi-strategy-consultant`, `strategic-situation-ana
 
 For agent-host wiring, use [AGENTS.md](./AGENTS.md) or the machine-readable profile at [agents/sunzi-strategy-consultant.yaml](./agents/sunzi-strategy-consultant.yaml).
 
+## Which Skill To Use First
+
+If you are unsure, start with `sunzi-strategy-consultant`. Use the other skills as follow-on gates when the work needs diagnosis, stakeholder pressure testing, domain review, or final go / revise / stop review.
+
+| User need | Start with | Reference example |
+|---|---|---|
+| Full strategy recommendation | `sunzi-strategy-consultant` | [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md) |
+| Stakeholder reaction, backlash, migration objection, or rollout stress test | `sunzi-stakeholder-ssr` | [API migration stakeholder SSR](./examples/api-migration-ssr.md) |
+| Growth loop, GTM, ecommerce, or lifecycle experiment | `sunzi-growth-review` | [Growth loop review](./examples/growth-loop-review.md) |
+| SOP, operations, incident, support, QA, or supply-chain workflow | `sunzi-operations-sop-review` | [Operations SOP review](./examples/operations-sop-review.md) |
+| Product-value, PRD, API, SDK, or requirement review | `sunzi-prd-review` | [Product value PRD review](./examples/product-value-prd-review.md) |
+| Skill quality, adoption readiness, PM/UED focus group, or industry-leader archetype review | `sunzi-focus-group-skill-review` | [Industry leader smoke test](./examples/industry-leader-smoke-test.md) |
+
 ## Included Skills
 
 - `sunzi-strategy-consultant`: a style-derived modern business consultant for terrain, actors, incentives, timing, restraint, and board-ready decision memos.
@@ -27,6 +40,7 @@ For agent-host wiring, use [AGENTS.md](./AGENTS.md) or the machine-readable prof
 - `sunzi-growth-review`: a growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling.
 - `sunzi-operations-sop-review`: an operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability.
 - `sunzi-prd-review`: a product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions.
+- `sunzi-focus-group-skill-review`: a PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, stakeholder simulation, dissent, and improvement recommendations.
 
 ## Install Options
 
@@ -69,6 +83,8 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Strategy output template](./references/strategy-output-template.md)
 - [Consulting case validation corpus](./references/consulting-case-validation-corpus.md)
 - [Sunzi business consultant soul notes](./references/sunzi-business-consultant-soul.md)
+- [Focus group panel contract](./skills/sunzi-focus-group-skill-review/references/panel-contract.md)
+- [Strategy focus group evaluation](./references/strategy-focus-group-evaluation.md)
 
 ## Examples
 
@@ -87,6 +103,22 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Growth loop review](./examples/growth-loop-review.md)
 - [Operations SOP review](./examples/operations-sop-review.md)
 - [Product value PRD review](./examples/product-value-prd-review.md)
+- [Focus group skill review](./examples/focus-group-skill-review.md)
+- [Focus group strategy evaluation](./examples/focus-group-strategy-evaluation.md)
+- [Industry leader smoke test](./examples/industry-leader-smoke-test.md)
+
+## Industry-Leader Smoke Test
+
+Use [industry-leader-smoke-test.md](./examples/industry-leader-smoke-test.md) when you want to verify the stack as a consultation company workflow instead of a single prompt. The example asks four synthetic industry-leader archetypes for Top 3 Problems, selects one case per industry, then runs the full loop:
+
+1. Sunzi strategy consultant diagnosis.
+2. Definition Of Done before simulation.
+3. Synthetic SSR Output with evidence boundary.
+4. Focus Group Review with dissent.
+5. Strategy Analyst Gate with metrics and kill criteria.
+6. Iteration until the final state is `works after revision`.
+
+The agents are synthetic archetypes, not real people. Do not present the output as real customer research, real industry-leader quotes, or market proof.
 
 ## Case-Study Tests
 
@@ -107,6 +139,9 @@ The `case-studies/` fixtures validate that the public examples exercise the expe
 - growth loop review under trust constraint
 - operations SOP review for billing escalations
 - product-value PRD review for partner automation
+- PM/UED focus group skill review with multiple stakeholder archetypes
+- top-10 strategy focus group evaluation with DoD, results, and iteration
+- industry-leader smoke test across SaaS growth, ecommerce operations, fintech, and enterprise AI platform cases
 
 Run them directly:
 

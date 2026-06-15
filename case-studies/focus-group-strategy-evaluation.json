@@ -1,0 +1,44 @@
+{
+  "name": "Focus Group Strategy Evaluation Across Real-World Cases",
+  "scenario": "A PM and UED group wants to run focus-group simulation across the top 10 real-world Sunzi and Thirty-Six Stratagems strategy cases, define DoD, evaluate results, and iterate until each case works.",
+  "output": "examples/focus-group-strategy-evaluation.md",
+  "required_headings": [
+    "## Source-Grounded Strategy Set",
+    "## Focus Group Method",
+    "## Case 1: Market Entry Without Head-On War",
+    "## Case 2: Community Growth Without Spam",
+    "## Case 3: Manager Delegation Under Pressure",
+    "## Case 4: Talent Retention And Motivation",
+    "## Case 5: Negotiation With Future Relationship Value",
+    "## Case 6: API Or Platform Migration Rollout",
+    "## Case 7: Incident Or Billing Escalation SOP",
+    "## Case 8: Personal Career Move Or Promotion Ask",
+    "## Case 9: Pricing And Packaging Change",
+    "## Case 10: Executive AI Transformation Push",
+    "## Cross-Case Evaluation",
+    "## Iteration Log"
+  ],
+  "required_phrases": [
+    "synthetic panel simulation",
+    "not real quotes",
+    "PM lead",
+    "UED researcher",
+    "trust/safety reviewer",
+    "Definition Of Done",
+    "Evaluation Result",
+    "Iteration 1",
+    "Iteration 2",
+    "works after revision",
+    "The 36 Stratagems for Business",
+    "Sun Tzu Strategies for Marketing",
+    "The Art of War for Managers",
+    "Sun Tzu for Success",
+    "The 36 Strategies of the Martial Arts"
+  ],
+  "blocked_phrases": [
+    "real industry leader said",
+    "single reviewer is enough",
+    "guaranteed success",
+    "no evidence needed"
+  ]
+}

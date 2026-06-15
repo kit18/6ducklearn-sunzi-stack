@@ -2,6 +2,14 @@
 
 Use this checklist before adopting or publishing a modified Sunzi Strategy Stack.
 
+## New User Clarity
+
+- Install path is explicit: clone, test, copy skills, restart agent session.
+- README names the first skill to call when unsure: `sunzi-strategy-consultant`.
+- Routing explains when to use diagnosis, SSR, focus-group review, domain review, and analyst review.
+- The industry-leader smoke test is labeled as synthetic industry-archetype output, not real people, real quotes, customer proof, or expert endorsement.
+- Public-safe boundaries are visible before examples: no secrets, no private runtime code, no customer data, no impersonation, no fake evidence.
+
 ## Public Boundary
 
 - No private paths, secrets, environment keys, internal Supabase functions, hosted runtime code, private memory, customer data, or billing logic.
@@ -13,6 +21,7 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 
 - The core skills are present: `sunzi-strategy-consultant`, `strategic-situation-analysis`, `sunzi-stakeholder-ssr`, and `strategy-analyst-review`.
 - Domain adapters are present for decision review, growth review, operations/SOP review, and product-value/PRD review.
+- The focus-group skill is present for PM/UED review of skill quality, adoption risk, stakeholder reactions, dissent, and evidence needed next.
 - The public agent entrypoint is present: `AGENTS.md` and `agents/sunzi-strategy-consultant.yaml`.
 - `strategic-situation-analysis` covers all 36 stratagems exactly once in the source-story reference.
 - The reference pack includes the matrix, domain adapters, market-signal forensics, consulting validation corpus, strategy output template, and ethical-use guardrails.
@@ -29,6 +38,9 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 - Strategy review: always separates evidence from interpretation, tests a competing diagnosis, and can return `go`, `revise`, or `stop`.
 - SSR: labels synthetic artifacts, treats simulation as hypothesis not proof, names stakeholder loss/fear/escalation, and recommends a safe response plus real evidence needed next.
 - Real-life DoD cases: each case includes source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.
+- Focus group skill review: uses multiple stakeholder archetypes, labels synthetic panel simulation, preserves dissent, includes scorecards, and never relies on one reviewer.
+- Strategy focus group evaluation: each top-10 real-world strategy case defines DoD, runs stakeholder simulation, records Evaluation Result, and iterates until it works after revision.
+- Industry-leader smoke test: asks synthetic archetypes for Top 3 Problems, selects cases, runs Sunzi diagnosis, SSR, focus-group dissent, strategy analyst review, metrics, kill criteria, and labels the result as synthetic.
 
 ## Validation
 
@@ -38,3 +50,9 @@ npm run test:case-studies
 ```
 
 The validators check skill frontmatter, local links, required references, all-36 coverage, example files, case-study behavior gates, manifest consistency, license files, and leakage patterns.
+
+## Reference Examples
+
+- Use `examples/focus-group-skill-review.md` to review whether a skill is usable and adoption-ready.
+- Use `examples/focus-group-strategy-evaluation.md` to review the top-10 real-life strategy cases with DoD and iteration.
+- Use `examples/industry-leader-smoke-test.md` to test the stack as an end-to-end consultation-company workflow across multiple industries.

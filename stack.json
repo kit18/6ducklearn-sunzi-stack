@@ -44,6 +44,11 @@
       "purpose": "Product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions."
     },
     {
+      "name": "sunzi-focus-group-skill-review",
+      "path": "skills/sunzi-focus-group-skill-review/SKILL.md",
+      "purpose": "PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, stakeholder simulation, dissent, and improvement recommendations."
+    },
+    {
       "name": "sunzi-strategy-consultant",
       "path": "skills/sunzi-strategy-consultant/SKILL.md",
       "purpose": "Modern Sunzi-style strategy consultant workflow for business decisions."
@@ -73,6 +78,8 @@
     "references/strategy-output-template.md",
     "references/consulting-case-validation-corpus.md",
     "references/sunzi-business-consultant-soul.md",
+    "references/strategy-focus-group-evaluation.md",
+    "skills/sunzi-focus-group-skill-review/references/panel-contract.md",
     "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
   ],
   "examples": [
@@ -90,7 +97,10 @@
     "examples/unsafe-manipulation-reframe.md",
     "examples/growth-loop-review.md",
     "examples/operations-sop-review.md",
-    "examples/product-value-prd-review.md"
+    "examples/product-value-prd-review.md",
+    "examples/focus-group-skill-review.md",
+    "examples/focus-group-strategy-evaluation.md",
+    "examples/industry-leader-smoke-test.md"
   ],
   "case_studies": [
     "case-studies/ai-transformation.json",
@@ -107,12 +117,15 @@
     "case-studies/dod-pricing-packaging-change.json",
     "case-studies/dod-talent-retention-and-motivation.json",
     "case-studies/ecommerce-growth.json",
+    "case-studies/focus-group-skill-review.json",
+    "case-studies/focus-group-strategy-evaluation.json",
     "case-studies/growth-community-ssr.json",
     "case-studies/macro-public-sector.json",
     "case-studies/market-risk-no-trade.json",
     "case-studies/operations-billing-ssr.json",
     "case-studies/operations-supply-chain.json",
     "case-studies/growth-loop-review.json",
+    "case-studies/industry-leader-smoke-test.json",
     "case-studies/operations-sop-review.json",
     "case-studies/product-value-prd-review.json",
     "case-studies/strategy-review-marketplace.json",
@@ -167,6 +180,18 @@
     "dod_cases": [
       "Each real-life DoD case must include a source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.",
       "Treat every simulation as hypothesis, not proof, and block deception, coercion, hidden terms, fabricated evidence, and trust-destroying tactics."
+    ],
+    "focus_group_skill_review": [
+      "Skill-quality reviews must use multiple stakeholder or industry-leader archetypes, never a single reviewer.",
+      "Focus-group outputs must label synthetic panel simulation, preserve dissent, include scorecards, and name evidence needed next."
+    ],
+    "strategy_focus_group_evaluation": [
+      "Top-10 real-world strategy cases must define DoD before focus-group simulation and preserve stakeholder dissent.",
+      "Each strategy evaluation must include Evaluation Result, Iteration 1, Iteration 2, and a final works-after-revision state before adoption."
+    ],
+    "industry_leader_smoke_test": [
+      "Industry-leader smoke tests must label archetypes as synthetic, ask for Top 3 Problems, and avoid real-person claims.",
+      "Successful cases must pass through Sunzi consultant diagnosis, SSR, focus-group dissent, strategy analyst review, evidence needed next, and kill criteria."
     ]
   },
   "public_boundaries": [
