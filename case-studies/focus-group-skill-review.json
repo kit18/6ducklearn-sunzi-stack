@@ -5,7 +5,14 @@
   "required_headings": [
     "## Panel Design",
     "## Artifact Under Review",
+    "## Interview Responses",
+    "## Segment Simulation",
+    "## 360 Comments",
     "## Individual Reviews",
+    "## Dynamic Scoring Contract",
+    "## Frozen Formula",
+    "## Structured Signals",
+    "## Deterministic Scores",
     "## Stakeholder Simulation",
     "## Cross-Panel Synthesis",
     "## Decision",
@@ -26,6 +33,13 @@
     "never rely on one reviewer",
     "scorecard",
     "dissent",
+    "synthetic_proxy",
+    "Loyal live shopper",
+    "Basket-builder household buyer",
+    "at least three simulated responses",
+    "after_comments_before_structured_signal_extraction",
+    "Node.js deterministic scorer",
+    "Synthetic proxy only",
     "revise"
   ],
   "blocked_phrases": [

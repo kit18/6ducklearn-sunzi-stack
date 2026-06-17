@@ -1,0 +1,114 @@
+{
+  "name": "SaaS adoption intent real respondent fixture",
+  "mode": "real_respondent",
+  "metric": "adoption_intent",
+  "scenario": "Three qualified SaaS operators respond after seeing a workflow automation concept",
+  "respondent_type": "qualified SaaS operator",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "problem_urgency",
+        "weight": 25,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Problem is weak or not owned by respondent.",
+          "max_anchor": "Problem is urgent, repeated, and owned by respondent."
+        }
+      },
+      {
+        "name": "workflow_fit",
+        "weight": 25,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Concept does not match current workflow.",
+          "max_anchor": "Concept fits a clear existing workflow."
+        }
+      },
+      {
+        "name": "buyer_trust",
+        "weight": 20,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Low trust or high perceived risk.",
+          "max_anchor": "High trust with clear governance or proof path."
+        }
+      },
+      {
+        "name": "implementation_burden",
+        "weight": 15,
+        "polarity": "negative",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Low implementation burden.",
+          "max_anchor": "High migration, training, or integration burden."
+        }
+      },
+      {
+        "name": "budget_readiness",
+        "weight": 15,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No budget path or buying owner.",
+          "max_anchor": "Clear budget path and buying owner."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "saas-1",
+      "respondent_type": "ops lead",
+      "text": "This fixes a weekly handoff problem and the setup sounds light enough to pilot.",
+      "signals": {
+        "problem_urgency": 5,
+        "workflow_fit": 5,
+        "buyer_trust": 4,
+        "implementation_burden": 1,
+        "budget_readiness": 4
+      }
+    },
+    {
+      "id": "saas-2",
+      "respondent_type": "support manager",
+      "text": "Useful, but I need proof it will not create another queue for my team.",
+      "signals": {
+        "problem_urgency": 4,
+        "workflow_fit": 4,
+        "buyer_trust": 3,
+        "implementation_burden": 3,
+        "budget_readiness": 3
+      }
+    },
+    {
+      "id": "saas-3",
+      "respondent_type": "platform owner",
+      "text": "I would test it if logs, permissions, and rollback are clear.",
+      "signals": {
+        "problem_urgency": 4,
+        "workflow_fit": 4,
+        "buyer_trust": 4,
+        "implementation_burden": 2,
+        "budget_readiness": 3
+      }
+    }
+  ],
+  "expected": {
+    "aggregate_score_1_to_10": 7.9,
+    "response_scores_1_to_10": [9.1, 7, 7.7],
+    "confidence": "high",
+    "score_label_includes": "real respondent"
+  }
+}

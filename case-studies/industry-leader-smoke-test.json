@@ -4,6 +4,7 @@
   "output": "examples/industry-leader-smoke-test.md",
   "required_headings": [
     "## Smoke Test Contract",
+    "## Research Metrics Safety Check",
     "## Industry Problem Intake",
     "### B2B SaaS / PLG Growth Agent",
     "### Ecommerce / Retail Operations Agent",
@@ -21,6 +22,9 @@
     "not real quotes",
     "Top 3 Problems",
     "Sunzi Strategy Consultant",
+    "synthetic_proxy",
+    "after_comments_before_structured_signal_extraction",
+    "Deterministic Scores",
     "Definition Of Done",
     "Synthetic SSR Output",
     "Focus Group Review",

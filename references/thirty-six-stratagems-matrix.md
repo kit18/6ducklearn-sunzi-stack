@@ -1,6 +1,6 @@
 # Thirty-Six Stratagems Matrix
 
-Use this as a lens library. Pick 2 to 4 lenses. Do not dump the whole matrix.
+Use this as a lens library, not an output checklist. The calling skill controls the visible lens count; privately screen the matrix when useful, then output only the selected lenses required by that skill. Do not dump the whole matrix.
 
 ## 勝戰計: Advantage and momentum
 

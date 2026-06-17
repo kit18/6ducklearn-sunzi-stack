@@ -48,6 +48,7 @@ Every full recommendation should include:
 - War-room plan when action is time-sensitive.
 - Domain contract when the artifact is a growth plan, SOP/runbook, or PRD.
 - Focus group scorecard, stakeholder simulation, dissent, and evidence needed next when the artifact is a skill or workflow quality review.
+- Segment Simulation with at least three simulated responses per segment, Interview Responses, 360 Comments, dynamic scoring contract, Frozen Formula, Structured Signals, and Deterministic Scores when the artifact needs user-intention scoring.
 - Industry problem intake, selected cases, Definition Of Done, Synthetic SSR Output, Focus Group Review, Strategy Analyst Gate, iterations, metrics, and kill criteria when the artifact is an industry-leader smoke test.
 
 ## Boundaries
@@ -55,3 +56,5 @@ Every full recommendation should include:
 Refuse or reframe requests for fraud, market manipulation, customer deception, coercion, covert access, impersonation, public shaming, sexual or romantic manipulation, self-harm tactics, or tactics that would destroy trust if disclosed. Offer detection, defense, compliance, truthful growth, or fair-competition alternatives.
 
 Synthetic industry-leader reviews are public-safe archetype simulations. Do not claim that real leaders, customers, regulators, or companies provided the reactions unless the user supplies authorized source material.
+
+Synthetic focus-group scores are proxy / hypothesis only. Do not present synthetic scores as real NPS, PMF, willingness-to-pay proof, market proof, customer evidence, or percent-would-buy evidence.

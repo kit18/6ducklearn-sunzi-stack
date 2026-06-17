@@ -18,6 +18,8 @@ Panel roles used across the evaluation: PM lead, UED researcher, growth leader, 
 6. Run Iteration 2 for adoption, safety, or evidence gaps.
 7. Mark final state as works after revision only when DoD is satisfied.
 
+When user-intention scoring is needed, apply the User Intention Metric Contract: simulate Interview Responses and 360 Comments, draft a dynamic scoring contract, freeze the formula, extract structured signals, and calculate Deterministic Scores. `works after revision` means ready for real validation, not proven demand from synthetic NPS proxy, PMF proxy, willingness-to-pay proxy, or market proof.
+
 ## Case 1: Market Entry Without Head-On War
 
 Source anchor: `The 36 Stratagems for Business`; Beijing Review on stratagem literacy for economics and human relations.

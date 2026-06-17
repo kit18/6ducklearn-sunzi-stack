@@ -1,0 +1,114 @@
+{
+  "name": "Shoe comments synthetic focus group dry run",
+  "mode": "synthetic_proxy",
+  "metric": "buying_intention",
+  "scenario": "Consumer shoe comments from a small synthetic focus group",
+  "respondent_type": "consumer shoe buyer",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "visual_appeal",
+        "weight": 30,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No visual appeal or aesthetic rejection.",
+          "max_anchor": "Strong visual appeal or emotional aesthetic praise."
+        }
+      },
+      {
+        "name": "comfort_signal",
+        "weight": 20,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No comfort signal.",
+          "max_anchor": "Strong explicit comfort praise."
+        }
+      },
+      {
+        "name": "brand_affinity",
+        "weight": 20,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No brand affinity.",
+          "max_anchor": "Strong brand or collection loyalty."
+        }
+      },
+      {
+        "name": "purchase_language",
+        "weight": 15,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No purchase or preference language.",
+          "max_anchor": "Explicit desire to buy or choose this product."
+        }
+      },
+      {
+        "name": "negative_reaction",
+        "weight": 15,
+        "polarity": "negative",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No negative reaction.",
+          "max_anchor": "Strong rejection or negative description."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "shoe-1",
+      "respondent_type": "skeptical consumer",
+      "text": "the shoes is ugle",
+      "signals": {
+        "visual_appeal": 0,
+        "comfort_signal": 0,
+        "brand_affinity": 0,
+        "purchase_language": 0,
+        "negative_reaction": 5
+      }
+    },
+    {
+      "id": "shoe-2",
+      "respondent_type": "aesthetic-driven consumer",
+      "text": "the shoes color is so nice. i love the green one as if i shine",
+      "signals": {
+        "visual_appeal": 5,
+        "comfort_signal": 0,
+        "brand_affinity": 0,
+        "purchase_language": 2,
+        "negative_reaction": 0
+      }
+    },
+    {
+      "id": "shoe-3",
+      "respondent_type": "brand-loyal comfort buyer",
+      "text": "the jordan shoes /collection is always my famous , so comfortable",
+      "signals": {
+        "visual_appeal": 4,
+        "comfort_signal": 5,
+        "brand_affinity": 5,
+        "purchase_language": 3,
+        "negative_reaction": 0
+      }
+    }
+  ],
+  "expected": {
+    "aggregate_score_1_to_10": 5.2,
+    "response_scores_1_to_10": [1, 5.6, 8.9],
+    "confidence": "medium",
+    "score_label_includes": "synthetic proxy"
+  }
+}

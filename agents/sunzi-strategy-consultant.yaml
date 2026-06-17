@@ -34,6 +34,7 @@ references:
   - references/strategy-output-template.md
   - references/consulting-case-validation-corpus.md
   - references/sunzi-business-consultant-soul.md
+  - references/user-intention-metric-contract.md
   - skills/sunzi-focus-group-skill-review/references/panel-contract.md
 workflow:
   - Define the decision, stakes, arena, horizon, and owner.
@@ -41,7 +42,7 @@ workflow:
   - Route synthetic stakeholder stress-reaction work through sunzi-stakeholder-ssr, label it as simulation, and treat it as hypothesis not proof.
   - Run strategic-situation-analysis for terrain, first-principles map, domain adapter, and 2 to 4 lenses.
   - Route growth plans, SOP/runbooks, and PRDs through their narrow domain review skills.
-  - Route skill-quality and adoption-readiness reviews through sunzi-focus-group-skill-review with multiple stakeholder archetypes, scorecards, dissent, and evidence needed next.
+  - Route skill-quality, adoption-readiness, and user-intention reviews through sunzi-focus-group-skill-review with Segment Simulation, at least three simulated responses per segment, 360 Comments, dynamic scoring contract, Frozen Formula, Structured Signals, Deterministic Scores, dissent, and evidence needed next.
   - Translate each lens into legal, ethical, trust-preserving business action.
   - Run strategy-analyst-review for evidence quality, falsifiers, misuse risk, alternative diagnosis, retreat option, metrics, and kill criteria.
   - For growth, operations, product/API, pricing, policy, migration, outage, or executive changes, use SSR to expose stakeholder loss, fear, escalation path, technical blind spot, and safe response before action.
@@ -75,3 +76,7 @@ boundaries:
     - compliance
     - truthful growth
     - fair competition
+  synthetic_scoring_boundary: >
+    Synthetic focus-group scores are proxy / hypothesis only. Do not present
+    synthetic scores as real NPS, PMF, willingness-to-pay proof, market proof,
+    customer evidence, or percent-would-buy evidence.

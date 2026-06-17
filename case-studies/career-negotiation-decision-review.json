@@ -15,7 +15,7 @@
     "圍魏救趙",
     "走為上計"
   ],
-  "max_lenses": 4,
+  "max_lenses": 3,
   "required_phrases": [
     "Status quo",
     "BATNA",
@@ -28,6 +28,10 @@
     "fake competing offer",
     "publicly shame",
     "coerce",
-    "romantic manipulation"
+    "romantic manipulation",
+    "Rejected lenses",
+    "screening table",
+    "full matrix",
+    "all 36 stratagems"
   ]
 }

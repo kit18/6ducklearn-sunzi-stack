@@ -1,0 +1,36 @@
+{
+  "name": "Invalid synthetic real NPS claim",
+  "mode": "synthetic_proxy",
+  "metric": "nps",
+  "scenario": "Synthetic comments incorrectly treated as real NPS",
+  "respondent_type": "synthetic customer",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "recommend_likelihood",
+        "weight": 100,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 10,
+          "min_anchor": "Would not recommend.",
+          "max_anchor": "Would strongly recommend."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "bad-nps-1",
+      "respondent_type": "synthetic user",
+      "text": "I would recommend it.",
+      "signals": {
+        "recommend_likelihood": 9
+      }
+    }
+  ]
+}

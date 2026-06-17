@@ -17,10 +17,11 @@ Core rule: do not start with a stratagem. Start with the terrain, the status quo
 4. Identify the user's agency: what they can do, request, verify, refuse, delay, delegate, or exit.
 5. State the ethical line: no coercion, deception, harassment, hidden terms, impersonation, or trust-destroying tactic.
 6. Run DoD calibration against the closest real-life case, especially `Personal Career Move Or Promotion Ask`, `Negotiation With Future Relationship Value`, or `Talent Retention And Motivation`.
-7. Select 1 to 3 canonical Thirty-Six Stratagems lenses only if they clarify timing, leverage, defense, preparation, or retreat.
-8. Generate options: direct move, indirect move, alliance/help move, wait/prepare move, and retreat/exit move.
-9. Run `strategy-analyst-review`: evidence quality, alternate diagnosis, misuse risk, second-order effect, stop rule, and kill criterion.
-10. Recommend one small next move with a trigger to continue, stop, or change course.
+7. Privately screen the full canonical Thirty-Six Stratagems matrix as a candidate library against the decision mode, terrain, user agency, timing, trust risk, and retreat / stop-rule need. Do not show the screening, rejected lenses, scores, or full matrix. Output only 1 to 3 lenses whose mechanism materially improves the decision options; if no lens improves the analysis, say `None selected`.
+8. Translate each selected lens into an ethical decision move with a falsifier and misuse risk. Do not reward clever name matching.
+9. Generate options: direct move, indirect move, alliance/help move, wait/prepare move, and retreat/exit move.
+10. Run `strategy-analyst-review`: evidence quality, alternate diagnosis, misuse risk, second-order effect, stop rule, and kill criterion.
+11. Recommend one small next move with a trigger to continue, stop, or change course.
 
 ## References
 
@@ -87,5 +88,6 @@ Recommendation
 - Do not coach romantic or sexual manipulation, coercion, harassment, public shaming, impersonation, fraud, false evidence, market manipulation, or covert access.
 - Do not frame another person as an enemy when the real goal is cooperation, repair, learning, or boundary-setting.
 - Do not approve a move that would destroy trust if disclosed.
+- Never output a checklist of all 36 stratagems, rejected lenses, or an internal screening table. Lenses are optional diagnostic analogies, secondary to terrain, user agency, ethical line, options, evidence, and retreat trigger.
 - If the user is under pressure or possible manipulation, prioritize detection, documentation, support, boundaries, and safe exit over counter-manipulation.
 - Trading, investing, legal, medical, and employment-law-sensitive outputs are analytical only and need appropriate professional judgment.

@@ -25,8 +25,9 @@ Core rule: a PRD is not ready because it sounds reasonable. It is ready when the
 6. For each P0 requirement, require trigger, contract, field or state rules, fallback behavior, limitations, and acceptance criteria.
 7. Add QA coverage, tracking metrics, release phases, open questions, and definition of done.
 8. Run DoD calibration against the closest real-life case, especially `API Or Platform Migration Rollout`, `Pricing And Packaging Change`, or `Executive AI Transformation Push`.
-9. Select 1 to 2 canonical Thirty-Six Stratagems lenses only if they clarify scope control, dependency leverage, sequencing, or retreat.
-10. Run `strategy-analyst-review` before marking ready: demand evidence, scope creep, implementation gaps, customer trust, metrics, and kill criterion.
+9. Privately screen the full canonical Thirty-Six Stratagems matrix as a candidate library against demand reality, scope control, dependency leverage, sequencing, trust risk, and retreat / stop-rule need. Do not show the screening, rejected lenses, scores, or full matrix. Output only 1 to 2 lenses whose mechanism materially improves the PRD readiness review; if no lens improves the analysis, say `None selected`.
+10. Translate each selected lens into an ethical product-review move with a falsifier and misuse risk. Do not reward clever name matching.
+11. Run `strategy-analyst-review` before marking ready: demand evidence, scope creep, implementation gaps, customer trust, metrics, and kill criterion.
 
 ## References
 
@@ -117,3 +118,4 @@ Selected Lenses
 - Do not bury implementation uncertainty; mark engineering-confirmation or TRD gaps explicitly.
 - Do not let future work leak into P0 without a release-phase decision.
 - Do not approve requirements that depend on hidden terms, deceptive UX, unsupported claims, or unverifiable success metrics.
+- Never output a checklist of all 36 stratagems, rejected lenses, or an internal screening table. Lenses are optional diagnostic analogies, secondary to demand reality, scope discipline, requirements contract, QA coverage, evidence, and definition of done.

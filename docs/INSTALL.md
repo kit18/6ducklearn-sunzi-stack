@@ -24,7 +24,7 @@ Then ask for one of:
 - `sunzi-stakeholder-ssr` for synthetic stakeholder stress-reaction simulation across growth, operations, product/API, pricing, policy, migration, outage, or executive strategy.
 - `strategic-situation-analysis` for first-principles diagnosis and Thirty-Six Stratagems lens selection.
 - `strategy-analyst-review` for a review gate on an existing memo or plan.
-- `sunzi-focus-group-skill-review` for PM/UED focus-group review, adoption readiness, or synthetic industry-leader archetype evaluation.
+- `sunzi-focus-group-skill-review` for PM/UED focus-group review, adoption readiness, user-intention scoring, or synthetic industry-leader archetype evaluation.
 
 ## First-Run Examples
 
@@ -34,7 +34,7 @@ Use these examples to confirm the stack is installed and routed correctly.
 |---|---|---|
 | Strategy memo | "Use `sunzi-strategy-consultant` on this decision..." | `examples/ecommerce-growth-decision-memo.md` |
 | Stakeholder simulation | "Use `sunzi-stakeholder-ssr` to simulate buyer/support/engineer reactions..." | `examples/api-migration-ssr.md` |
-| Skill or workflow review | "Use `sunzi-focus-group-skill-review` to review this skill with PM/UED and stakeholder archetypes..." | `examples/focus-group-skill-review.md` |
+| Skill, workflow, or user-intention review | "Use `sunzi-focus-group-skill-review` to simulate comments, generate 360 comments, freeze a dynamic scoring contract, and calculate deterministic scores..." | `examples/focus-group-skill-review.md` |
 | Consultation-company smoke test | "Ask synthetic industry-leader archetypes for Top 3 Problems, select cases, then run SSR and strategy review..." | `examples/industry-leader-smoke-test.md` |
 
 ## Repository Pointer
@@ -92,3 +92,22 @@ gate, evidence needed next, metrics, and kill criteria.
 ```
 
 The expected reference shape is [Industry leader smoke test](../examples/industry-leader-smoke-test.md). Keep the synthetic label visible: this is hypothesis generation and rollout-risk discovery, not real customer evidence.
+
+## User-Intention Scoring Prompt
+
+```text
+Use sunzi-focus-group-skill-review to evaluate buying intention for this product.
+First simulate segments with at least three responses per segment, then generate
+360 comments. Then create a dynamic deterministic scoring contract, freeze the
+formula, extract structured signals, and calculate deterministic 1-10
+synthetic_proxy scores.
+```
+
+For local validation:
+
+```bash
+npm run test:scorer
+npm run score:intention -- fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json
+```
+
+Synthetic scores are proxy / hypothesis only. Real NPS, PMF, willingness-to-pay, market proof, and percent-would-buy claims require real qualified respondents.

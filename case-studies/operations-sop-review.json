@@ -9,6 +9,7 @@
     "## Bottleneck Map",
     "## Pressure Scenarios",
     "## DoD Calibration",
+    "## Selected Lenses",
     "## Metrics And Kill Criteria"
   ],
   "required_lenses": [
@@ -16,7 +17,7 @@
     "以逸待勞",
     "釜底抽薪"
   ],
-  "max_lenses": 4,
+  "max_lenses": 3,
   "required_phrases": [
     "Physical bottleneck",
     "Information bottleneck",
@@ -30,6 +31,10 @@
   "blocked_phrases": [
     "hide billing risk",
     "no owner needed",
-    "dashboard is enough"
+    "dashboard is enough",
+    "Rejected lenses",
+    "screening table",
+    "full matrix",
+    "all 36 stratagems"
   ]
 }

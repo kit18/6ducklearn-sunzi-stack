@@ -10,6 +10,15 @@ This artifact is a synthetic industry-leader agent smoke test, not real quotes. 
 - Pass condition: each selected case includes a strategy diagnosis, Definition Of Done, Synthetic SSR Output, Focus Group Review, Strategy Analyst Gate, Evidence Needed Next, metrics, kill criteria, and final state `works after revision`.
 - Blocked moves: fake proof, real-person impersonation, hidden terms, coercive growth, regulatory shortcut, private-data use, and synthetic output presented as customer evidence.
 
+## Research Metrics Safety Check
+
+- Use `synthetic_proxy` for industry-leader archetype comments, focus-group reactions, and 360 comments.
+- Generate Interview Responses and 360 Comments before drafting any dynamic scoring contract.
+- Freeze the formula at `after_comments_before_structured_signal_extraction` before structured signal extraction.
+- Calculate Deterministic Scores with the Node.js scorer when a case needs buying intention, NPS proxy, PMF proxy, willingness-to-pay proxy, adoption intent, switching cost, task-fit, or custom criteria.
+- Do not present synthetic scores as real NPS, real PMF, real willingness-to-pay proof, market proof, customer evidence, or percent-would-buy evidence.
+- `works after revision` means ready for real validation, not validated by synthetic intent.
+
 ## How To Use This Example
 
 Use this file as a known-good pattern for testing the stack, not as market evidence.

@@ -33,6 +33,7 @@ const expectedReferences = [
   'references/consulting-case-validation-corpus.md',
   'references/sunzi-business-consultant-soul.md',
   'references/strategy-focus-group-evaluation.md',
+  'references/user-intention-metric-contract.md',
   'skills/sunzi-focus-group-skill-review/references/panel-contract.md',
   'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md',
 ];
@@ -99,6 +100,17 @@ const expectedCaseStudies = [
   'case-studies/product-value-prd-review.json',
   'case-studies/strategy-review-marketplace.json',
   'case-studies/unsafe-manipulation-reframe.json',
+];
+
+const expectedScoringArtifacts = [
+  'scripts/score-user-intention.mjs',
+  'scripts/test-user-intention-scorer.mjs',
+  'fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json',
+  'fixtures/user-intention-scoring/valid/saas-adoption-real.json',
+  'fixtures/user-intention-scoring/valid/missing-evidence-synthetic.json',
+  'fixtures/user-intention-scoring/invalid/synthetic-real-nps-claim.json',
+  'fixtures/user-intention-scoring/invalid/bad-weight-sum.json',
+  'fixtures/user-intention-scoring/invalid/model-supplied-score.json',
 ];
 
 const stratagemNames = [
@@ -244,6 +256,7 @@ function validateReferences() {
     ...expectedDocs,
     ...expectedExamples,
     ...expectedCaseStudies,
+    ...expectedScoringArtifacts,
     'stack.json',
   ]) {
     if (!fileExists(relativePath)) {
@@ -373,15 +386,15 @@ function validateExamples() {
     },
     {
       path: 'examples/focus-group-skill-review.md',
-      required: ['synthetic panel simulation', 'not real quotes', 'PM lead', 'UED researcher', 'scorecard', 'dissent', 'Verdict: revise'],
+      required: ['synthetic panel simulation', 'not real quotes', 'PM lead', 'UED researcher', 'scorecard', 'dissent', 'Interview Responses', 'Segment Simulation', '360 Comments', 'Dynamic Scoring Contract', 'Frozen Formula', 'Structured Signals', 'Deterministic Scores', 'Verdict: revise'],
     },
     {
       path: 'examples/focus-group-strategy-evaluation.md',
-      required: ['Source-Grounded Strategy Set', 'Focus Group Method', 'Definition Of Done', 'Evaluation Result', 'Iteration 1', 'Iteration 2', 'works after revision'],
+      required: ['Source-Grounded Strategy Set', 'Focus Group Method', 'Definition Of Done', 'Evaluation Result', 'Iteration 1', 'Iteration 2', 'works after revision', 'ready for real validation'],
     },
     {
       path: 'examples/industry-leader-smoke-test.md',
-      required: ['synthetic industry-leader agent smoke test', 'Top 3 Problems', 'Sunzi Strategy Consultant', 'Synthetic SSR Output', 'Focus Group Review', 'Strategy Analyst Gate', 'Evidence Needed Next', 'works after revision'],
+      required: ['synthetic industry-leader agent smoke test', 'Top 3 Problems', 'Sunzi Strategy Consultant', 'Research Metrics Safety Check', 'Synthetic SSR Output', 'Focus Group Review', 'Strategy Analyst Gate', 'Evidence Needed Next', 'works after revision'],
     },
   ];
 
@@ -526,19 +539,51 @@ function validateDodWorkflowIntegration() {
     },
     {
       path: 'skills/sunzi-growth-review/SKILL.md',
-      required: ['DoD calibration', 'Community Growth Without Spam', 'Market Entry Without Head-On War'],
+      required: [
+        'DoD calibration',
+        'Community Growth Without Spam',
+        'Market Entry Without Head-On War',
+        'Privately screen',
+        'Do not show the screening',
+        '1 to 3',
+        'Never output a checklist of all 36',
+      ],
     },
     {
       path: 'skills/sunzi-operations-sop-review/SKILL.md',
-      required: ['DoD calibration', 'Manager Delegation Under Pressure', 'Incident Or Billing Escalation SOP'],
+      required: [
+        'DoD calibration',
+        'Manager Delegation Under Pressure',
+        'Incident Or Billing Escalation SOP',
+        'Privately screen',
+        'Do not show the screening',
+        '1 to 3',
+        'Never output a checklist of all 36',
+      ],
     },
     {
       path: 'skills/sunzi-prd-review/SKILL.md',
-      required: ['DoD calibration', 'API Or Platform Migration Rollout', 'Pricing And Packaging Change'],
+      required: [
+        'DoD calibration',
+        'API Or Platform Migration Rollout',
+        'Pricing And Packaging Change',
+        'Privately screen',
+        'Do not show the screening',
+        '1 to 2',
+        'Never output a checklist of all 36',
+      ],
     },
     {
       path: 'skills/sunzi-decision-review/SKILL.md',
-      required: ['DoD calibration', 'Personal Career Move Or Promotion Ask', 'Negotiation With Future Relationship Value'],
+      required: [
+        'DoD calibration',
+        'Personal Career Move Or Promotion Ask',
+        'Negotiation With Future Relationship Value',
+        'Privately screen',
+        'Do not show the screening',
+        '1 to 3',
+        'Never output a checklist of all 36',
+      ],
     },
     {
       path: 'skills/strategy-analyst-review/SKILL.md',
@@ -564,15 +609,27 @@ function validateFocusGroupSkillReview() {
   const skill = read('skills/sunzi-focus-group-skill-review/SKILL.md');
   const panel = read('skills/sunzi-focus-group-skill-review/references/panel-contract.md');
   const example = read('examples/focus-group-skill-review.md');
+  const metricContract = read('references/user-intention-metric-contract.md');
+  const scorer = read('scripts/score-user-intention.mjs');
   const stack = readJson('stack.json');
 
   for (const required of [
     'never rely on one reviewer',
     'Panel Design',
+    'Interview Responses',
+    'Segment Simulation',
+    '360 Comments',
+    'Dynamic Scoring Contract',
+    'Frozen Formula',
+    'Structured Signals',
+    'Deterministic Scores',
     'Stakeholder Simulation',
     'Cross-Panel Synthesis',
     'Evidence Needed Next',
     'not real quotes',
+    'do not let the LLM invent final scores',
+    'at least three simulated responses',
+    'after_comments_before_structured_signal_extraction',
   ]) {
     if (!skill.includes(required)) {
       fail(`sunzi-focus-group-skill-review must include ${required}`);
@@ -599,10 +656,47 @@ function validateFocusGroupSkillReview() {
     'not real quotes',
     'scorecard',
     'dissent',
+    'synthetic_proxy',
+    'Node.js deterministic scorer',
+    'Synthetic proxy only',
+    'Loyal live shopper',
+    'Basket-builder household buyer',
+    'at least three simulated responses',
     'revise',
   ]) {
     if (!example.includes(required)) {
       fail(`focus group review example must include ${required}`);
+    }
+  }
+
+  for (const required of [
+    'buying intention',
+    'NPS proxy',
+    'PMF proxy',
+    'willingness-to-pay proxy',
+    'adoption intent',
+    'switching cost',
+    'task-fit',
+    'dynamic deterministic scoring contract',
+    'Segment Simulation Report',
+    'at least three simulated responses per segment',
+    'Synthetic proxy only',
+    'percent-would-buy evidence',
+  ]) {
+    if (!metricContract.includes(required)) {
+      fail(`user intention metric contract must include ${required}`);
+    }
+  }
+
+  for (const required of [
+    'scoreFixture',
+    'allowedSyntheticMetrics',
+    'allow_model_supplied_final_scores',
+    'weighted_normalized_1_to_10',
+    'cannot use metric',
+  ]) {
+    if (!scorer.includes(required)) {
+      fail(`score-user-intention.mjs must include ${required}`);
     }
   }
 
@@ -624,6 +718,8 @@ function validateStrategyFocusGroupEvaluation() {
     'Safety Boundary',
     'synthetic panel simulation',
     'not real quotes',
+    'User Intention Metric Contract',
+    'ready for real validation',
   ]) {
     if (!reference.includes(required)) {
       fail(`strategy focus group reference must include ${required}`);
@@ -657,6 +753,7 @@ function validateStrategyFocusGroupEvaluation() {
     'PM lead',
     'UED researcher',
     'trust/safety reviewer',
+    'ready for real validation',
   ]) {
     if (!example.includes(required)) {
       fail(`strategy focus group example must include ${required}`);
@@ -701,6 +798,7 @@ function validateIndustryLeaderSmokeTest() {
     'Top 3 Problems',
     'Sunzi Strategy Consultant',
     'Synthetic SSR Output',
+    'Research Metrics Safety Check',
     'Focus Group Review',
     'Strategy Analyst Gate',
     'works after revision',

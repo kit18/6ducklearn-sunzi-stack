@@ -5,24 +5,33 @@ description: Use when evaluating whether a skill, skill pack, agent workflow, pr
 
 # Sunzi Focus Group Skill Review
 
-Use this skill to evaluate skill quality through a PM/UED-led focus group. The panel should combine product judgment, user research, operational realism, technical feasibility, trust/safety, and adoption pressure.
+Use this skill to evaluate skill quality and user intention through a PM/UED-led focus group. The panel should combine product judgment, user research, operational realism, technical feasibility, trust/safety, adoption pressure, and deterministic scoring when the user asks for buying intention, NPS proxy, PMF proxy, willingness-to-pay proxy, adoption intent, switching cost, task-fit, or custom criteria.
 
 Core rule: never rely on one reviewer. A single expert can miss adoption friction, unsafe incentives, support burden, or user confusion that a cross-functional panel will expose.
+
+Scoring rule: do not let the LLM invent final scores. The LLM may simulate comments, produce 360 comments, draft a dynamic scoring contract, and extract structured signals. Final 1-10 scores must come from the deterministic Node.js scorer or an equivalent deterministic implementation.
 
 ## Workflow
 
 1. Define the artifact under review: skill name, target users, trigger conditions, expected output, adoption context, and known risks.
 2. Design the panel using [Panel Contract](references/panel-contract.md). Include at least six roles; default to eight when stakes are product, growth, operations, or customer-facing.
 3. Label the review as synthetic panel simulation, not real quotes, unless real interview notes are supplied by the user.
-4. Give each panelist an independent scorecard before synthesis: task fit, usability, evidence discipline, safety, adoption friction, testability, and one required change.
-5. Run stakeholder simulation with at least four reactions from people affected by the skill, such as end user, operator, manager, engineer, customer-success lead, or buyer.
-6. Surface dissent before consensus. Name the strongest disagreement, what evidence would resolve it, and whether the skill should go, revise, or stop.
-7. Connect the review to `strategy-analyst-review` when the skill may influence product, growth, operations, pricing, policy, migration, or executive decisions.
-8. End with recommended changes, priority, owner, evidence needed next, and retest scenarios.
+4. Generate Segment Simulation and diverse Interview Responses first: target users, buyers, skeptics, fans, operators, support, and edge-case users. Each focus-group segment should include at least three simulated responses before scoring. These can be synthetic proxy comments or real respondent notes supplied by the user.
+5. Generate 360 Comments from PM, UED/research, growth, sales/buyer, support, trust/safety, engineering/ops, and any domain-specific reviewer.
+6. Give each panelist an independent scorecard before synthesis: task fit, usability, evidence discipline, safety, adoption friction, testability, and one required change.
+7. If scoring is needed, use [User Intention Metric Contract](../../references/user-intention-metric-contract.md) to draft a dynamic deterministic scoring contract from the scenario, metric goal, respondent types, Interview Responses, and 360 Comments.
+8. Freeze the formula at `after_comments_before_structured_signal_extraction` before extracting signals or calculating scores.
+9. Extract Structured Signals from each response using only the frozen formula dimensions.
+10. Run deterministic scoring for Deterministic Scores. Use `synthetic_proxy` for simulated comments and `real_respondent` only for real qualified responses. Synthetic scores are proxy / hypothesis only.
+11. Run stakeholder simulation with at least four reactions from people affected by the skill, such as end user, operator, manager, engineer, customer-success lead, or buyer.
+12. Surface dissent before consensus. Name the strongest disagreement, what evidence would resolve it, and whether the skill should go, revise, or stop.
+13. Connect the review to `strategy-analyst-review` when the skill may influence product, growth, operations, pricing, policy, migration, or executive decisions.
+14. End with recommended changes, priority, owner, evidence needed next, and retest scenarios.
 
 ## References
 
 - [Panel Contract](references/panel-contract.md)
+- [User Intention Metric Contract](../../references/user-intention-metric-contract.md)
 - [Domain review contracts](../../references/domain-review-contracts.md)
 - [Stakeholder Stress-Reaction Simulation](../../references/stakeholder-stress-reaction.md)
 
@@ -44,9 +53,48 @@ Core rule: never rely on one reviewer. A single expert can miss adoption frictio
 - Adoption context:
 - Known risk:
 
+## Interview Responses
+| Respondent | Mode | Comment | Signal candidate | Evidence boundary |
+|---|---|---|---|---|
+
+## Segment Simulation
+| Segment | Simulated responses (minimum 3) | Score | Main friction | Best fix |
+|---|---|---:|---|---|
+
+## 360 Comments
+| Reviewer | Lens | Comment | Risk / opportunity | Required change |
+|---|---|---|---|---|
+
 ## Individual Reviews
 | Panelist | Score | What works | Main concern | Required change |
 |---|---:|---|---|---|
+
+## Dynamic Scoring Contract
+- Metric:
+- Mode: synthetic_proxy / real_respondent
+- Respondent type:
+- Formula type: weighted_normalized_1_to_10
+- Generated by skill: true
+- Formula source: scenario + Interview Responses + 360 Comments
+
+## Frozen Formula
+```json
+{
+  "formula_type": "weighted_normalized_1_to_10",
+  "generated_by_skill": true,
+  "frozen_stage": "after_comments_before_structured_signal_extraction",
+  "allow_model_supplied_final_scores": false,
+  "dimensions": []
+}
+```
+
+## Structured Signals
+| Response | Dimension signals | Missing evidence | Notes |
+|---|---|---|---|
+
+## Deterministic Scores
+| Response | Score 1-10 | Confidence | Warning |
+|---|---:|---|---|
 
 ## Stakeholder Simulation
 | Stakeholder | Synthetic reaction | Risk exposed | Evidence needed |
@@ -79,6 +127,10 @@ Confidence:
 
 - Do not impersonate real named industry leaders. Use public-safe archetypes unless the user provides authorized source material.
 - Do not present synthetic panel output as real interview evidence or real quotes.
+- Do not present synthetic scores as real NPS, PMF, willingness-to-pay proof, market proof, customer evidence, or percent-would-buy evidence.
+- Do not score a focus-group segment from one synthetic quote. Generate at least three simulated responses per segment to diversify buying trigger, objection, and operational or trust concern.
+- Do not let the LLM provide final 1-10 scores directly. Draft a dynamic scoring contract, freeze the formula, extract structured signals, then calculate deterministically.
+- Do not output executable scoring code as the formula. Use declarative JSON only.
 - Do not give a single-reviewer verdict for multi-stakeholder skill quality decisions.
 - Do not reward impressive language without trigger clarity, user fit, output contract, evidence discipline, safety, and testability.
 - Do not hide dissent. If the panel disagrees, preserve the disagreement and name the evidence needed next.

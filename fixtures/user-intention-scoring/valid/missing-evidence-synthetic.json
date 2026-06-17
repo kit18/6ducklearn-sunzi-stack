@@ -1,0 +1,77 @@
+{
+  "name": "Missing evidence synthetic PMF proxy fixture",
+  "mode": "synthetic_proxy",
+  "metric": "pmf_proxy",
+  "scenario": "Synthetic early product-market-fit comments with incomplete pricing and switching evidence",
+  "respondent_type": "target workflow user",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "pain_frequency",
+        "weight": 30,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Pain is rare or unclear.",
+          "max_anchor": "Pain is frequent and specific."
+        }
+      },
+      {
+        "name": "current_workaround_cost",
+        "weight": 25,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No current workaround cost.",
+          "max_anchor": "Current workaround is costly or painful."
+        }
+      },
+      {
+        "name": "solution_pull",
+        "weight": 25,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No pull for the solution.",
+          "max_anchor": "Respondent strongly asks for this solution."
+        }
+      },
+      {
+        "name": "switching_friction",
+        "weight": 20,
+        "polarity": "negative",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Low switching friction.",
+          "max_anchor": "High switching friction."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "pmf-1",
+      "respondent_type": "workflow user",
+      "text": "I hit this problem every week and the current spreadsheet is annoying, but I do not know what it takes to switch.",
+      "signals": {
+        "pain_frequency": 5,
+        "current_workaround_cost": 4,
+        "solution_pull": 3
+      }
+    }
+  ],
+  "expected": {
+    "aggregate_score_1_to_10": 6.9,
+    "response_scores_1_to_10": [6.9],
+    "confidence": "low",
+    "score_label_includes": "synthetic proxy"
+  }
+}

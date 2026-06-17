@@ -1,0 +1,48 @@
+{
+  "name": "Invalid dynamic scoring contract weight sum",
+  "mode": "synthetic_proxy",
+  "metric": "task_fit",
+  "scenario": "Weights do not sum to 100",
+  "respondent_type": "synthetic operator",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "task_clarity",
+        "weight": 50,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "Task is unclear.",
+          "max_anchor": "Task is clear."
+        }
+      },
+      {
+        "name": "workflow_fit",
+        "weight": 30,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No workflow fit.",
+          "max_anchor": "Strong workflow fit."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "bad-weight-1",
+      "respondent_type": "synthetic operator",
+      "text": "The task is clear.",
+      "signals": {
+        "task_clarity": 5,
+        "workflow_fit": 4
+      }
+    }
+  ]
+}

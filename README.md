@@ -28,7 +28,7 @@ If you are unsure, start with `sunzi-strategy-consultant`. Use the other skills 
 | Growth loop, GTM, ecommerce, or lifecycle experiment | `sunzi-growth-review` | [Growth loop review](./examples/growth-loop-review.md) |
 | SOP, operations, incident, support, QA, or supply-chain workflow | `sunzi-operations-sop-review` | [Operations SOP review](./examples/operations-sop-review.md) |
 | Product-value, PRD, API, SDK, or requirement review | `sunzi-prd-review` | [Product value PRD review](./examples/product-value-prd-review.md) |
-| Skill quality, adoption readiness, PM/UED focus group, or industry-leader archetype review | `sunzi-focus-group-skill-review` | [Industry leader smoke test](./examples/industry-leader-smoke-test.md) |
+| Skill quality, adoption readiness, PM/UED focus group, user-intention scoring, or industry-leader archetype review | `sunzi-focus-group-skill-review` | [Industry leader smoke test](./examples/industry-leader-smoke-test.md) |
 
 ## Included Skills
 
@@ -40,7 +40,7 @@ If you are unsure, start with `sunzi-strategy-consultant`. Use the other skills 
 - `sunzi-growth-review`: a growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling.
 - `sunzi-operations-sop-review`: an operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability.
 - `sunzi-prd-review`: a product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions.
-- `sunzi-focus-group-skill-review`: a PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, stakeholder simulation, dissent, and improvement recommendations.
+- `sunzi-focus-group-skill-review`: a PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, 360 comments, dynamic deterministic scoring, dissent, and improvement recommendations.
 
 ## Install Options
 
@@ -85,6 +85,7 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Sunzi business consultant soul notes](./references/sunzi-business-consultant-soul.md)
 - [Focus group panel contract](./skills/sunzi-focus-group-skill-review/references/panel-contract.md)
 - [Strategy focus group evaluation](./references/strategy-focus-group-evaluation.md)
+- [User intention metric contract](./references/user-intention-metric-contract.md)
 
 ## Examples
 
@@ -148,6 +149,26 @@ Run them directly:
 ```bash
 npm run test:case-studies
 ```
+
+## User-Intention Scoring
+
+The focus-group workflow can produce synthetic_proxy or real_respondent 1-10 scores for buying intention, NPS proxy, PMF proxy, willingness-to-pay proxy, adoption intent, switching cost, task-fit, or custom criteria.
+
+The LLM must not invent final scores. It generates Segment Simulation with at least three simulated responses per segment, Interview Responses, 360 Comments, a declarative dynamic scoring contract, and structured signals. The Node.js scorer calculates the final score from the frozen formula.
+
+Run the scorer tests:
+
+```bash
+npm run test:scorer
+```
+
+Dry-run the shoe-comment fixture:
+
+```bash
+npm run score:intention -- fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json
+```
+
+Synthetic scores are proxy / hypothesis only, not real NPS, PMF, WTP, market proof, or percent-would-buy evidence.
 
 ## Machine-Readable Manifest
 

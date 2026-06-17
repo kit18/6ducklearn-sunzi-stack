@@ -9,14 +9,14 @@
     "## Business Use Cases",
     "## Requirements Contract",
     "## DoD Calibration",
+    "## Selected Lenses",
     "## Definition Of Done"
   ],
   "required_lenses": [
-    "釜底抽薪",
     "擒賊擒王",
     "走為上計"
   ],
-  "max_lenses": 4,
+  "max_lenses": 2,
   "required_phrases": [
     "Demand reality",
     "Status quo",
@@ -32,6 +32,10 @@
     "no QA coverage needed",
     "hidden terms",
     "deceptive UX",
-    "generic automation builder is ready"
+    "generic automation builder is ready",
+    "Rejected lenses",
+    "screening table",
+    "full matrix",
+    "all 36 stratagems"
   ]
 }

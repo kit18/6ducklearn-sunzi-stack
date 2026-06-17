@@ -49,6 +49,9 @@ For each strategy:
 6. Run Iteration 1 to address the highest-risk gap.
 7. Run Iteration 2 to address adoption, safety, or evidence gaps.
 8. Mark final state as `works after revision` only when DoD is satisfied.
+9. If user-intention scoring is needed, use [User Intention Metric Contract](user-intention-metric-contract.md): simulate Interview Responses and 360 Comments, draft a dynamic scoring contract, freeze the formula, extract structured signals, and calculate Deterministic Scores. Synthetic scores are proxy / hypothesis only.
+
+`works after revision` means the strategy is ready for real validation. It does not mean synthetic intent, synthetic NPS proxy, synthetic PMF proxy, or synthetic willingness-to-pay proxy has proven market demand.
 
 ## DoD Template
 

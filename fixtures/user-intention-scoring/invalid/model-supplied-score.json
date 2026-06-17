@@ -1,0 +1,37 @@
+{
+  "name": "Invalid model supplied score",
+  "mode": "synthetic_proxy",
+  "metric": "buying_intention",
+  "scenario": "LLM tries to include a final score before deterministic calculation",
+  "respondent_type": "synthetic buyer",
+  "scoring_contract": {
+    "formula_type": "weighted_normalized_1_to_10",
+    "generated_by_skill": true,
+    "frozen_stage": "after_comments_before_structured_signal_extraction",
+    "allow_model_supplied_final_scores": false,
+    "dimensions": [
+      {
+        "name": "positive_affect",
+        "weight": 100,
+        "polarity": "positive",
+        "scale": {
+          "min": 0,
+          "max": 5,
+          "min_anchor": "No positive affect.",
+          "max_anchor": "Strong positive affect."
+        }
+      }
+    ]
+  },
+  "responses": [
+    {
+      "id": "bad-score-1",
+      "respondent_type": "synthetic buyer",
+      "text": "I like it.",
+      "score": 8,
+      "signals": {
+        "positive_affect": 4
+      }
+    }
+  ]
+}

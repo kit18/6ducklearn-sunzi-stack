@@ -16,8 +16,8 @@ Core rule: growth is terrain plus feedback. Find the constraint, choose a revers
 3. Separate mechanism from tactic: explain why the loop should work before naming posts, ads, discounts, partnerships, or automation.
 4. Run DoD calibration against the closest real-life case, especially `Market Entry Without Head-On War`, `Community Growth Without Spam`, or `Pricing And Packaging Change`.
 5. Build the evidence ledger: baseline, customer proof, channel signal, funnel data, economics, and missing data.
-6. Select 1 to 3 canonical Thirty-Six Stratagems lenses only if they clarify constraint, timing, positioning, or retreat.
-7. Translate each lens into an ethical business move.
+6. Privately screen the full canonical Thirty-Six Stratagems matrix as a candidate library against the growth constraint, timing, positioning, trust risk, and retreat / stop-rule need. Do not show the screening, rejected lenses, scores, or full matrix. Output only 1 to 3 lenses whose mechanism materially improves the experiment design; if no lens improves the analysis, say `None selected`.
+7. Translate each selected lens into an ethical business move with a falsifier and misuse risk. Do not reward clever name matching.
 8. Run `strategy-analyst-review` before recommending scale: falsifier, trust risk, channel abuse risk, margin risk, leading metric, guardrail metric, and kill criterion.
 9. Output a growth review memo with one reversible experiment and one explicit stop rule.
 
@@ -91,4 +91,5 @@ Required Changes
 - Do not recommend fake scarcity, fake reviews, hidden fees, deceptive discounts, spam, astroturfing, dark patterns, unsupported claims, or manipulative urgency.
 - Do not scale a channel without a baseline and a stop rule.
 - Do not treat traffic as success unless activation, retention, revenue, or learning improves.
+- Never output a checklist of all 36 stratagems, rejected lenses, or an internal screening table. Lenses are optional diagnostic analogies, secondary to terrain, mechanism, evidence, trust guardrail, and kill criterion.
 - If the user asks for manipulation, reframe toward truthful growth, detection, defense, compliance, or customer education.

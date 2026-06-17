@@ -46,7 +46,7 @@
     {
       "name": "sunzi-focus-group-skill-review",
       "path": "skills/sunzi-focus-group-skill-review/SKILL.md",
-      "purpose": "PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, stakeholder simulation, dissent, and improvement recommendations."
+      "purpose": "PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, dynamic deterministic scoring, dissent, and improvement recommendations."
     },
     {
       "name": "sunzi-strategy-consultant",
@@ -79,6 +79,7 @@
     "references/consulting-case-validation-corpus.md",
     "references/sunzi-business-consultant-soul.md",
     "references/strategy-focus-group-evaluation.md",
+    "references/user-intention-metric-contract.md",
     "skills/sunzi-focus-group-skill-review/references/panel-contract.md",
     "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
   ],
@@ -158,6 +159,7 @@
     ],
     "decision_review": [
       "Start with terrain, status quo, user agency, trust, and cost of action versus inaction before choosing a stratagem.",
+      "Privately screen the full Thirty-Six Stratagems matrix as a candidate library, then output only 1 to 3 selected lenses that materially improve the decision options.",
       "Require act, negotiate, wait, defend, retreat, or observe mode plus a trust-preserving next move and retreat trigger."
     ],
     "stakeholder_ssr": [
@@ -167,14 +169,17 @@
     ],
     "growth_review": [
       "Separate growth mechanism from channel tactic before recommending execution.",
+      "Privately screen the full Thirty-Six Stratagems matrix as a candidate library, then output only 1 to 3 selected lenses that materially improve the growth experiment design.",
       "Require baseline, leading metric, business metric, trust guardrail, and kill criterion before scaling."
     ],
     "operations_sop_review": [
       "Model the SOP as a state machine with owner, backup, exception path, rollback path, and audit log.",
+      "Privately screen the full Thirty-Six Stratagems matrix as a candidate library, then output only 1 to 3 selected lenses that materially improve the SOP design.",
       "Name physical bottleneck, information bottleneck, decision latency, and pressure scenarios before approval."
     ],
     "prd_review": [
       "Require demand reality, status quo, narrowest wedge, business use cases, scope boundaries, requirement contracts, acceptance criteria, QA coverage, release phases, open questions, and definition of done.",
+      "Privately screen the full Thirty-Six Stratagems matrix as a candidate library, then output only 1 to 2 selected lenses that materially improve the PRD readiness review.",
       "Mark engineering-confirmation gaps explicitly instead of hiding implementation uncertainty."
     ],
     "dod_cases": [
@@ -183,15 +188,19 @@
     ],
     "focus_group_skill_review": [
       "Skill-quality reviews must use multiple stakeholder or industry-leader archetypes, never a single reviewer.",
-      "Focus-group outputs must label synthetic panel simulation, preserve dissent, include scorecards, and name evidence needed next."
+      "Focus-group outputs must label synthetic panel simulation, preserve dissent, include scorecards, and name evidence needed next.",
+      "When user-intention scoring is needed, generate Segment Simulation with at least three simulated responses per segment and 360 Comments before drafting a dynamic scoring contract, then freeze the formula before structured signal extraction.",
+      "Final 1-10 scores must be calculated deterministically from a declarative contract; synthetic scores are proxy / hypothesis only, never real NPS, PMF, WTP, market proof, or percent-would-buy evidence."
     ],
     "strategy_focus_group_evaluation": [
       "Top-10 real-world strategy cases must define DoD before focus-group simulation and preserve stakeholder dissent.",
-      "Each strategy evaluation must include Evaluation Result, Iteration 1, Iteration 2, and a final works-after-revision state before adoption."
+      "Each strategy evaluation must include Evaluation Result, Iteration 1, Iteration 2, and a final works-after-revision state before adoption.",
+      "Works after revision means ready for real validation, not validated by synthetic intent or synthetic user-intention scores."
     ],
     "industry_leader_smoke_test": [
       "Industry-leader smoke tests must label archetypes as synthetic, ask for Top 3 Problems, and avoid real-person claims.",
-      "Successful cases must pass through Sunzi consultant diagnosis, SSR, focus-group dissent, strategy analyst review, evidence needed next, and kill criteria."
+      "Successful cases must pass through Sunzi consultant diagnosis, SSR, focus-group dissent, strategy analyst review, evidence needed next, and kill criteria.",
+      "Research metrics safety checks must block synthetic scores from becoming real customer evidence."
     ]
   },
   "public_boundaries": [
@@ -199,6 +208,7 @@
     "No secrets, customer data, private memory, billing logic, OAuth flows, or hosted runtime internals.",
     "No literal historical-persona claim.",
     "No synthetic SSR output presented as real customer evidence.",
+    "No synthetic focus-group score presented as real NPS, PMF, WTP, market proof, or percent-would-buy evidence.",
     "Classical stratagems are diagnostic analogies, not permission for deception or harm."
   ]
 }

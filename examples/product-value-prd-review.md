@@ -100,6 +100,5 @@ Confidence: medium
 
 | Lens | Product-review mechanism | Ethical translation | Falsifier / misuse risk |
 |---|---|---|---|
-| 釜底抽薪 | Remove the root cause of manual coordination pain | Solve the repeated operational bottleneck before building a broad editor | Falsified if partner delay is mostly sales priority, not workflow friction |
 | 擒賊擒王 | Find the control node in the use case | Pick the one workflow where ownership, trigger, and business value are clearest | Misuse risk: overfitting to one loud partner |
 | 走為上計 | Retreat from premature platform breadth | Defer generic marketplace and no-code polish until the wedge has real usage | Misuse risk: deferring important governance work |
