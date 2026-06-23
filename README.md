@@ -154,7 +154,7 @@ npm run test:case-studies
 
 The focus-group workflow can produce synthetic_proxy or real_respondent 1-10 scores for buying intention, NPS proxy, PMF proxy, willingness-to-pay proxy, adoption intent, switching cost, task-fit, or custom criteria.
 
-The LLM must not invent final scores. It generates Segment Simulation with at least three simulated responses per segment, Interview Responses, 360 Comments, a declarative dynamic scoring contract, and structured signals. The Node.js scorer calculates the final score from the frozen formula.
+The LLM must not invent final scores. It generates Segment Simulation with a minimum three-response gate per dynamic segment, continues until the convergence gate shows no new viewpoint categories, then produces Interview Responses, 360 Comments, a declarative dynamic scoring contract, and structured signals. The Node.js scorer calculates the final score from the frozen formula.
 
 Run the scorer tests:
 
@@ -168,7 +168,7 @@ Dry-run the shoe-comment fixture:
 npm run score:intention -- fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json
 ```
 
-Synthetic scores are proxy / hypothesis only, not real NPS, PMF, WTP, market proof, or percent-would-buy evidence.
+Synthetic scores and convergence checks are proxy / hypothesis only, not real NPS, PMF, WTP, market proof, statistical significance, or percent-would-buy evidence.
 
 ## Machine-Readable Manifest
 

@@ -38,7 +38,7 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 - Strategy review: always separates evidence from interpretation, tests a competing diagnosis, and can return `go`, `revise`, or `stop`.
 - SSR: labels synthetic artifacts, treats simulation as hypothesis not proof, names stakeholder loss/fear/escalation, and recommends a safe response plus real evidence needed next.
 - Real-life DoD cases: each case includes source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.
-- Focus group skill review: uses multiple stakeholder archetypes, labels synthetic panel simulation, preserves dissent, includes scorecards, simulates at least three responses per segment, generates 360 Comments, freezes a dynamic scoring contract, calculates Deterministic Scores, and never relies on one reviewer.
+- Focus group skill review: uses multiple stakeholder archetypes, labels synthetic panel simulation, preserves dissent, includes scorecards, starts each dynamic segment with a minimum three-response gate, continues until no new viewpoint categories appear, generates 360 Comments, freezes a dynamic scoring contract, calculates Deterministic Scores, and never relies on one reviewer.
 - Strategy focus group evaluation: each top-10 real-world strategy case defines DoD, runs stakeholder simulation, records Evaluation Result, and iterates until it works after revision.
 - Industry-leader smoke test: asks synthetic archetypes for Top 3 Problems, selects cases, runs Sunzi diagnosis, SSR, focus-group dissent, strategy analyst review, metrics, kill criteria, and labels the result as synthetic.
 

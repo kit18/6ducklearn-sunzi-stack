@@ -189,8 +189,8 @@
     "focus_group_skill_review": [
       "Skill-quality reviews must use multiple stakeholder or industry-leader archetypes, never a single reviewer.",
       "Focus-group outputs must label synthetic panel simulation, preserve dissent, include scorecards, and name evidence needed next.",
-      "When user-intention scoring is needed, generate Segment Simulation with at least three simulated responses per segment and 360 Comments before drafting a dynamic scoring contract, then freeze the formula before structured signal extraction.",
-      "Final 1-10 scores must be calculated deterministically from a declarative contract; synthetic scores are proxy / hypothesis only, never real NPS, PMF, WTP, market proof, or percent-would-buy evidence."
+      "When user-intention scoring is needed, generate Segment Simulation with a minimum three-response gate per dynamic segment, continue until no new viewpoint categories appear, and produce 360 Comments before drafting a dynamic scoring contract; then freeze the formula before structured signal extraction.",
+      "Final 1-10 scores must be calculated deterministically from a declarative contract; synthetic scores and convergence checks are proxy / hypothesis only, never real NPS, PMF, WTP, market proof, statistical significance, or percent-would-buy evidence."
     ],
     "strategy_focus_group_evaluation": [
       "Top-10 real-world strategy cases must define DoD before focus-group simulation and preserve stakeholder dissent.",

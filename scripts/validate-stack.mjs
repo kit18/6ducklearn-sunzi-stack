@@ -628,7 +628,9 @@ function validateFocusGroupSkillReview() {
     'Evidence Needed Next',
     'not real quotes',
     'do not let the LLM invent final scores',
-    'at least three simulated responses',
+    'minimum three-response gate',
+    'convergence gate',
+    'statistically significant',
     'after_comments_before_structured_signal_extraction',
   ]) {
     if (!skill.includes(required)) {
@@ -661,7 +663,8 @@ function validateFocusGroupSkillReview() {
     'Synthetic proxy only',
     'Loyal live shopper',
     'Basket-builder household buyer',
-    'at least three simulated responses',
+    'minimum three-response gate',
+    'no new viewpoint categories',
     'revise',
   ]) {
     if (!example.includes(required)) {
@@ -679,7 +682,9 @@ function validateFocusGroupSkillReview() {
     'task-fit',
     'dynamic deterministic scoring contract',
     'Segment Simulation Report',
-    'at least three simulated responses per segment',
+    'minimum three-response gate',
+    'convergence gate',
+    'Research validity note',
     'Synthetic proxy only',
     'percent-would-buy evidence',
   ]) {

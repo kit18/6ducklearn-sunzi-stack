@@ -1,6 +1,6 @@
 ---
 name: sunzi-focus-group-skill-review
-description: Use when evaluating whether a skill, skill pack, agent workflow, prompt library, or AI operating method is good enough through a PM/UED-led focus group with multiple stakeholder or industry-leader archetypes, scorecards, dissent, risk review, and improvement recommendations.
+description: Use when evaluating whether a skill, skill pack, agent workflow, prompt library, AI operating method, product concept, or user-intention question is good enough through a PM/UED-led focus group with dynamic segment simulation, a minimum three-response segment gate, convergence checking, scorecards, dissent, risk review, deterministic scoring, and improvement recommendations.
 ---
 
 # Sunzi Focus Group Skill Review
@@ -16,7 +16,7 @@ Scoring rule: do not let the LLM invent final scores. The LLM may simulate comme
 1. Define the artifact under review: skill name, target users, trigger conditions, expected output, adoption context, and known risks.
 2. Design the panel using [Panel Contract](references/panel-contract.md). Include at least six roles; default to eight when stakes are product, growth, operations, or customer-facing.
 3. Label the review as synthetic panel simulation, not real quotes, unless real interview notes are supplied by the user.
-4. Generate Segment Simulation and diverse Interview Responses first: target users, buyers, skeptics, fans, operators, support, and edge-case users. Each focus-group segment should include at least three simulated responses before scoring. These can be synthetic proxy comments or real respondent notes supplied by the user.
+4. Generate Segment Simulation and diverse Interview Responses first: target users, buyers, skeptics, fans, operators, support, and edge-case users. Each dynamic segment must start with a minimum three-response gate; use 3-5 varied responses as the first pass, then continue in small batches if new viewpoints still appear. Vary respondent seeds across buying trigger, objection/confusion, operational or trust concern, price/effort sensitivity, and edge-case behavior when relevant. Stop only after a convergence gate: the latest added responses introduce no new viewpoint category. These can be synthetic proxy comments or real respondent notes supplied by the user.
 5. Generate 360 Comments from PM, UED/research, growth, sales/buyer, support, trust/safety, engineering/ops, and any domain-specific reviewer.
 6. Give each panelist an independent scorecard before synthesis: task fit, usability, evidence discipline, safety, adoption friction, testability, and one required change.
 7. If scoring is needed, use [User Intention Metric Contract](../../references/user-intention-metric-contract.md) to draft a dynamic deterministic scoring contract from the scenario, metric goal, respondent types, Interview Responses, and 360 Comments.
@@ -58,8 +58,8 @@ Scoring rule: do not let the LLM invent final scores. The LLM may simulate comme
 |---|---|---|---|---|
 
 ## Segment Simulation
-| Segment | Simulated responses (minimum 3) | Score | Main friction | Best fix |
-|---|---|---:|---|---|
+| Segment | Simulated responses (min 3; extend until convergence) | New viewpoint categories | Convergence status | Score | Main friction | Best fix |
+|---|---|---|---|---:|---|---|
 
 ## 360 Comments
 | Reviewer | Lens | Comment | Risk / opportunity | Required change |
@@ -128,7 +128,9 @@ Confidence:
 - Do not impersonate real named industry leaders. Use public-safe archetypes unless the user provides authorized source material.
 - Do not present synthetic panel output as real interview evidence or real quotes.
 - Do not present synthetic scores as real NPS, PMF, willingness-to-pay proof, market proof, customer evidence, or percent-would-buy evidence.
-- Do not score a focus-group segment from one synthetic quote. Generate at least three simulated responses per segment to diversify buying trigger, objection, and operational or trust concern.
+- Do not score a focus-group segment from one or two synthetic quotes. Start with at least three varied simulated responses per dynamic segment, then extend beyond 3-5 when new viewpoint categories keep appearing.
+- Do not stop because the response count reached 3-5. Stop only when the convergence gate is met: no new buying trigger, objection/confusion, operational or trust concern, price/effort sensitivity, or edge-case behavior appears in the latest added responses.
+- Do not describe synthetic convergence as statistically significant or real questionnaire evidence. It is synthetic_proxy coverage for hypothesis generation and questionnaire design; real validity requires real respondents, a defined sampling plan, and an appropriate research instrument.
 - Do not let the LLM provide final 1-10 scores directly. Draft a dynamic scoring contract, freeze the formula, extract structured signals, then calculate deterministically.
 - Do not output executable scoring code as the formula. Use declarative JSON only.
 - Do not give a single-reviewer verdict for multi-stakeholder skill quality decisions.

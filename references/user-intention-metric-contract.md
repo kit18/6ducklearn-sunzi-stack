@@ -16,7 +16,7 @@ Synthetic output must not be described as real NPS, PMF, willingness-to-pay proo
 ## Workflow
 
 1. Define the scenario, product, target audience, respondent types, and metric goal.
-2. Generate Segment Simulation first. Each focus-group segment should include at least three simulated responses to diversify tone, objection, and buying trigger before scoring.
+2. Generate Segment Simulation first. Each dynamic segment must pass a minimum three-response gate; use 3-5 varied responses as the first pass, then continue in small batches if new viewpoint categories still appear. Stop only after the convergence gate is met: the latest added responses introduce no new buying trigger, objection/confusion, operational or trust concern, price/effort sensitivity, or edge-case behavior before scoring.
 3. Generate 360 comments from PM, UED/research, growth, sales/buyer, support, trust/safety, engineering/ops, and any domain-specific reviewer.
 4. Draft a dynamic deterministic scoring contract from the scenario and comment themes.
 5. Freeze the formula at `after_comments_before_structured_signal_extraction`.
@@ -74,23 +74,27 @@ Every synthetic score must include:
 
 `Synthetic proxy only: do not present as real NPS, PMF, WTP, market proof, or percent-would-buy evidence.`
 
+Research validity note: synthetic segment convergence improves coverage for hypothesis generation and questionnaire design, but it is not statistically significant, not real respondent evidence, and not a substitute for a sampled survey or interview study.
+
 ## Segment Simulation Report
 
 Use this report when the review needs a segment-level readout across shopper, buyer, operator, finance, support, or other stakeholder segments.
 
-Minimum rule: each segment must include at least three simulated responses per segment before scoring. Do not score a segment from one synthetic quote.
+Minimum rule: each dynamic segment must include at least three varied simulated responses before scoring. Use 3-5 responses as the first pass, not the cap. If new viewpoint categories continue to appear, add more responses in small batches until the convergence gate is met. Do not score a segment from one or two synthetic quotes.
 
 ```markdown
 ## Segment Simulation
-| Segment | Simulated responses (minimum 3) | Score | Main friction | Best fix |
-|---|---|---:|---|---|
-| Loyal live shopper | 1. ...<br>2. ...<br>3. ... | 8.3 | Rules confusion | Pin one simple rule card throughout live |
+| Segment | Simulated responses (min 3; extend until convergence) | New viewpoint categories | Convergence status | Score | Main friction | Best fix |
+|---|---|---|---|---:|---|---|
+| Loyal live shopper | 1. ...<br>2. ...<br>3. ... | buying trigger, rules confusion, inventory trust | converged after first pass | 8.3 | Rules confusion | Pin one simple rule card throughout live |
 ```
 
-Use the three responses to expose variation:
+Use the response spread to expose variation:
 
 - positive buying trigger
 - objection or confusion
 - operational or trust concern
+- price or effort sensitivity
+- edge-case behavior when the segment is broad or high-stakes
 
 Then extract structured signals and calculate the score deterministically from the frozen formula.

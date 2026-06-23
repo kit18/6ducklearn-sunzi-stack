@@ -48,7 +48,7 @@ Score each dimension from 1 to 5.
 
 1. Clarify the artifact and target user.
 2. Select panel roles and name missing perspectives.
-3. Generate diverse Interview Responses and 360 Comments before scoring; each focus-group segment needs at least three simulated responses.
+3. Generate diverse Interview Responses and 360 Comments before scoring; each dynamic segment starts with a minimum three-response gate, then continues until convergence if new viewpoint categories still appear.
 4. Run independent scorecards before discussion.
 5. When user-intention scoring is needed, draft a dynamic scoring contract from the scenario and comment themes, then freeze the formula before structured signal extraction.
 6. Produce at least four stakeholder reactions before synthesis.
@@ -67,7 +67,11 @@ Score each dimension from 1 to 5.
 - Label every generated reaction as synthetic panel simulation, not real quotes.
 - Use archetypes instead of real named people unless the user supplies authorized source material.
 - Include at least four stakeholder reactions before synthesis.
-- Include at least three simulated responses per segment before assigning segment-level scores.
+- Include at least three varied simulated responses per dynamic segment before assigning segment-level scores.
+- Use 3-5 responses as the first pass, not the cap. Continue in small batches when new viewpoint categories keep appearing.
+- Stop only after a convergence gate: the latest added responses introduce no new buying trigger, objection/confusion, operational or trust concern, price/effort sensitivity, or edge-case behavior.
+- Vary respondent seeds across buying trigger, objection/confusion, operational or trust concern, price/effort sensitivity, and edge-case behavior when relevant.
+- Treat synthetic convergence as coverage for hypothesis generation and questionnaire design, not statistical validation.
 - Include dissent even when the final verdict is positive.
 - End with Evidence Needed Next, not just opinions.
 - If scores are produced, label them as `synthetic_proxy` or `real_respondent` and calculate final 1-10 scores deterministically from a frozen formula.

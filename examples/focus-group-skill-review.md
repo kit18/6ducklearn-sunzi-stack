@@ -30,15 +30,15 @@ These are synthetic_proxy comments for method validation, not real quotes or rea
 
 ## Segment Simulation
 
-Different case: 618 live-commerce promotion. This is a synthetic_proxy segment simulation, not real shopper evidence. Each segment includes at least three simulated responses before the segment score is calculated.
+Different case: 618 live-commerce promotion. This is a synthetic_proxy segment simulation, not real shopper evidence. Each dynamic segment starts with a minimum three-response gate and only stops when no new viewpoint categories appear.
 
-| Segment | Simulated responses (minimum 3) | Score | Main friction | Best fix |
-|---|---|---:|---|---|
-| Loyal live shopper | 1. "我會守直播，18:18秒殺有氣氛。但唔好太多規則，最好pin住點買。"<br>2. "如果主持講得清楚，我會跟住落單；太多暗號我會miss。"<br>3. "直播有互動我會買多啲，但要睇到庫存同截止時間。" | 8.3 | Rules confusion | Pin one simple rule card throughout live. |
-| Basket-builder household buyer | 1. "如果食品、日用品、護膚可以砌bundle，滿$618我會買。"<br>2. "我想一次過補貨，最好有家庭包，唔使逐件揀。"<br>3. "如果bundle入面有唔啱用嘅SKU，我寧願唔買。" | 8.1 | Needs practical bundles | Create named bundles: 補貨包 / 家庭包 / 旅行包. |
-| Merchandising / inventory owner | 1. "可以做，但一定要控制SKU。唔好每樣都推，會亂同爆stock。"<br>2. "直播節奏快，SKU太多會令主持、倉同客服都跟唔切。"<br>3. "英雄SKU可以推，但慢貨唔好硬塞入所有bundle。" | 7.3 | Inventory chaos | Use 3 hero SKUs, 6 bundle SKUs, 3 flash SKUs only. |
-| Price-sensitive 618 shopper | 1. "我會同其他平台比價。如果只係$18券，未必夠吸引。"<br>2. "有贈品同bundle savings我會睇，但要一眼見到慳幾多。"<br>3. "如果直播示範到值，貴少少都可以；只講平我會格價。" | 7.1 | Price comparison | Show total value: bundle saving, gift, limited sourcing, live demo. |
-| New parent / first-time buyer | 1. "我未必識關鍵字落單，又驚買錯。"<br>2. "第一次買最怕入錯碼或者錯過付款時間。"<br>3. "如果每個產品前有30秒教學，我會安心啲。" | 6.7 | Onboarding friction | Add 30-second "新客點買" before each product block. |
+| Segment | Simulated responses (min 3; extend until convergence) | New viewpoint categories | Convergence status | Score | Main friction | Best fix |
+|---|---|---|---|---:|---|---|
+| Loyal live shopper | 1. "我會守直播，18:18秒殺有氣氛。但唔好太多規則，最好pin住點買。"<br>2. "如果主持講得清楚，我會跟住落單；太多暗號我會miss。"<br>3. "直播有互動我會買多啲，但要睇到庫存同截止時間。" | buying trigger, rules confusion, inventory trust | converged after first pass | 8.3 | Rules confusion | Pin one simple rule card throughout live. |
+| Basket-builder household buyer | 1. "如果食品、日用品、護膚可以砌bundle，滿$618我會買。"<br>2. "我想一次過補貨，最好有家庭包，唔使逐件揀。"<br>3. "如果bundle入面有唔啱用嘅SKU，我寧願唔買。" | bundle trigger, convenience, SKU mismatch | converged after first pass | 8.1 | Needs practical bundles | Create named bundles: 補貨包 / 家庭包 / 旅行包. |
+| Merchandising / inventory owner | 1. "可以做，但一定要控制SKU。唔好每樣都推，會亂同爆stock。"<br>2. "直播節奏快，SKU太多會令主持、倉同客服都跟唔切。"<br>3. "英雄SKU可以推，但慢貨唔好硬塞入所有bundle。" | SKU control, ops burden, slow-stock risk | converged after first pass | 7.3 | Inventory chaos | Use 3 hero SKUs, 6 bundle SKUs, 3 flash SKUs only. |
+| Price-sensitive 618 shopper | 1. "我會同其他平台比價。如果只係$18券，未必夠吸引。"<br>2. "有贈品同bundle savings我會睇，但要一眼見到慳幾多。"<br>3. "如果直播示範到值，貴少少都可以；只講平我會格價。" | price comparison, value display, demo value | converged after first pass | 7.1 | Price comparison | Show total value: bundle saving, gift, limited sourcing, live demo. |
+| New parent / first-time buyer | 1. "我未必識關鍵字落單，又驚買錯。"<br>2. "第一次買最怕入錯碼或者錯過付款時間。"<br>3. "如果每個產品前有30秒教學，我會安心啲。" | onboarding, payment anxiety, education need | converged after first pass | 6.7 | Onboarding friction | Add 30-second "新客點買" before each product block. |
 | Customer support / order ops | 1. "18分鐘一個drop好刺激，但客服會爆。要有固定keyword同fallback。"<br>2. "如果關鍵字有幾個版本，客服同倉會對唔到單。"<br>3. "要預先有缺貨替代、退款、改單話術，否則live後會塞爆。" | 6.7 | Support load | Prepare SKU/keyword/stock/fallback ops sheet. |
 | Finance / margin owner | 1. "唔可以所有貨都折。秒殺要限量，bundle要保毛利。"<br>2. "如果只追GMV，618後毛利同退貨會好難睇。"<br>3. "折扣要分層，hero SKU引流，bundle保margin。" | 6.7 | Margin risk | No storewide discount; discount only selected SKUs. |
 | App-reluctant shopper | 1. "如果一定要download app先有著數，我可能走咗。"<br>2. "我可以用app拎bonus，但唔想未睇清楚就被迫下載。"<br>3. "如果網頁都買到，app多一張券，我會考慮裝。" | 6.2 | App friction | Make app coupon a bonus, not a gate. |

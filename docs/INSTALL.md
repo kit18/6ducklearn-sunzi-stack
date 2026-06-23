@@ -97,10 +97,11 @@ The expected reference shape is [Industry leader smoke test](../examples/industr
 
 ```text
 Use sunzi-focus-group-skill-review to evaluate buying intention for this product.
-First simulate segments with at least three responses per segment, then generate
-360 comments. Then create a dynamic deterministic scoring contract, freeze the
-formula, extract structured signals, and calculate deterministic 1-10
-synthetic_proxy scores.
+First simulate dynamic segments with a minimum three-response gate. Use 3-5
+responses as the first pass, then continue until the convergence gate shows no
+new viewpoint categories. Then generate 360 comments, create a dynamic
+deterministic scoring contract, freeze the formula, extract structured signals,
+and calculate deterministic 1-10 synthetic_proxy scores.
 ```
 
 For local validation:
@@ -110,4 +111,4 @@ npm run test:scorer
 npm run score:intention -- fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json
 ```
 
-Synthetic scores are proxy / hypothesis only. Real NPS, PMF, willingness-to-pay, market proof, and percent-would-buy claims require real qualified respondents.
+Synthetic scores and convergence checks are proxy / hypothesis only. Real NPS, PMF, willingness-to-pay, market proof, statistical significance, and percent-would-buy claims require real qualified respondents.
