@@ -8,7 +8,9 @@ This repo is public and standalone. It can be copied into any agent host that su
 git clone https://github.com/kit18/6ducklearn-sunzi-stack.git
 cd 6ducklearn-sunzi-stack
 npm test
+mkdir -p ~/.codex/skills ~/.codex/references
 cp -R skills/* ~/.codex/skills/
+cp -R references/* ~/.codex/references/
 ```
 
 After copying, start a new agent session and run this first:

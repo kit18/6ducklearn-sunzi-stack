@@ -10,7 +10,9 @@ This repository is intentionally standalone. It is shaped by the install-flow cl
 git clone https://github.com/kit18/6ducklearn-sunzi-stack.git
 cd 6ducklearn-sunzi-stack
 npm test
+mkdir -p ~/.codex/skills ~/.codex/references
 cp -R skills/* ~/.codex/skills/
+cp -R references/* ~/.codex/references/
 ```
 
 Then ask your agent to use `sunzi-strategy-consultant`, `strategic-situation-analysis`, or `sunzi-stakeholder-ssr` on a real decision. The expected output is a decision memo or labeled synthetic SSR artifact, not a motivational essay.
@@ -44,12 +46,14 @@ If you are unsure, start with `sunzi-strategy-consultant`. Use the other skills 
 
 ## Install Options
 
-Copy the `skills/*` directories into an agent host that supports local skills, or point your internal skill loader at this repository.
+Copy the `skills/*` directories and shared `references/*` pack into an agent host that supports local skills, or point your internal skill loader at this repository.
 
 Example local copy:
 
 ```bash
+mkdir -p ~/.codex/skills ~/.codex/references
 cp -R skills/* ~/.codex/skills/
+cp -R references/* ~/.codex/references/
 ```
 
 See [Install and Adoption](./docs/INSTALL.md) for host-agnostic setup guidance and [Adoption Checklist](./docs/ADOPTION-CHECKLIST.md) for rollout review.

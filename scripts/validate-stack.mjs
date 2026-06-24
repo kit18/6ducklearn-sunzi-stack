@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -165,6 +166,13 @@ const leakagePatterns = [
 ];
 
 const processSummaryDescriptionPattern = /\b(selects|returns|generates|delivers|routes|audits|simulates)\b/i;
+const localOnlyExclusions = ['docs/internal-enablement/'];
+const requiredPacklistPaths = [
+  'README.md',
+  'docs/INSTALL.md',
+  'references/user-intention-metric-contract.md',
+  'skills/sunzi-strategy-consultant/SKILL.md',
+];
 
 function fail(message) {
   console.error(`validate-stack: ${message}`);
@@ -188,12 +196,31 @@ function fileExists(relativePath) {
   return fs.existsSync(path.join(root, relativePath));
 }
 
+function hasConfigLine(content, expectedLine) {
+  return content
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .includes(expectedLine);
+}
+
+function runGit(args) {
+  return execFileSync('git', args, {
+    cwd: root,
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+}
+
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name === '.git' || entry.name === 'node_modules') {
       continue;
     }
     const absolute = path.join(dir, entry.name);
+    const relativePath = path.relative(root, absolute).replaceAll(path.sep, '/');
+    if (entry.isDirectory() && localOnlyExclusions.some((excluded) => `${relativePath}/` === excluded)) {
+      continue;
+    }
     if (entry.isDirectory()) {
       walk(absolute, files);
     } else {
@@ -939,6 +966,65 @@ function validateLicenses() {
   }
 }
 
+function validateReleaseHygiene() {
+  const gitignore = read('.gitignore');
+  const npmignore = read('.npmignore');
+
+  for (const excludedPath of localOnlyExclusions) {
+    if (!hasConfigLine(gitignore, excludedPath)) {
+      fail(`.gitignore must exclude local-only path ${excludedPath}`);
+    }
+    if (!hasConfigLine(npmignore, excludedPath)) {
+      fail(`.npmignore must exclude local-only path ${excludedPath}`);
+    }
+
+    const trackedFiles = runGit(['ls-files', '--', excludedPath])
+      .split(/\r?\n/)
+      .filter(Boolean);
+    if (trackedFiles.length > 0) {
+      fail(`${excludedPath} must not contain tracked public-release files: ${trackedFiles.join(', ')}`);
+    }
+  }
+
+  for (const requiredSnippet of [
+    'mkdir -p ~/.codex/skills ~/.codex/references',
+    'cp -R references/* ~/.codex/references/',
+  ]) {
+    if (!read('README.md').includes(requiredSnippet)) {
+      fail(`README.md install instructions must include ${requiredSnippet}`);
+    }
+    if (!read('docs/INSTALL.md').includes(requiredSnippet)) {
+      fail(`docs/INSTALL.md install instructions must include ${requiredSnippet}`);
+    }
+  }
+
+  let packlist;
+  try {
+    packlist = JSON.parse(execFileSync('npm', ['pack', '--dry-run', '--json'], {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    }));
+  } catch (error) {
+    fail(`npm pack --dry-run --json must succeed: ${error.message}`);
+    return;
+  }
+
+  const packFiles = packlist.flatMap((pack) => (pack.files ?? []).map((file) => file.path));
+  for (const excludedPath of localOnlyExclusions) {
+    const leakedFiles = packFiles.filter((filePath) => filePath.startsWith(excludedPath));
+    if (leakedFiles.length > 0) {
+      fail(`npm pack must exclude ${excludedPath}: ${leakedFiles.join(', ')}`);
+    }
+  }
+
+  for (const requiredPath of requiredPacklistPaths) {
+    if (!packFiles.includes(requiredPath)) {
+      fail(`npm pack must include required public asset ${requiredPath}`);
+    }
+  }
+}
+
 function validateLeakage() {
   for (const absolutePath of walk(root)) {
     const relativePath = path.relative(root, absolutePath);
@@ -966,6 +1052,7 @@ validateStrategyFocusGroupEvaluation();
 validateIndustryLeaderSmokeTest();
 validateStackManifest();
 validateLicenses();
+validateReleaseHygiene();
 validateLeakage();
 
 if (!process.exitCode) {

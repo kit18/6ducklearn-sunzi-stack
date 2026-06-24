@@ -1,7 +1,8 @@
 node_modules/
 .DS_Store
 dist/
+*.tgz
 .env
 .env.*
 !.env.example
-
+docs/internal-enablement/
