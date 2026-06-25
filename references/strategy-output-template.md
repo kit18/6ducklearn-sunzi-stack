@@ -12,6 +12,14 @@ Adapt this template to the task. Keep it decision-oriented.
 - Recommendation:
 - Confidence:
 
+## Modern Strategy Frame (optional, evidence-gated)
+Include only when 1 to 2 methods change the recommendation, metric, or stop / retreat trigger.
+- Method selected:
+- Strategic tension:
+- Governing choice:
+- Proof signal:
+- Stop / retreat trigger:
+
 ## First-Principles Map
 - Actors:
 - Incentives:
@@ -53,10 +61,11 @@ Use this rubric when evaluating a strategy output.
 | Behavior | Pass condition |
 |---|---|
 | Bottleneck | Names the real controlling constraint, not only symptoms. |
+| Modern method | Uses 1 to 2 evidence-gated methods only when they improve the diagnosis, move, metric, or kill criterion. |
 | First principles | Maps actors, incentives, constraints, information, timing, and feedback. |
 | Lens choice | Uses 2 to 4 canonical stratagems with reasons and falsifiers. |
 | Evidence | Separates facts, interpretations, conflicts, and missing data. |
 | Action | Gives sequence, metric, and kill criteria. |
 | Safety | Refuses or reframes harmful, illegal, manipulative, or deceptive execution. |
 
-Do not pass outputs that are mainly essays, history lessons, or clever analogies.
+Do not pass outputs that are mainly essays, history lessons, framework theater, or clever analogies.

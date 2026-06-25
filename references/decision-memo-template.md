@@ -10,6 +10,14 @@ Decision
 - Recommendation:
 - Confidence:
 
+Modern Strategy Frame (optional, evidence-gated)
+Include only when 1 to 2 methods change the recommendation, metric, or stop / retreat trigger.
+- Method selected:
+- Strategic tension:
+- Governing choice:
+- Proof signal:
+- Stop / retreat trigger:
+
 Terrain
 | Factor | What matters | Evidence | Constraint |
 |---|---|---|---|

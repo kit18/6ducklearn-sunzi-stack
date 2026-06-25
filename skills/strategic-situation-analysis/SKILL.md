@@ -20,18 +20,20 @@ Core rule: use the Thirty-Six Stratagems as lenses, not as slogans. Evidence com
    - 混戰: disorder and multi-party conflict
    - 並戰: alliances, substitutions, and control shifts
    - 敗戰: downside, exit, and recovery
-4. Select 2 to 4 canonical lenses from the source-story reference. For each lens, explain why it fits and what evidence would falsify it.
-5. Use the domain adapters to name the domain-specific evidence lanes and output checks.
-6. If the user needs an everyday/professional choice rather than a business artifact, route through `sunzi-decision-review`.
-7. If the user needs synthetic stakeholder reaction artifacts, route through `sunzi-stakeholder-ssr`.
-8. If the user is reviewing a growth plan, SOP/runbook, or PRD/product contract, route the artifact through `sunzi-growth-review`, `sunzi-operations-sop-review`, or `sunzi-prd-review`.
-9. Translate each lens into a legal, ethical, modern business move.
-10. Run the strategy-analyst review loop:
+4. Privately screen modern methods from the Modern Strategy Method Library after the first-principles map, not before evidence. Output a short `Modern Strategy Frame` only when 1 to 2 selected methods materially improve the diagnosis.
+5. Select 2 to 4 canonical lenses from the source-story reference. For each lens, explain why it fits and what evidence would falsify it.
+6. Use the domain adapters to name the domain-specific evidence lanes and output checks.
+7. If the user needs an everyday/professional choice rather than a business artifact, route through `sunzi-decision-review`.
+8. If the user needs synthetic stakeholder reaction artifacts, route through `sunzi-stakeholder-ssr`.
+9. If the user is reviewing a growth plan, SOP/runbook, or PRD/product contract, route the artifact through `sunzi-growth-review`, `sunzi-operations-sop-review`, or `sunzi-prd-review`.
+10. Translate each lens into a legal, ethical, modern business move.
+11. Run the strategy-analyst review loop:
    - Check lens fit against evidence, falsifiers, and source-story mechanism.
+   - Check modern method fit against evidence and reject template theater.
    - Identify ethical misuse risk and rewrite unsafe moves as detection, defense, compliance, or fair competition.
    - Force one alternative lens and one "do nothing / retreat" option when the situation is high stakes.
    - Add metrics and kill criteria before any recommendation.
-11. Write the decision memo with a source/evidence ledger.
+12. Write the decision memo with a source/evidence ledger.
 
 ## References
 
@@ -46,6 +48,7 @@ Core rule: use the Thirty-Six Stratagems as lenses, not as slogans. Evidence com
 - [Strategy output template](../../references/strategy-output-template.md)
 - [Consulting case validation corpus](../../references/consulting-case-validation-corpus.md)
 - [Ethical use guardrails](../../references/ethical-use-guardrails.md)
+- [Modern Strategy Method Library](../../references/modern-strategy-method-library.md)
 - Public-domain Wikisource source: https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88
 
 ## Decision Memo
@@ -57,6 +60,14 @@ Decision
 - Time horizon:
 - Recommendation:
 - Confidence:
+
+Modern Strategy Frame (optional, evidence-gated)
+Include only when 1 to 2 methods change the recommendation, metric, or stop / retreat trigger.
+- Method selected:
+- Strategic tension:
+- Governing choice:
+- Proof signal:
+- Stop / retreat trigger:
 
 First-Principles Map
 | Variable | Evidence | Interpretation | Missing / falsifier |
@@ -96,6 +107,8 @@ Action Plan
 ## Guardrails
 
 - Use only canonical Thirty-Six Stratagems names as lenses.
+- Do not dump modern frameworks. Privately screen methods and output only 1 to 2 that materially improve the diagnosis.
+- Modern business books are bibliographic anchors only; do not reproduce copyrighted text, chapter summaries, distinctive tables, or author-specific phrasing.
 - Do not use invented or non-canonical labels as stratagem names.
 - Do not present classical stratagems as moral permission. They are diagnostic analogies, not licenses for manipulation.
 - Do not help execute fraud, market manipulation, deception against customers, harassment, coercion, illegal conduct, covert access, impersonation, sexual/romantic manipulation, self-harm, or public shaming.

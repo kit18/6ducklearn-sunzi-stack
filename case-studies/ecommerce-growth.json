@@ -4,6 +4,7 @@
   "output": "examples/ecommerce-growth-decision-memo.md",
   "required_headings": [
     "## Decision",
+    "## Modern Strategy Frame (optional, evidence-gated)",
     "## First-Principles Map",
     "## Selected Lenses",
     "## Strategy-Analyst Review",
@@ -17,6 +18,9 @@
   "max_lenses": 4,
   "required_phrases": [
     "checkout completion",
+    "evidence-gated",
+    "Proof signal",
+    "Stop / retreat trigger",
     "fake scarcity",
     "fake reviews",
     "hidden fees",

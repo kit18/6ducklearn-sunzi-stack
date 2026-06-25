@@ -31,6 +31,8 @@ const expectedReferences = [
   'references/domain-review-contracts.md',
   'references/market-signal-forensics.md',
   'references/strategy-output-template.md',
+  'references/modern-strategy-method-library.md',
+  'references/tool-book-family-tree.md',
   'references/consulting-case-validation-corpus.md',
   'references/sunzi-business-consultant-soul.md',
   'references/strategy-focus-group-evaluation.md',
@@ -71,6 +73,8 @@ const expectedExamples = [
   'examples/focus-group-skill-review.md',
   'examples/focus-group-strategy-evaluation.md',
   'examples/industry-leader-smoke-test.md',
+  'examples/tool-book-family-tree-ai-agent-plan.md',
+  'examples/ai-agent-operating-cadence-review.md',
 ];
 
 const expectedCaseStudies = [
@@ -302,6 +306,52 @@ function validateReferences() {
       fail(`${stratagemName} must appear exactly once in source-story reference; found ${matches.length}`);
     }
   }
+
+  const methodLibrary = read('references/modern-strategy-method-library.md');
+  for (const required of [
+    'bibliographic anchors only',
+    'Do not reproduce copyrighted text',
+    'User-Read Book Synthesis',
+    'user-provided reading notes',
+    'reader digest',
+    'Consultant-Agency Presentation Review',
+    'synthetic consultant-agency presentation review',
+    'one-slide headline',
+    'Modern Strategy Frame',
+    'MECE / logic tree',
+    'Porter Five Forces',
+    'SWOT',
+    'PDCA',
+    'framework catalog',
+  ]) {
+    if (!methodLibrary.includes(required)) {
+      fail(`modern strategy method library must include ${required}`);
+    }
+  }
+
+  const toolBookFamilyTree = read('references/tool-book-family-tree.md');
+  for (const required of [
+    'Tool-book learning for AI agents',
+    'Reader Digest Contract',
+    'MECE Issue-Tree Contract',
+    'Synthetic Top-Consultancy Panel',
+    'McKinsey-style issue-tree partner',
+    'Bain-style customer-economics operator',
+    'BCG-style advantage',
+    'Advantage / portfolio family',
+    'Large-consultancy-style transformation and deck lead',
+    'AI-Agent Application Plan',
+    'Customer Economics Scorecard',
+    'AI Agent Operating Cadence',
+    'adoption telemetry',
+    'customer economics signal',
+    'not affiliated with McKinsey, Bain, BCG, Deloitte, Accenture',
+    'No copied copyrighted book content',
+  ]) {
+    if (!toolBookFamilyTree.includes(required)) {
+      fail(`tool-book family tree reference must include ${required}`);
+    }
+  }
 }
 
 function validateAgents() {
@@ -322,6 +372,10 @@ function validateAgents() {
     'literal historical figure',
     'hypothesis, not proof',
     'Safe response',
+    'Modern Strategy Frame',
+    'bibliographic anchors only',
+    'user-provided reading notes',
+    'synthetic consultant-agency presentation review',
   ]) {
     if (!agentsDoc.includes(required)) {
       fail(`AGENTS.md must include ${required}`);
@@ -340,8 +394,14 @@ function validateAgents() {
     'sunzi-focus-group-skill-review',
     'sunzi-strategy-consultant',
     'references/ssr-evaluation-scenarios.md',
+    'references/modern-strategy-method-library.md',
+    'references/tool-book-family-tree.md',
     'hypothesis not proof',
     'safe response',
+    'Modern Strategy Frame',
+    'Tool-Book Family Placement',
+    'reader digest',
+    'synthetic consultant-agency presentation review',
     'Evidence Ledger',
     'fraud',
     'market manipulation',
@@ -357,7 +417,7 @@ function validateExamples() {
   const exampleExpectations = [
     {
       path: 'examples/ecommerce-growth-decision-memo.md',
-      required: ['fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion', 'Evidence Ledger'],
+      required: ['Modern Strategy Frame (optional, evidence-gated)', 'evidence-gated', 'Proof signal', 'Stop / retreat trigger', 'fake scarcity', 'fake reviews', 'hidden fees', 'checkout completion', 'Evidence Ledger'],
     },
     {
       path: 'examples/career-negotiation-decision-review.md',
@@ -422,6 +482,14 @@ function validateExamples() {
     {
       path: 'examples/industry-leader-smoke-test.md',
       required: ['synthetic industry-leader agent smoke test', 'Top 3 Problems', 'Sunzi Strategy Consultant', 'Research Metrics Safety Check', 'Synthetic SSR Output', 'Focus Group Review', 'Strategy Analyst Gate', 'Evidence Needed Next', 'works after revision'],
+    },
+    {
+      path: 'examples/tool-book-family-tree-ai-agent-plan.md',
+      required: ['Input basis: user-provided reading notes', 'Reader Digest', 'Tool Family Placement', 'MECE Issue-Tree Contract', 'AI-Agent Behavior Change', 'Evidence Needed', 'Misuse Risk', 'Presentation Angle', 'Family Tree', 'Synthetic Consultancy Panel Review', 'not affiliated with McKinsey, Bain, BCG, Deloitte, Accenture', 'One-slide headline', 'Risk / stop-rule line', 'Exact wording cuts'],
+    },
+    {
+      path: 'examples/ai-agent-operating-cadence-review.md',
+      required: ['Original Reader Digest', 'AI Agent Operating Cadence', 'Customer Economics Scorecard', 'Decision rule', 'Adoption telemetry', 'customer economics', 'not affiliated with McKinsey, Bain, BCG, Deloitte, Accenture', 'Risk / stop-rule line'],
     },
   ];
 
@@ -938,15 +1006,47 @@ function validateStackManifest() {
     }
   }
 
+  const strategyReviewGate = JSON.stringify(behaviorGates.strategy_review ?? []);
+  for (const required of [
+    'modern strategy methods',
+    'evidence-gated',
+    'user-provided reading notes',
+    'Tool-book family reviews',
+    'advantage / portfolio',
+    'customer economics',
+    'adoption telemetry',
+    'Synthetic consultant-agency presentation reviews',
+    'kill criterion',
+  ]) {
+    if (!strategyReviewGate.includes(required)) {
+      fail(`stack.json behavior_gates.strategy_review must include ${required}`);
+    }
+  }
+
   const boundaries = JSON.stringify(stack.public_boundaries ?? []);
   for (const required of [
     'No private 6DuckLearn product code',
     'No secrets',
     'No literal historical-persona claim',
     'No synthetic SSR output presented as real customer evidence',
+    'Modern business books are bibliographic anchors only unless the user supplies reading notes',
+    'do not reproduce copyrighted text',
+    'Synthetic consultant-agency presentation reviews must be labeled as simulation',
   ]) {
     if (!boundaries.includes(required)) {
       fail(`stack.json public_boundaries must include ${required}`);
+    }
+  }
+
+  for (const trackedPath of [
+    'references/modern-strategy-method-library.md',
+    'references/tool-book-family-tree.md',
+    'examples/tool-book-family-tree-ai-agent-plan.md',
+    'examples/ai-agent-operating-cadence-review.md',
+  ]) {
+    const tracked = runGit(['ls-files', '--', trackedPath]).trim();
+    if (tracked !== trackedPath) {
+      fail(`${trackedPath} must be tracked because public files reference it`);
     }
   }
 }

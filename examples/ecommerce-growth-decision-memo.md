@@ -12,6 +12,14 @@ Traffic is up 40%, checkout completion is down, two competitors are discounting 
 - Recommendation: fix checkout friction and inventory transparency before matching competitor discounts.
 - Confidence: medium, pending funnel and inventory data.
 
+## Modern Strategy Frame (optional, evidence-gated)
+
+- Method selected: evidence-gated 3C for customer / company / competitor fit; SWOT only after the evidence ledger is filled.
+- Strategic tension: competitors are using price pressure while customers may be reacting to checkout trust, shipping clarity, or stockout friction.
+- Governing choice: protect profitable in-stock demand before using discounts to chase broad traffic.
+- Proof signal: checkout completion improves for in-stock SKUs without a support or refund spike.
+- Stop / retreat trigger: pause promotions if margin, refund rate, or complaint volume deteriorates for two consecutive days.
+
 ## First-Principles Map
 
 | Variable | Evidence | Interpretation | Missing / falsifier |

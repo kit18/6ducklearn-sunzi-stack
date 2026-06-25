@@ -26,7 +26,7 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 - `strategic-situation-analysis` covers all 36 stratagems exactly once in the source-story reference.
 - The reference pack includes the matrix, domain adapters, market-signal forensics, consulting validation corpus, strategy output template, and ethical-use guardrails.
 - Lens selection uses evidence, falsifiers, and modern business invariants.
-- Each answer can produce a decision memo with source/evidence ledger, action, metric, owner, stop condition, and kill criterion.
+- Each answer can produce a decision memo with source/evidence ledger, action, metric, owner, cadence, decision rule, adoption telemetry, customer economics signal, stop condition, and kill criterion.
 
 ## Behavior Gates
 
@@ -36,6 +36,7 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 - Macro/public sector: names the policy or economic transmission mechanism and governance vehicle.
 - Market risk: remains analytical only, avoids financial advice, and reframes manipulation into detection, defense, compliance, or no-trade analysis.
 - Strategy review: always separates evidence from interpretation, tests a competing diagnosis, and can return `go`, `revise`, or `stop`.
+- Modern-method / reader-digest review: labels original reader digest from user-provided reading notes, avoids full-book summary claims, shows AI-agent workflow impact, metric impact, synthetic review label, family placement, customer economics, adoption telemetry, and stop / adjust trigger.
 - SSR: labels synthetic artifacts, treats simulation as hypothesis not proof, names stakeholder loss/fear/escalation, and recommends a safe response plus real evidence needed next.
 - Real-life DoD cases: each case includes source anchor, canonical lenses, Definition Of Done, simulation output, stakeholder reaction, safe response, and evidence needed next.
 - Focus group skill review: uses multiple stakeholder archetypes, labels synthetic panel simulation, preserves dissent, includes scorecards, starts each dynamic segment with a minimum three-response gate, continues until no new viewpoint categories appear, generates 360 Comments, freezes a dynamic scoring contract, calculates Deterministic Scores, and never relies on one reviewer.
@@ -57,6 +58,8 @@ The validators check skill frontmatter, local links, required references, all-36
 - Use `examples/focus-group-skill-review.md` to review whether a skill is usable and adoption-ready.
 - Use `examples/focus-group-strategy-evaluation.md` to review the top-10 real-life strategy cases with DoD and iteration.
 - Use `examples/industry-leader-smoke-test.md` to test the stack as an end-to-end consultation-company workflow across multiple industries.
+- Use `examples/tool-book-family-tree-ai-agent-plan.md` to turn user-provided book notes into a family-tree, reader-digest, synthetic-panel, and AI-agent behavior plan.
+- Use `examples/ai-agent-operating-cadence-review.md` to verify owner, cadence, decision rule, customer economics, adoption telemetry, and stop / adjust triggers.
 - Use `fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json` with `npm run score:intention -- ...` to verify deterministic user-intention scoring.
 
 ## Scoring Safety

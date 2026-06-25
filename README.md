@@ -68,6 +68,17 @@ https://zh.wikisource.org/wiki/%E4%B8%89%E5%8D%81%E5%85%AD%E8%A8%88
 
 The source stories are used for mechanism checks and analogy quality. They are not moral permission to deceive, manipulate, coerce, violate law, or exploit vulnerable people.
 
+Modern business strategy sources are used as bibliographic anchors and method
+selection aids only. The public pack does not reproduce copyrighted modern book
+text, chapter summaries, distinctive tables, diagrams, or author-specific
+phrasing.
+
+When a user has read a book and supplies their own notes, the stack may produce
+an original reader digest, consultant insight brief, or synthetic
+consultant-agency presentation review. These outputs must be labeled as
+user-provided reading-note synthesis or synthetic review, not as copied text,
+author endorsement, or a definitive full-book summary.
+
 The full public reference pack adds the operating matrix, domain adapters, market-signal forensics, validation corpus, and output contract so installers can audit behavior without private 6DuckLearn runtime code.
 
 ## Templates
@@ -85,6 +96,8 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Domain review contracts](./references/domain-review-contracts.md)
 - [Market signal forensics](./references/market-signal-forensics.md)
 - [Strategy output template](./references/strategy-output-template.md)
+- [Modern strategy method library](./references/modern-strategy-method-library.md)
+- [Tool-book family tree](./references/tool-book-family-tree.md)
 - [Consulting case validation corpus](./references/consulting-case-validation-corpus.md)
 - [Sunzi business consultant soul notes](./references/sunzi-business-consultant-soul.md)
 - [Focus group panel contract](./skills/sunzi-focus-group-skill-review/references/panel-contract.md)
@@ -111,6 +124,7 @@ The full public reference pack adds the operating matrix, domain adapters, marke
 - [Focus group skill review](./examples/focus-group-skill-review.md)
 - [Focus group strategy evaluation](./examples/focus-group-strategy-evaluation.md)
 - [Industry leader smoke test](./examples/industry-leader-smoke-test.md)
+- [Tool-book family tree AI-agent plan](./examples/tool-book-family-tree-ai-agent-plan.md)
 
 ## Industry-Leader Smoke Test
 

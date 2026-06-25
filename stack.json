@@ -76,6 +76,8 @@
     "references/domain-review-contracts.md",
     "references/market-signal-forensics.md",
     "references/strategy-output-template.md",
+    "references/modern-strategy-method-library.md",
+    "references/tool-book-family-tree.md",
     "references/consulting-case-validation-corpus.md",
     "references/sunzi-business-consultant-soul.md",
     "references/strategy-focus-group-evaluation.md",
@@ -101,7 +103,9 @@
     "examples/product-value-prd-review.md",
     "examples/focus-group-skill-review.md",
     "examples/focus-group-strategy-evaluation.md",
-    "examples/industry-leader-smoke-test.md"
+    "examples/industry-leader-smoke-test.md",
+    "examples/tool-book-family-tree-ai-agent-plan.md",
+    "examples/ai-agent-operating-cadence-review.md"
   ],
   "case_studies": [
     "case-studies/ai-transformation.json",
@@ -155,6 +159,11 @@
     ],
     "strategy_review": [
       "Separate evidence from interpretation.",
+      "Privately screen modern strategy methods and output only 1 to 2 evidence-gated methods when they improve the diagnosis, move, metric, or kill criterion.",
+      "Allow original reader digest and consultant insight synthesis only from user-provided reading notes, with clear labels and no copyrighted text reproduction.",
+      "Tool-book family reviews must place insights into strategic lens, consulting diagnosis, advantage / portfolio, operating system, or presentation family before changing AI-agent behavior.",
+      "Reader-digest operating reviews must define cadence, decision rule, customer economics, adoption telemetry, and stop / adjust trigger.",
+      "Synthetic consultant-agency presentation reviews must check one-slide storyline, evidence, risk, and stop rule without implying real agency endorsement.",
       "Force a competing diagnosis, a do-nothing or retreat option, metrics, and kill criteria."
     ],
     "decision_review": [
@@ -209,6 +218,8 @@
     "No literal historical-persona claim.",
     "No synthetic SSR output presented as real customer evidence.",
     "No synthetic focus-group score presented as real NPS, PMF, WTP, market proof, or percent-would-buy evidence.",
-    "Classical stratagems are diagnostic analogies, not permission for deception or harm."
+    "Classical stratagems are diagnostic analogies, not permission for deception or harm.",
+    "Modern business books are bibliographic anchors only unless the user supplies reading notes; do not reproduce copyrighted text.",
+    "Synthetic consultant-agency presentation reviews must be labeled as simulation, not real endorsement."
   ]
 }
