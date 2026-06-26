@@ -44,6 +44,8 @@ Every full recommendation should include:
 - SSR evidence boundary: hypothesis, not proof; name the real evidence needed next.
 - Safe response when stakeholder simulation exposes backlash, burden, hidden dependency, or trust risk.
 - Terrain and first-principles map.
+- Issue Tree / Controlling Branches with root question, MECE branches, evidence, falsifier, decision impact, and unknown lane.
+- Advantage / Portfolio Choice with where to play, how to win, capability system / moat hypothesis, investment tier, and scale / pause / kill reallocation trigger.
 - Optional `Modern Strategy Frame` with 1 to 2 evidence-gated methods, not a framework dump.
 - Tool-book family placement when the user asks to apply book learning to AI-agent work.
 - 2 to 4 source-grounded Thirty-Six Stratagems lenses.

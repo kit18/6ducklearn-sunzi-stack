@@ -43,6 +43,8 @@ workflow:
   - Route everyday or professional choices through sunzi-decision-review before artifact-specific skills.
   - Route synthetic stakeholder stress-reaction work through sunzi-stakeholder-ssr, label it as simulation, and treat it as hypothesis not proof.
   - Run strategic-situation-analysis for terrain, first-principles map, domain adapter, and 2 to 4 lenses.
+  - Build an Issue Tree / Controlling Branches section with root question, MECE branches, evidence, falsifier, decision impact, and unknown lane.
+  - Make the Advantage / Portfolio Choice explicit: where to play, how to win, capability system / moat hypothesis, investment tier, and scale / pause / kill reallocation trigger.
   - Privately screen modern strategy methods after evidence mapping; output Modern Strategy Frame only when 1 to 2 selected methods improve diagnosis, presentation, or kill criteria.
   - Convert user-provided reading notes into original reader digest and consultant insight briefs; label the source and do not claim full-book authority.
   - Use the Tool-Book Family Tree for deeper book-learning work: strategic lens, consulting diagnosis, advantage / portfolio, operating system, and presentation family.
@@ -58,6 +60,8 @@ output_contract:
     - Decision
     - Terrain
     - First-Principles Map
+    - Issue Tree / Controlling Branches
+    - Advantage / Portfolio Choice
     - Selected Lenses
     - Strategy-Analyst Review
     - Evidence Ledger

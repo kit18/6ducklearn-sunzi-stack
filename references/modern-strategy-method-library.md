@@ -95,6 +95,35 @@ Simulated reviewer stance:
 | Porter Five Forces | The decision depends on industry attractiveness, profit pool, or market structure. | Buyer power, supplier power, substitutes, rivalry, entrants, and trend evidence. | The force that most changes strategic freedom or margin. | Applying an industry tool to a narrow feature or internal workflow. |
 | SWOT | The evidence ledger already exists and needs synthesis. | Evidence for each quadrant, plus missing data and falsifier. | A compact synthesis table only after evidence is gathered. | Starting with SWOT before analysis, causing vague positives and negatives. |
 | PDCA | The work is an SOP, operations loop, rollout, or reversible experiment. | Owner, cadence, leading metric, learning rule, stop / adjust criterion. | The next cycle: plan, do, check, act. | Endless iteration without a decision threshold. |
+| Advantage / portfolio allocation | The decision chooses where to play, how to win, what to fund, or what to stop. | Segment attractiveness, capability fit, competitor response, resource constraint, and trigger evidence. | An Advantage / Portfolio Choice with investment tier and reallocation rule. | Mistaking ambition for moat or keeping every option alive. |
+
+## Advantage / Portfolio Allocation Rules
+
+Use this section when the recommendation changes resource allocation, market
+choice, partnership posture, or capability investment. A full strategy memo must
+make the portfolio choice explicit instead of hiding it inside the narrative.
+
+Required fields:
+
+- Where to play: the customer, market, channel, workflow, or use case to focus on.
+- How to win: the mechanism that makes the move hard to copy or easier to trust.
+- Capability system / moat hypothesis: the linked capabilities, data, process,
+  distribution, trust, or switching-cost advantage that could compound.
+- Investment tier: scale, test, partner, pause, or kill.
+- Scale / pause / kill reallocation trigger: the evidence threshold that moves
+  budget, people, roadmap capacity, or executive attention.
+
+Evidence gates:
+
+1. The `where to play` choice must tie to demand, margin, urgency, or strategic
+   control evidence.
+2. The `how to win` claim must name the actor who could copy, block, or ignore
+   the move.
+3. The moat hypothesis must be falsifiable; if the capability does not compound,
+   the plan is only an experiment.
+4. The investment tier must state what resource changes now.
+5. The reallocation trigger must say what gets scaled, paused, partnered, or
+   killed when the signal moves.
 
 ## Modern Strategy Frame (Optional, Evidence-Gated)
 

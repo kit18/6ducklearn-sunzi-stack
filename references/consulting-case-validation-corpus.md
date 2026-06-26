@@ -4,6 +4,8 @@ Use these cases as public behavior tests for the skill and as examples for downs
 
 Source policy: official consulting-company or regulator sources only.
 
+Boundary: validation corpus only. This public pack is not affiliated with, endorsed by, or sponsored by any named consulting firm, client, regulator, author, or publisher.
+
 For each case, the skill should output a first-principles map, 2 to 4 canonical lenses, a strategy move, metrics, and kill criteria.
 
 ## Growth and ecommerce

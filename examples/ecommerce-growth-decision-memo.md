@@ -32,6 +32,27 @@ Traffic is up 40%, checkout completion is down, two competitors are discounting 
 | Feedback | Checkout completion, contribution margin, support tickets | Early signals can validate friction fixes in days | Channel-level CAC |
 | Failure mode | Fake urgency or hidden fees | Trust damage and refunds | Customer complaint spike |
 
+## Issue Tree / Controlling Branches
+
+MECE check: demand, operating capability, competitive pressure, and unknown lane are separated so the team does not double-count the same symptom as multiple causes.
+
+| Root question | Branch | Evidence | Falsifier | Decision impact |
+|---|---|---|---|---|
+| What is the highest-leverage way to recover profitable checkout conversion during the 30-day inventory constraint? | Customer / demand branch: customers may be abandoning because trust, shipping clarity, payment, or stockout information degraded. | Traffic is up while checkout completion is down. | Device, payment, and SKU cuts show no friction increase, and price sensitivity explains most drop-off. | Prioritize checkout and stock transparency before discounting. |
+| Same root question | Capability / operating branch: inventory and support capacity constrain broad promotion. | Inventory is constrained for 30 days; support/refund signals are monitored. | Replenishment becomes reliable and support load stays flat under targeted offers. | Keep offers SKU-level and reversible. |
+| Same root question | Competitive / external branch: competitor discounting may pull price-sensitive demand away. | Two competitors are discounting aggressively. | Conversion recovers after friction fixes without price matching. | Avoid broad discount matching unless the external branch becomes the control node. |
+| Same root question | Unknown lane: channel-level CAC and competitor margin durability are not yet known. | Evidence ledger is incomplete. | CAC and margin data prove a profitable promotion window. | Reallocate test budget only after evidence arrives. |
+
+## Advantage / Portfolio Choice
+
+| Choice | Current answer | Evidence | Reallocation trigger |
+|---|---|---|---|
+| Where to play | In-stock SKUs and checkout paths where demand is already present. | Traffic is up 40%, but checkout completion is down. | Scale only if in-stock checkout completion rises without refund/support spike. |
+| How to win | Win on trustworthy checkout clarity and operational reliability rather than broad price matching. | Inventory constraint makes undisciplined volume risky. | Pause if competitor price explains most lost conversion after friction fixes. |
+| Capability system / moat hypothesis | A cross-functional checkout, inventory, support, and margin loop can compound into faster demand-quality decisions. | Event logs, inventory forecast, and support tickets can be reviewed daily. | Kill the loop if the team cannot make daily SKU/channel decisions from the data. |
+| Investment tier: scale, test, partner, pause, or kill | Test. Fund checkout fixes and targeted SKU offers; pause broad promotions. | Evidence is medium-quality and reversible. | Scale targeted offers, partner on payments/shipping fixes, pause low-margin traffic, or kill discounts based on the two-day signal. |
+| Scale / pause / kill reallocation trigger | Reallocate spend from broad acquisition into checkout/in-stock SKU tests until proof improves. | Margin, refund, complaint, and checkout metrics are the governing signals. | Move budget when two consecutive days confirm conversion gain without margin or trust deterioration. |
+
 ## Selected Lenses
 
 | Lens | Why it fits | Ethical business translation | Falsifier / misuse risk |

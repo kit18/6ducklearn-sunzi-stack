@@ -37,6 +37,25 @@ First-Principles Map
 | Feedback |  |  |  |
 | Failure mode |  |  |  |
 
+Issue Tree / Controlling Branches
+MECE check:
+
+| Root question | Branch | Evidence | Falsifier | Decision impact |
+|---|---|---|---|---|
+|  | Customer / demand branch |  |  |  |
+|  | Capability / operating branch |  |  |  |
+|  | Competitive / external branch |  |  |  |
+|  | Unknown lane |  |  |  |
+
+Advantage / Portfolio Choice
+| Choice | Current answer | Evidence | Reallocation trigger |
+|---|---|---|---|
+| Where to play |  |  |  |
+| How to win |  |  |  |
+| Capability system / moat hypothesis |  |  |  |
+| Investment tier: scale, test, partner, pause, or kill |  |  |  |
+| Scale / pause / kill reallocation trigger |  |  |  |
+
 Selected Lenses
 | Lens | Mechanism | Ethical business translation | Falsifier |
 |---|---|---|---|

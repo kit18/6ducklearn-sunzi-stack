@@ -170,7 +170,7 @@ const leakagePatterns = [
 ];
 
 const processSummaryDescriptionPattern = /\b(selects|returns|generates|delivers|routes|audits|simulates)\b/i;
-const localOnlyExclusions = ['docs/internal-enablement/'];
+const localOnlyExclusions = ['docs/internal-enablement/', 'private-drafts/', 'worktrees/', '.worktrees/'];
 const requiredPacklistPaths = [
   'README.md',
   'docs/INSTALL.md',
@@ -319,6 +319,13 @@ function validateReferences() {
     'one-slide headline',
     'Modern Strategy Frame',
     'MECE / logic tree',
+    'Advantage / portfolio allocation',
+    'Advantage / Portfolio Allocation Rules',
+    'Where to play',
+    'How to win',
+    'Capability system / moat hypothesis',
+    'Investment tier',
+    'Scale / pause / kill reallocation trigger',
     'Porter Five Forces',
     'SWOT',
     'PDCA',
@@ -352,6 +359,36 @@ function validateReferences() {
       fail(`tool-book family tree reference must include ${required}`);
     }
   }
+
+  for (const [relativePath, label] of [
+    ['references/strategy-output-template.md', 'strategy output template'],
+    ['references/decision-memo-template.md', 'decision memo template'],
+  ]) {
+    const template = read(relativePath);
+    for (const required of [
+      'Issue Tree / Controlling Branches',
+      'Root question',
+      'MECE check',
+      'Evidence',
+      'Falsifier',
+      'Decision impact',
+      'Unknown lane',
+      'Advantage / Portfolio Choice',
+      'Where to play',
+      'How to win',
+      'Capability system / moat hypothesis',
+      'Investment tier',
+      'Scale / pause / kill reallocation trigger',
+    ]) {
+      if (!template.includes(required)) {
+        fail(`${label} must include ${required}`);
+      }
+    }
+  }
+
+  if (!read('references/consulting-case-validation-corpus.md').includes('validation corpus only')) {
+    fail('consulting case validation corpus must include local validation-only disclaimer');
+  }
 }
 
 function validateAgents() {
@@ -372,6 +409,9 @@ function validateAgents() {
     'literal historical figure',
     'hypothesis, not proof',
     'Safe response',
+    'Issue Tree / Controlling Branches',
+    'Advantage / Portfolio Choice',
+    'scale / pause / kill reallocation trigger',
     'Modern Strategy Frame',
     'bibliographic anchors only',
     'user-provided reading notes',
@@ -398,6 +438,9 @@ function validateAgents() {
     'references/tool-book-family-tree.md',
     'hypothesis not proof',
     'safe response',
+    'Issue Tree / Controlling Branches',
+    'Advantage / Portfolio Choice',
+    'scale / pause / kill reallocation trigger',
     'Modern Strategy Frame',
     'Tool-Book Family Placement',
     'reader digest',

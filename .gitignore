@@ -5,4 +5,7 @@ dist/
 .env
 .env.*
 !.env.example
+private-drafts/
+worktrees/
+.worktrees/
 docs/internal-enablement/
