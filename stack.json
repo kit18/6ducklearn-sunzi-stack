@@ -57,6 +57,11 @@
       "name": "sunzi-compare",
       "path": "skills/sunzi-compare/SKILL.md",
       "purpose": "Pre-commitment 七計 war-room count against a named rival: evidence-gated seven-comparison scorecard, market-position classification, and 廟算 go / no-go verdict."
+    },
+    {
+      "name": "sunzi-terrain",
+      "path": "skills/sunzi-terrain/SKILL.md",
+      "purpose": "地 ground-truth survey: first-principles market map, 九地 ground classification with doctrine, supply lines, the rival's view of the same ground, and withdrawal assessment."
     }
   ],
   "agents": [
