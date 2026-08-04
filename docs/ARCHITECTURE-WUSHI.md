@@ -73,6 +73,20 @@ The pack enforces the sequence structurally:
   output header: `⚠ running without foundation audit — tactics without a base`.
   It runs anyway (the user decides), but it never runs silently.
 
+### Provenance — two books, one join
+
+孫子兵法 (Warring States) and 三十六計 (a Ming–Qing folk compilation) are
+separate works, roughly two millennia apart, and the pack never pretends
+otherwise. The join is architectural, not historical: 五事七計 is the
+**diagnosis layer** — systematic, evidence-first, canonical; the stratagems are
+a **lens library** screened only after diagnosis, exactly because they are
+folk-tactical material with no internal restraint of their own. This is also
+why the killing-blow framing (一擊必殺) that popular business writing attaches
+to the stratagems is deliberately *not* adopted: 謀攻篇 ranks 不戰而屈人之兵 —
+winning without the strike — as 善之善者, and the cost ladder 伐謀 → 伐交 →
+伐兵 → 攻城 exists to make the decisive strike the most expensive option, not
+the most glorious one.
+
 Each becomes one skill. Not a section of a skill — a skill, with its own modes,
 its own forcing questions, and its own artifact.
 
@@ -102,8 +116,7 @@ Five skills. Each answers one question that the other four cannot.
 > 主孰有道？將孰有能？天地孰得？法令孰行？兵眾孰強？士卒孰練？賞罰孰明？
 
 Seven head-to-head comparisons against a **named** rival. Sunzi's own scoring
-rubric, and the pack's go/no-go gate — the analogue of gstack's `/autoplan`
-readiness dashboard.
+rubric, and the pack's go/no-go gate.
 
 | Skill | Specialist | What it does |
 |---|---|---|
@@ -157,22 +170,6 @@ operation, and chapter 5 is the only chapter written for allies — including
 what allies do to each other. When the SSR skill simulates partner reactions,
 this is the chapter it screens.
 
-### Provenance note — two books, one join
-
-孫子兵法 (Warring States) and 三十六計 (a Ming–Qing folk compilation) are
-separate works, roughly two millennia apart, and the pack never pretends
-otherwise. The join is architectural, not historical: 五事七計 is the
-**diagnosis layer** — systematic, evidence-first, canonical; the stratagems are
-a **lens library** screened only after diagnosis, exactly because they are
-folk-tactical material with no internal restraint of their own. This is also
-why the killing-blow framing (一擊必殺) that popular business writing attaches
-to the stratagems is deliberately *not* adopted here: 謀攻篇 ranks
-不戰而屈人之兵 — winning without the strike — as 善之善者, and the cost ladder
-伐謀 → 伐交 → 伐兵 → 攻城 exists to make the decisive strike the most
-expensive option, not the most glorious one. `/sunzi-win-without-fighting`
-sits above the maneuver tier for that reason: the pack recommends the strike
-only after the cheaper rungs are shown to fail.
-
 Three rules keep this honest:
 
 1. **Anchors are public narratives, not verified data.** They live in the
@@ -197,6 +194,26 @@ This is the only chapter that is primarily a warning, and it is the correct
 home for the class of business decisions that cannot be undone. Most strategy
 tooling has no such gate.
 
+### Deliberately implicit: 形、勢、奇正
+
+Three load-bearing concepts get no skill of their own — the layer count
+follows the text, not symmetry — but each has a stated home:
+
+- **形 (disposition, 軍形篇)** lives in the sequencing doctrine. 先為不可勝 *is*
+  形 — the shape you build before contact. A separate skill would duplicate
+  the 五事 audit.
+- **勢 (momentum, 兵勢篇)** lives inside `/sunzi-timing` and
+  `/sunzi-find-the-wedge`. 求之於勢，不責於人 — seek victory from the setup,
+  not from heroics — is the test both skills apply to any plan whose success
+  clause is "the team executes harder." Modern reading: flywheels, compounding
+  distribution, sequencing releases so each one raises the ground for the next.
+- **奇正 (orthodox / extraordinary, 兵勢篇)** is a mode of the wedge: 以正合，
+  以奇勝 — hold with the orthodox, win with the unexpected.
+  `/sunzi-find-the-wedge` asks which part of the plan is 正 (must simply not
+  lose: product quality, service, unit economics) and which is 奇 (the surprise
+  that wins), and rejects plans that are all 奇 — a company of nothing but
+  surprises has nothing to hold the line while the surprise develops.
+
 ### Retained skills
 
 | Skill | Change | Why |
@@ -220,7 +237,7 @@ arrives as an adapter to a terrain survey, not as a separate review.
 
 ## 4. Modes and forcing questions
 
-This is the gstack pattern the pack was missing. Every skill gets 2–4 **modes**
+This is the structural pattern the pack was missing. Every skill gets 2–4 **modes**
 and a set of **forcing questions** it must ask before producing output. Modes
 prevent one-size analysis; forcing questions prevent the agent from writing
 plausible strategy prose without evidence.
@@ -330,8 +347,10 @@ Forcing questions:
 
 ## 5. Artifact chaining
 
-gstack's real unlock is that skills write files downstream skills read. The
-Sunzi pack currently names skills at each other and passes nothing.
+Skills write artifacts that downstream skills read — that is what turns a
+collection of prompts into a process. v0.2.0 skills only *named* each other
+and passed nothing; this is the single most important structural pattern the
+rebuild adopts.
 
 ```
 /sunzi-terrain      → terrain-survey.md      ┐
@@ -355,36 +374,43 @@ Sunzi pack currently names skills at each other and passes nothing.
 Artifacts are plain Markdown in the working directory. No daemon, no state
 directory, no `~/.sunzi/`. The pack stays dependency-free and host-agnostic.
 
-### The campaign loop — gstack's sprint, translated
+### The campaign loop — 審 → 算 → 謀 → 驗 → 斷 → 省
 
-gstack is a process, not a pile of tools: Think → Plan → Build → Review →
-Test → Ship → Reflect, each skill feeding the next. The Sunzi pack runs the
-same shape as a **campaign loop**, and each stage has a canonical anchor:
+The pack is a process, not a pile of prompts. Six stages, each with its own
+skills and its own canonical anchor:
 
-| gstack stage | gstack skill | Sunzi pack stage | Skill | Canonical anchor |
-|---|---|---|---|---|
-| Think | `/office-hours` | 經之以五事 — audit the foundation | 五事 tier (any order, all five) | 始計篇 |
-| Plan | `/plan-ceo-review` | 校之以計 — score against a named rival, classify position | `/sunzi-compare` | 校之以計，而索其情 |
-| Build | implementation | 謀攻 → maneuver — choose the move, cheapest rung first | `/sunzi-win-without-fighting`, then maneuver tier | 上兵伐謀 |
-| Review | `/review` | stress the plan against people who must live with it | `sunzi-stakeholder-ssr` | 知彼知己 |
-| Test | `/qa` | quality gate: falsifiers, kill criteria, alternative diagnosis | `strategy-analyst-review` | 多算勝，少算不勝 |
-| Ship | `/ship` | 火攻 gate for irreversible moves, then commit the memo | `/sunzi-restraint` → decision memo | 非利不動，非得不用，非危不戰 |
-| Reflect | `/retro` | 校計 recalibration — re-score the seven after contact | `/sunzi-retro` *(new)* | 兵無常勢，水無常形 |
+| Stage | Meaning | Skills | Canonical anchor |
+|---|---|---|---|
+| **審** audit | Weigh the five factors | 五事 tier (all five, any order) | 經之以五事 |
+| **算** count | Score against a named rival; classify position | `/sunzi-compare` | 校之以計，而索其情 |
+| **謀** devise | Choose the move, cheapest rung first | `/sunzi-win-without-fighting` → maneuver tier | 上兵伐謀 |
+| **驗** test | Stress the plan against people and falsifiers | `sunzi-stakeholder-ssr` + `strategy-analyst-review` | 知彼知己；多算勝，少算不勝 |
+| **斷** decide | Gate irreversible moves; commit the memo | `/sunzi-restraint` → decision memo | 非利不動，非得不用，非危不戰 |
+| **省** reflect | Re-score after contact; diff the counts | `/sunzi-retro` | 兵無常勢，水無常形 |
 
-`/sunzi-retro` is the one skill this loop adds beyond the roster above, and
-gstack's `/retro` is why: a review pipeline without a reflect stage never
-learns. After a campaign (a launch, a negotiation, a quarter), it re-runs the
-seven comparisons against what actually happened, diffs the two scorecards,
-and records which 事 was misjudged and which lens was decoration. 虛實篇's
-兵無常勢 is the anchor — the shape of the water changes, so the map must be
-redrawn after every engagement. The diff artifact
-(`廟算-recalibration.md`) is what the *next* campaign's `/sunzi-compare` reads
-first — the pack's compounding memory, done with files instead of a daemon.
+驗 is one stage with two gates — stakeholder pressure and analytic falsification
+— where an engineering pack would split "review" from "test." Strategy doesn't
+support that split: both are challenges mounted *before* commitment, and
+separating them only manufactures a stage. The loop is six stages because that
+is what 始計篇 supports, not seven to match anything else. Readers who know
+engineering skill packs will recognize the silhouette (think → plan → build →
+review → ship → reflect); the resemblance is convergent — Sunzi was running
+this order first.
 
-The router (`sunzi-strategy-consultant`) is the pack's `/autoplan`: invoked
-bare, it walks the whole loop, surfacing only the decisions that are genuinely
-the user's — which rival to score against, which position claim to accept,
-which irreversible move to authorize.
+`/sunzi-retro` is the one skill the loop adds beyond the roster above, because
+a pipeline without a reflect stage never learns. After a campaign — a launch,
+a negotiation, a quarter — it re-runs the seven comparisons against what
+actually happened, diffs the two scorecards, and records which 事 was
+misjudged and which lens was decoration. 虛實篇 supplies the anchor: 兵無常勢，
+水無常形 — the shape of the water changes, so the map must be redrawn after
+every engagement. The diff artifact (`廟算-recalibration.md`) is what the
+*next* campaign's `/sunzi-compare` reads first — compounding memory, done with
+plain files.
+
+The router (`sunzi-strategy-consultant`), invoked bare, walks the whole loop
+and surfaces only the decisions that are genuinely the user's — which rival to
+score against, which position claim to accept, which irreversible move to
+authorize.
 
 ---
 
