@@ -149,6 +149,29 @@ chapter for your position carries a burden of proof.
 | 挑戰者 (challenger) | 敵戰計 · 攻戰計 | 暗渡陳倉 — visible move masks the real advance into ground incumbents ignore (Pinduoduo's group-buy groups covering a down-market landgrab while Alibaba and JD fought over tier-1 cities). 聲東擊西 — draw the defense to the wrong surface (ByteDance holding Baidu/Tencent's attention on news-feed content while massing on short video) | pinduoduo-flank, bytedance-misdirection |
 | 顛覆者 (disruptor) | 混戰計 | 釜底抽薪 — remove the fuel the incumbent's model burns (360's free antivirus draining license-key vendors; Netflix streaming draining Blockbuster's store economics). 借刀殺人 — mobilize a third party's capital or incentive (the Didi/Kuaidi subsidy war fought with Tencent's and Alibaba's money) | 360-free-model, netflix-blockbuster, didi-kuaidi-capital |
 | 劣勢/轉型 (disadvantaged) | 敗戰計 | 金蟬脫殼 — shed the shell, keep the organism (IBM selling PC to Lenovo and re-emerging as enterprise services). 走為上計 — cut the losing line while cash remains (Microsoft exiting Windows Phone) | ibm-lenovo-shell, microsoft-wp-exit |
+| 同盟/生態 (allied — a *situation*, not a position; can overlay any row above) | 並戰計 | 假道伐虢 — the road you borrow becomes the road that conquers you: platform dependency, the API you build on, the marketplace that hosts you and then ships your feature natively. 偷樑換柱 — the quiet swap of a load-bearing beam: standard capture, default-setting changes, contract-renewal term drift inside a "stable" partnership | platform-sherlock-risk, standard-capture |
+
+並戰計 deserves the extra row because modern companies rarely fight alone:
+every platform listing, co-marketing deal, and OEM relationship is an allied
+operation, and chapter 5 is the only chapter written for allies — including
+what allies do to each other. When the SSR skill simulates partner reactions,
+this is the chapter it screens.
+
+### Provenance note — two books, one join
+
+孫子兵法 (Warring States) and 三十六計 (a Ming–Qing folk compilation) are
+separate works, roughly two millennia apart, and the pack never pretends
+otherwise. The join is architectural, not historical: 五事七計 is the
+**diagnosis layer** — systematic, evidence-first, canonical; the stratagems are
+a **lens library** screened only after diagnosis, exactly because they are
+folk-tactical material with no internal restraint of their own. This is also
+why the killing-blow framing (一擊必殺) that popular business writing attaches
+to the stratagems is deliberately *not* adopted here: 謀攻篇 ranks
+不戰而屈人之兵 — winning without the strike — as 善之善者, and the cost ladder
+伐謀 → 伐交 → 伐兵 → 攻城 exists to make the decisive strike the most
+expensive option, not the most glorious one. `/sunzi-win-without-fighting`
+sits above the maneuver tier for that reason: the pack recommends the strike
+only after the cheaper rungs are shown to fail.
 
 Three rules keep this honest:
 
@@ -331,6 +354,37 @@ Sunzi pack currently names skills at each other and passes nothing.
 
 Artifacts are plain Markdown in the working directory. No daemon, no state
 directory, no `~/.sunzi/`. The pack stays dependency-free and host-agnostic.
+
+### The campaign loop — gstack's sprint, translated
+
+gstack is a process, not a pile of tools: Think → Plan → Build → Review →
+Test → Ship → Reflect, each skill feeding the next. The Sunzi pack runs the
+same shape as a **campaign loop**, and each stage has a canonical anchor:
+
+| gstack stage | gstack skill | Sunzi pack stage | Skill | Canonical anchor |
+|---|---|---|---|---|
+| Think | `/office-hours` | 經之以五事 — audit the foundation | 五事 tier (any order, all five) | 始計篇 |
+| Plan | `/plan-ceo-review` | 校之以計 — score against a named rival, classify position | `/sunzi-compare` | 校之以計，而索其情 |
+| Build | implementation | 謀攻 → maneuver — choose the move, cheapest rung first | `/sunzi-win-without-fighting`, then maneuver tier | 上兵伐謀 |
+| Review | `/review` | stress the plan against people who must live with it | `sunzi-stakeholder-ssr` | 知彼知己 |
+| Test | `/qa` | quality gate: falsifiers, kill criteria, alternative diagnosis | `strategy-analyst-review` | 多算勝，少算不勝 |
+| Ship | `/ship` | 火攻 gate for irreversible moves, then commit the memo | `/sunzi-restraint` → decision memo | 非利不動，非得不用，非危不戰 |
+| Reflect | `/retro` | 校計 recalibration — re-score the seven after contact | `/sunzi-retro` *(new)* | 兵無常勢，水無常形 |
+
+`/sunzi-retro` is the one skill this loop adds beyond the roster above, and
+gstack's `/retro` is why: a review pipeline without a reflect stage never
+learns. After a campaign (a launch, a negotiation, a quarter), it re-runs the
+seven comparisons against what actually happened, diffs the two scorecards,
+and records which 事 was misjudged and which lens was decoration. 虛實篇's
+兵無常勢 is the anchor — the shape of the water changes, so the map must be
+redrawn after every engagement. The diff artifact
+(`廟算-recalibration.md`) is what the *next* campaign's `/sunzi-compare` reads
+first — the pack's compounding memory, done with files instead of a daemon.
+
+The router (`sunzi-strategy-consultant`) is the pack's `/autoplan`: invoked
+bare, it walks the whole loop, surfacing only the decisions that are genuinely
+the user's — which rival to score against, which position claim to accept,
+which irreversible move to authorize.
 
 ---
 
