@@ -15,6 +15,7 @@ const expectedSkills = [
   'sunzi-prd-review',
   'sunzi-focus-group-skill-review',
   'sunzi-strategy-consultant',
+  'sunzi-compare',
 ];
 
 const expectedReferences = [

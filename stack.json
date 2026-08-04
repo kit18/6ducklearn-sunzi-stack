@@ -52,6 +52,11 @@
       "name": "sunzi-strategy-consultant",
       "path": "skills/sunzi-strategy-consultant/SKILL.md",
       "purpose": "Modern Sunzi-style strategy consultant workflow for business decisions."
+    },
+    {
+      "name": "sunzi-compare",
+      "path": "skills/sunzi-compare/SKILL.md",
+      "purpose": "Pre-commitment 七計 war-room count against a named rival: evidence-gated seven-comparison scorecard, market-position classification, and 廟算 go / no-go verdict."
     }
   ],
   "agents": [
