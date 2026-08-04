@@ -62,6 +62,11 @@
       "name": "sunzi-terrain",
       "path": "skills/sunzi-terrain/SKILL.md",
       "purpose": "地 ground-truth survey: first-principles market map, 九地 ground classification with doctrine, supply lines, the rival's view of the same ground, and withdrawal assessment."
+    },
+    {
+      "name": "sunzi-method",
+      "path": "skills/sunzi-method/SKILL.md",
+      "purpose": "法 operating-system examination: org-vs-strategy capability map, decision rights and latency, incentive conflicts, compliance exposure, and the enforced unit-economics gate with computed break-even."
     }
   ],
   "agents": [
