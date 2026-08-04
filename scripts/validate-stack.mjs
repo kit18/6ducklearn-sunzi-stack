@@ -21,6 +21,12 @@ const expectedSkills = [
   'sunzi-alignment',
   'sunzi-timing',
   'sunzi-command',
+  'sunzi-win-without-fighting',
+  'sunzi-find-the-wedge',
+  'sunzi-contingency',
+  'sunzi-restraint',
+  'sunzi-intelligence',
+  'sunzi-retro',
 ];
 
 const expectedReferences = [

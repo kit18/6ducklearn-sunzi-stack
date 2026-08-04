@@ -82,6 +82,36 @@
       "name": "sunzi-command",
       "path": "skills/sunzi-command/SKILL.md",
       "purpose": "將 command assessment: 智信仁勇嚴 scored from cited behavior, 將有五危 exposure screening with bait shapes, the 君不御 chain test, counterpart reads from public record, and per-campaign bench review."
+    },
+    {
+      "name": "sunzi-win-without-fighting",
+      "path": "skills/sunzi-win-without-fighting/SKILL.md",
+      "purpose": "謀攻 cost ladder walked in order (伐謀/伐交/伐兵/攻城) with force-ratio sizing doctrine, 全勝 intact-win statement, and position-weighted lens screening before any head-on move."
+    },
+    {
+      "name": "sunzi-find-the-wedge",
+      "path": "skills/sunzi-find-the-wedge/SKILL.md",
+      "purpose": "虛實 wedge analysis: rival commitments turned into structural weakness, closing-cost test, mandatory 正/奇 split rejecting all-奇 plans, initiative test, and the defensive read of your own 虛."
+    },
+    {
+      "name": "sunzi-contingency",
+      "path": "skills/sunzi-contingency/SKILL.md",
+      "purpose": "九變 contingency layer: owned triggers with pre-agreed adaptations, mandatory refusals list (所不), kill layer with numbers and invocation authority, and the 利害 blend both directions."
+    },
+    {
+      "name": "sunzi-restraint",
+      "path": "skills/sunzi-restraint/SKILL.md",
+      "purpose": "火攻 gate for irreversible and escalatory moves: four written tests (anger, profit, necessity, survival), bait check against the command watch-list, smaller-commitment search, and named dissenting authority."
+    },
+    {
+      "name": "sunzi-intelligence",
+      "path": "skills/sunzi-intelligence/SKILL.md",
+      "purpose": "用間 collection discipline: decision-gated requirements, five channels translated to legitimate sources with an absolute legitimacy line, verification before money moves, and the broadcast (反間) mirror."
+    },
+    {
+      "name": "sunzi-retro",
+      "path": "skills/sunzi-retro/SKILL.md",
+      "purpose": "省 recalibration: the seven comparisons re-scored from outcomes against the written scorecard, evidence-vs-reading attribution, lens and contingency audits, and a max-three-correction inheritance for the next count."
     }
   ],
   "agents": [
