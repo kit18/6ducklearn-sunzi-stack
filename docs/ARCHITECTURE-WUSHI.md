@@ -233,6 +233,34 @@ being skills and become **domain adapters** under
 the 五事 skills pull in. Growth work still gets growth-specific rigor — it
 arrives as an adapter to a terrain survey, not as a separate review.
 
+### The 未戰 lane — every adapter must serve the pre-launch case
+
+The v0.2.0 adapters demanded funnel data, channel mix, conversion, and
+retention as *inputs* — which silently excluded the most common strategy
+client: someone pre-revenue, pre-funnel, deciding whether to start. The
+canonical position is the opposite of that exclusion. 廟算 happens 未戰 —
+before the campaign — and 用間篇 is explicit about where pre-campaign
+knowledge comes from:
+
+> 先知者，不可取於鬼神，不可象於事，不可驗於度，必取於人。
+
+Foreknowledge comes from people, not divination and not extrapolation. So
+every domain adapter carries a mandatory **未戰 lane** alongside its operating
+lane:
+
+- **Evidence is probe-based, and labeled so.** 無中生有 and 拋磚引玉 are the
+  governing lenses: a low-cost probe (mock bundles, preorder page, priced
+  waitlist, supplier sample round) creates real information before
+  commitment. Probe evidence is tiered below operating evidence and the
+  scorecard says which tier each row rests on.
+- **Proxy metrics must falsify the actual thesis.** A retention thesis needs a
+  pre-launch retention proxy (a priced subscribe option, a refill preorder) —
+  a traffic or add-to-cart proxy cannot stand in for it, and the adapter must
+  reject the substitution.
+- **The economics gate still runs**, on quotes and benchmarks instead of
+  actuals, with every estimated row marked. Pre-launch is precisely when the
+  break-even arithmetic is cheapest to act on — 夫未戰而廟算勝者，得算多也.
+
 ---
 
 ## 4. Modes and forcing questions
@@ -331,7 +359,11 @@ CAC payback, cash conversion.
 
 That is CAC payback stated as doctrine. PROVISIONING mode refuses to return a
 verdict without a computed break-even, because a strategy whose arithmetic
-fails is not a strategy.
+fails is not a strategy. The computational contract — the contribution ladder,
+break-even CAC, allowable CAC, payback vs. runway, and the required output
+block — lives in [`references/unit-economics-gate.md`](../references/unit-economics-gate.md);
+PROVISIONING mode enforces it row by row, writing `insufficient evidence` where
+the data does not exist rather than skipping the row.
 
 Forcing questions:
 
