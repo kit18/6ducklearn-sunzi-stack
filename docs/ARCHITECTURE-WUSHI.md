@@ -320,7 +320,8 @@ Forcing questions:
 
 ### 將 — `/sunzi-command`
 
-**Modes:** SELF-AUDIT · ASSESS-COUNTERPART · DECISION-RIGHTS MAP
+**Modes:** SELF-AUDIT · COUNTERPART · BENCH REVIEW (decision-rights *mapping*
+lives in 法/官道; 將 assesses the mapped holders)
 
 Rubric is 智信仁勇嚴, scored with evidence. The failure taxonomy is 九變篇's
 將有五危 — five ways a commander gets themselves killed, and every one has a

@@ -18,6 +18,9 @@ const expectedSkills = [
   'sunzi-compare',
   'sunzi-terrain',
   'sunzi-method',
+  'sunzi-alignment',
+  'sunzi-timing',
+  'sunzi-command',
 ];
 
 const expectedReferences = [

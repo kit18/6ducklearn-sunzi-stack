@@ -67,6 +67,21 @@
       "name": "sunzi-method",
       "path": "skills/sunzi-method/SKILL.md",
       "purpose": "法 operating-system examination: org-vs-strategy capability map, decision rights and latency, incentive conflicts, compliance exposure, and the enforced unit-economics gate with computed break-even."
+    },
+    {
+      "name": "sunzi-alignment",
+      "path": "skills/sunzi-alignment/SKILL.md",
+      "purpose": "道 mandate examination: behavioral pain evidence, constituency and incentive map for 上下同欲, opposed incentives inside and outside the tent, coalition building, and fracture repair."
+    },
+    {
+      "name": "sunzi-timing",
+      "path": "skills/sunzi-timing/SKILL.md",
+      "purpose": "天 window assessment: enabling conditions with falsifiers, cost of waiting vs cost of haste, the runway-vs-market urgency test, rival clocks, prepared waiting (以逸待勞), and late-entry honesty."
+    },
+    {
+      "name": "sunzi-command",
+      "path": "skills/sunzi-command/SKILL.md",
+      "purpose": "將 command assessment: 智信仁勇嚴 scored from cited behavior, 將有五危 exposure screening with bait shapes, the 君不御 chain test, counterpart reads from public record, and per-campaign bench review."
     }
   ],
   "agents": [
