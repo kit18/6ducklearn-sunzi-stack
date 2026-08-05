@@ -1,5 +1,10 @@
 # Growth Loop Review
 
+> **v1.0.0 note.** This output is now produced by the 五事 skills pulling
+> [`references/domain-adapters/growth.md`](../references/domain-adapters/growth.md),
+> not by a standalone `sunzi-growth-review` skill. The review contract is
+> unchanged. See [MIGRATION.md](../docs/MIGRATION.md).
+
 ## Scenario
 
 A workflow app has rising community traffic after an AI tutorial post, but activation is flat. The team wants to automate daily community posts and add an urgent discount banner.

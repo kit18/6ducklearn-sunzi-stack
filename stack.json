@@ -149,7 +149,8 @@
     "examples/focus-group-strategy-evaluation.md",
     "examples/industry-leader-smoke-test.md",
     "examples/tool-book-family-tree-ai-agent-plan.md",
-    "examples/ai-agent-operating-cadence-review.md"
+    "examples/ai-agent-operating-cadence-review.md",
+    "examples/campaign-loop-dtc-launch.md"
   ],
   "case_studies": [
     "case-studies/ai-transformation.json",

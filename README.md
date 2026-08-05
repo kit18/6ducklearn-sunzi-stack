@@ -53,7 +53,7 @@ If you are unsure, start with `sunzi-strategy-consultant` and let it dispatch.
 
 | User need | Start with | Reference example |
 |---|---|---|
-| Full strategy recommendation, board-ready memo | `sunzi-strategy-consultant` | [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md) |
+| Full strategy recommendation, board-ready memo | `sunzi-strategy-consultant` | [**Full campaign loop: DTC launch**](./examples/campaign-loop-dtc-launch.md) · [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md) |
 | "Should we enter / can we beat them / go or no-go?" | `sunzi-compare` | — |
 | "Is now the moment?" / "are we too late?" | `sunzi-timing` | — |
 | "What ground are we on?" / market map / exit question | `sunzi-terrain` | — |
@@ -97,6 +97,10 @@ standalone skills; see [Migration](./docs/MIGRATION.md).
 - `sunzi-stakeholder-ssr`: cross-domain stakeholder stress-reaction simulation for growth, operations, product/API, pricing, policy, migration, outage, and executive-strategy pressure tests.
 - `strategy-analyst-review`: the quality gate for proposed strategies, lens choices, risks, falsifiers, and kill criteria.
 - `sunzi-focus-group-skill-review`: PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, 360 comments, dynamic deterministic scoring, dissent, and improvement recommendations.
+
+See [examples/campaign-loop-dtc-launch.md](./examples/campaign-loop-dtc-launch.md)
+for one decision run through all six stages, including the unit-economics gate
+catching a cost target that looked like a floor and was actually a trap.
 
 The architecture and its canonical grounding are documented in
 [docs/ARCHITECTURE-WUSHI.md](./docs/ARCHITECTURE-WUSHI.md).

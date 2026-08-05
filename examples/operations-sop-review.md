@@ -1,5 +1,10 @@
 # Operations SOP Review
 
+> **v1.0.0 note.** This output is now produced by `sunzi-method` pulling
+> [`references/domain-adapters/operations.md`](../references/domain-adapters/operations.md),
+> not by a standalone `sunzi-operations-sop-review` skill. The review contract
+> is unchanged. See [MIGRATION.md](../docs/MIGRATION.md).
+
 ## Scenario
 
 A support team has an escalation SOP for billing incidents, but tickets sit unresolved when payment logs are missing, support and engineering disagree on priority, and customers receive inconsistent updates.

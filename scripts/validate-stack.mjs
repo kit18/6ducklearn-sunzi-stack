@@ -87,6 +87,7 @@ const expectedExamples = [
   'examples/industry-leader-smoke-test.md',
   'examples/tool-book-family-tree-ai-agent-plan.md',
   'examples/ai-agent-operating-cadence-review.md',
+  'examples/campaign-loop-dtc-launch.md',
 ];
 
 const expectedCaseStudies = [
@@ -526,6 +527,21 @@ function validateExamples() {
     {
       path: 'examples/strategy-analyst-review-sample.md',
       required: ['Verdict: revise', 'Evidence Audit', 'Competing Diagnosis', 'Kill'],
+    },
+    {
+      path: 'examples/campaign-loop-dtc-launch.md',
+      required: [
+        'Synthetic case',
+        'Unit Economics Gate',
+        'not viable',
+        'Break-even CAC',
+        '廟算 verdict',
+        'start narrow probe',
+        'Fatal row',
+        'Refusals',
+        'Inheritance',
+        'Lens audit',
+      ],
     },
     {
       path: 'examples/growth-loop-review.md',

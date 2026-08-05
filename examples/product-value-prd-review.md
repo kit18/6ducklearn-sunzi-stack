@@ -1,5 +1,11 @@
 # Product Value PRD Review
 
+> **v1.0.0 note.** This output is now produced by `sunzi-alignment` and
+> `sunzi-method` pulling
+> [`references/domain-adapters/product.md`](../references/domain-adapters/product.md),
+> not by a standalone `sunzi-prd-review` skill. The review contract is
+> unchanged. See [MIGRATION.md](../docs/MIGRATION.md).
+
 ## Scenario
 
 A platform team wants to build a partner-facing automation builder for merchants. The proposal says partners can create workflows faster, but the current PRD mostly describes configuration screens and event payloads. It does not prove which merchant job is painful enough to justify the product.
