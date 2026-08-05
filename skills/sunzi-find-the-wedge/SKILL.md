@@ -42,6 +42,13 @@ it would cost them their core.
 - The weakness is unknown because the rival is unknown → `/sunzi-intelligence`.
 - Position unknown → `/sunzi-compare`; the wedge's shape depends on it.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 虛實篇:
@@ -86,7 +93,7 @@ larger force.
 
 ## Workflow
 
-1. **Read the artifacts**: `廟算-scorecard.md` (position, chapter weighting),
+1. **Read the artifacts**: `miaosuan-scorecard.md` (position, chapter weighting),
    `maneuver-brief.md` (the ladder's conclusion), `terrain-survey.md` (the
    rival's-map section is the wedge's raw material). Missing scorecard →
    print the foundation warning and proceed.

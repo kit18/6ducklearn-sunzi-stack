@@ -388,7 +388,7 @@ rebuild adopts.
 ```
 /sunzi-terrain      → terrain-survey.md      ┐
 /sunzi-timing       → window-assessment.md   │
-/sunzi-alignment    → mandate-audit.md       ├→ /sunzi-compare → 廟算-scorecard.md
+/sunzi-alignment    → mandate-audit.md       ├→ /sunzi-compare → miaosuan-scorecard.md
 /sunzi-command      → command-assessment.md  │                        │
 /sunzi-method       → operating-model.md     ┘                        ▼
                                                           scorecard carries verdict +
@@ -436,7 +436,7 @@ a negotiation, a quarter — it re-runs the seven comparisons against what
 actually happened, diffs the two scorecards, and records which 事 was
 misjudged and which lens was decoration. 虛實篇 supplies the anchor: 兵無常勢，
 水無常形 — the shape of the water changes, so the map must be redrawn after
-every engagement. The diff artifact (`廟算-recalibration.md`) is what the
+every engagement. The diff artifact (`miaosuan-recalibration.md`) is what the
 *next* campaign's `/sunzi-compare` reads first — compounding memory, done with
 plain files.
 

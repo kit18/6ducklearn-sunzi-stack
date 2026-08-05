@@ -51,6 +51,13 @@ themselves, and reads the rival's command with the same instruments — because
   `sunzi-stakeholder-ssr`; this skill profiles the standing pattern, SSR
   plays out the scenario.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 始計篇 gives the rubric:
@@ -127,7 +134,7 @@ modern bait:
 
 ## Workflow
 
-1. **Read the memory first.** `廟算-recalibration.md` if present, then
+1. **Read the memory first.** `miaosuan-recalibration.md` if present, then
    `operating-model.md` (the decision-rights map names who to assess) and
    prior `command-assessment.md`. List artifacts found and missing.
 2. **Fix the campaign** the assessment is *for* — capability is per-fight —

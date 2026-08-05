@@ -48,6 +48,13 @@ the sky from the state of your runway.
 - The decision is whether to fight at all → `/sunzi-compare`.
 - Choosing the maneuver once timing is known → maneuver tier.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 始計篇 defines the factor:
@@ -108,7 +115,7 @@ worthwhile — the check that "land grab" plans systematically skip.
 
 ## Workflow
 
-1. **Read the memory first.** `廟算-recalibration.md` if present (timing
+1. **Read the memory first.** `miaosuan-recalibration.md` if present (timing
    misjudgments are the most common recalibration finding), then
    `terrain-survey.md` (which ground the window opens onto) and
    `operating-model.md` (runway, for forcing Q5). List artifacts found and

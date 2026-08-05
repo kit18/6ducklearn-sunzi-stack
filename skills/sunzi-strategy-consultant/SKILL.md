@@ -64,11 +64,11 @@ orchestrating; they are decorating a decision already made.
 | Stage | Invokes | Artifact carried forward |
 |---|---|---|
 | **審** audit | The 五事 skills as needed: `/sunzi-alignment` 道 · `/sunzi-timing` 天 · `/sunzi-terrain` 地 · `/sunzi-command` 將 · `/sunzi-method` 法 | `mandate-audit.md`, `window-assessment.md`, `terrain-survey.md`, `command-assessment.md`, `operating-model.md` |
-| **算** count | `/sunzi-compare` | `廟算-scorecard.md` (verdict + position) |
+| **算** count | `/sunzi-compare` | `miaosuan-scorecard.md` (verdict + position) |
 | **謀** devise | `/sunzi-win-without-fighting`, then per its route: `/sunzi-find-the-wedge`, `/sunzi-contingency`, with `/sunzi-intelligence` filling 不知 rows | `maneuver-brief.md`, `intelligence-brief.md` |
 | **驗** test | `sunzi-stakeholder-ssr` (people pressure) + `strategy-analyst-review` (falsification) | SSR output labeled synthetic; review findings |
 | **斷** decide | `/sunzi-restraint` for any irreversible element, then the decision memo | Restraint gate verdict; final memo |
-| **省** reflect | `/sunzi-retro`, scheduled at memo time with a named review date | `廟算-recalibration.md` (next engagement reads it first) |
+| **省** reflect | `/sunzi-retro`, scheduled at memo time with a named review date | `miaosuan-recalibration.md` (next engagement reads it first) |
 
 Not every engagement runs every 審 skill — the orchestrator triages which of
 the five factors are load-bearing for *this* decision and runs those deep,
@@ -95,7 +95,7 @@ Everything else it decides itself. These it must ask:
 
 1. **Intake.** Fix the decision, the stakes, the deadline, and the
    deliverable. Read any existing pack artifacts in the working directory —
-   including `廟算-recalibration.md` from prior engagements, which is read
+   including `miaosuan-recalibration.md` from prior engagements, which is read
    *first* (its inheritance corrections apply to everything downstream).
 2. **Triage the 五事.** Which factors are load-bearing for this decision?
    State the triage and its reasoning in one short block, then run the deep

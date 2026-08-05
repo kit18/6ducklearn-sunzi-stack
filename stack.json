@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -150,7 +150,8 @@
     "examples/industry-leader-smoke-test.md",
     "examples/tool-book-family-tree-ai-agent-plan.md",
     "examples/ai-agent-operating-cadence-review.md",
-    "examples/campaign-loop-dtc-launch.md"
+    "examples/campaign-loop-dtc-launch.md",
+    "examples/v1-pack-focus-group-review.md"
   ],
   "case_studies": [
     "case-studies/ai-transformation.json",

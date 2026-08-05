@@ -40,6 +40,13 @@ campaigns die pleasantly on an upper rung, which is the point.
 - The fight is chosen and the question is the weak point → `/sunzi-find-the-wedge`.
 - The move is irreversible and needs its gate → `/sunzi-restraint`.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 謀攻篇:
@@ -83,7 +90,7 @@ not shame.
 
 ## Workflow
 
-1. **Read the artifacts**: `廟算-scorecard.md` (verdict, position, chapter
+1. **Read the artifacts**: `miaosuan-scorecard.md` (verdict, position, chapter
    weighting), the 五事 set if present. Missing scorecard → print
    `⚠ running without foundation audit — tactics without a base` and proceed.
 2. **Walk the ladder top-down.** For each rung: the concrete move available at

@@ -49,6 +49,13 @@ stopped surveying.
 - Org, economics, and execution capacity — `/sunzi-method` (法).
 - Simulating how people react to a move — `sunzi-stakeholder-ssr`.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 始計篇 defines the factor:
@@ -137,7 +144,7 @@ marked missing:
 
 ## Workflow
 
-1. **Read the memory first.** `廟算-recalibration.md` if present (which 事 was
+1. **Read the memory first.** `miaosuan-recalibration.md` if present (which 事 was
    misjudged last time), then any prior `terrain-survey.md` — note what
    changed since. List artifacts found and missing in the output header.
 2. **Fix the decision.** What choice does this survey inform? A map with no

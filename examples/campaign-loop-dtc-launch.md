@@ -82,7 +82,7 @@ contribution — a metric that actively fights this plan.
 
 ## 算 — The Count
 
-### 廟算-scorecard.md
+### miaosuan-scorecard.md
 
 Rival (named): **Northwind Home** — incumbent, 4 years in category.
 Mode: FULL COUNT. Foundation artifacts read: all five.
@@ -197,7 +197,7 @@ Kill criterion: blended CAC > $13 for 7 consecutive days (owner: founder)
 Retro scheduled: Jan 8, or immediately if the kill criterion fires
 Overrides on record: none
 Artifact trail: mandate-audit.md, window-assessment.md, terrain-survey.md,
-  operating-model.md, 廟算-scorecard.md, maneuver-brief.md
+  operating-model.md, miaosuan-scorecard.md, maneuver-brief.md
 ```
 
 The decision the loop actually changed: the team arrived wanting to launch a
@@ -211,7 +211,7 @@ cannot close cheaply.
 
 ## 省 — The Reflect (run Jan 8)
 
-### 廟算-recalibration.md
+### miaosuan-recalibration.md
 
 | # | 計 | Predicted | Actual | Misjudged 事 | Evidence or reading? |
 |---|---|---|---|---|---|

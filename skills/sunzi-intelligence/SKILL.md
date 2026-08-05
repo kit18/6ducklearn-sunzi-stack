@@ -46,6 +46,13 @@ thirteen for a reason — everything upstream runs on what it supplies.
   the [market signal forensics](../../references/market-signal-forensics.md)
   reference, pulled in by whichever skill hit the signal.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 用間篇 opens by pricing ignorance:
@@ -97,7 +104,7 @@ modern equivalents:
 ## Workflow
 
 1. **Read the artifacts** — the 不知 rows and `needed next` columns of
-   `廟算-scorecard.md`, `terrain-survey.md`, and `maneuver-brief.md` are the
+   `miaosuan-scorecard.md`, `terrain-survey.md`, and `maneuver-brief.md` are the
    requirements list. Missing scorecard → foundation warning, proceed.
 2. **Write the requirements table** (Q1): each unknown → the decision it
    gates → the artifact row it fills → its priority (what money moves on it).

@@ -33,7 +33,7 @@ including the verdict nobody wants: *do not start*.
 - A 五事 audit exists and the user asks "so should we do it?"
 - The user proposes tactics ("let's undercut them", "let's run a referral
   loop") before any position assessment exists.
-- A prior campaign ended and `廟算-recalibration.md` exists — re-count before
+- A prior campaign ended and `miaosuan-recalibration.md` exists — re-count before
   the next one.
 
 ## When NOT to invoke this skill
@@ -45,6 +45,13 @@ including the verdict nobody wants: *do not start*.
 - Simulating how stakeholders react to a chosen move — route to
   `sunzi-stakeholder-ssr`.
 - Choosing *which* tactic once position is known — route to the maneuver tier.
+
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
 
 ## Canonical grounding
 
@@ -109,7 +116,7 @@ against the rival.
 
 ## Workflow
 
-1. **Read the memory first.** If `廟算-recalibration.md` exists in the working
+1. **Read the memory first.** If `miaosuan-recalibration.md` exists in the working
    directory, read it before anything else — it records which 事 was misjudged
    last time. Then gather the 五事 artifacts (`terrain-survey.md`,
    `window-assessment.md`, `mandate-audit.md`, `command-assessment.md`,
@@ -138,7 +145,7 @@ against the rival.
    Defend the classification from the row pattern. A 顛覆者 claim must state
    *which rows are inapplicable and what different game makes them so* — 顛覆者
    is a different scoring geometry, not an amnesty for lost rows.
-8. **Write the artifact** `廟算-scorecard.md` to the working directory. The
+8. **Write the artifact** `miaosuan-scorecard.md` to the working directory. The
    maneuver tier and `/sunzi-retro` read it; a count that lives only in chat
    is a count that gets re-litigated from memory.
 9. **Route.** By position: 龍頭 → 勝戰計-weighted maneuver screening; 挑戰者 →
@@ -150,7 +157,7 @@ against the rival.
 ## Output
 
 ```markdown
-# 廟算 Scorecard
+# 廟算 Scorecard (miaosuan-scorecard.md)
 
 Date: · Decision gated: · Mode:
 Rival (named): 
@@ -205,7 +212,7 @@ Chapter weighting for maneuver screening:
   [ethical strategy guardrails](../../references/ethical-strategy-guardrails.md)).
 - Position classification binds the downstream chapter weighting; a
   cross-position lens later must argue against this scorecard explicitly.
-- The artifact write is not optional. No `廟算-scorecard.md`, no completed run.
+- The artifact write is not optional. No `miaosuan-scorecard.md`, no completed run.
 
 ## Anti-patterns
 

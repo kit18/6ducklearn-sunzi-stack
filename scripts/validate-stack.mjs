@@ -88,6 +88,7 @@ const expectedExamples = [
   'examples/tool-book-family-tree-ai-agent-plan.md',
   'examples/ai-agent-operating-cadence-review.md',
   'examples/campaign-loop-dtc-launch.md',
+  'examples/v1-pack-focus-group-review.md',
 ];
 
 const expectedCaseStudies = [
@@ -527,6 +528,18 @@ function validateExamples() {
     {
       path: 'examples/strategy-analyst-review-sample.md',
       required: ['Verdict: revise', 'Evidence Audit', 'Competing Diagnosis', 'Kill'],
+    },
+    {
+      path: 'examples/v1-pack-focus-group-review.md',
+      required: [
+        'synthetic panel simulation, not real quotes',
+        'Frozen Formula',
+        'Deterministic Scores',
+        'Verdict: revise',
+        'Dissent',
+        'Retest',
+        'Method limitation',
+      ],
     },
     {
       path: 'examples/campaign-loop-dtc-launch.md',

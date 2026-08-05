@@ -49,6 +49,13 @@ for exactly that afternoon.
 - Assessing whether the leader is *prone* to provoked moves → `/sunzi-command`
   (whose watch-list this skill reads).
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 火攻篇 ends the chapter — and effectively the book's operational teaching —
@@ -106,7 +113,7 @@ Every gated move passes all four, in writing, or does not proceed:
 ## Workflow
 
 1. **Read the artifacts**: `maneuver-brief.md` (the move and its tag),
-   `command-assessment.md` (watch-list), `廟算-scorecard.md`,
+   `command-assessment.md` (watch-list), `miaosuan-scorecard.md`,
    `operating-model.md` (the survival test needs the balance sheet
    reality). Missing scorecard → foundation warning, proceed — but a missing
    *survival-test evidence base* blocks the gate outright.

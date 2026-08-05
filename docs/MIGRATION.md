@@ -49,8 +49,8 @@ and `sunzi-focus-group-skill-review` are unchanged.
 ## Behavioral changes to expect
 
 - **Artifacts.** Skills now write chained Markdown artifacts in the working
-  directory (`terrain-survey.md`, `廟算-scorecard.md`, `maneuver-brief.md`,
-  `廟算-recalibration.md`, …). A run that writes no artifact is incomplete by
+  directory (`terrain-survey.md`, `miaosuan-scorecard.md`, `maneuver-brief.md`,
+  `miaosuan-recalibration.md`, …). A run that writes no artifact is incomplete by
   its own hard rules.
 - **Sequencing.** Maneuver skills print
   `⚠ running without foundation audit — tactics without a base` when no 五事

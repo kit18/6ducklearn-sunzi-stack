@@ -48,6 +48,13 @@ hard month arrives and the mandate turns out to have been a slide.
   `sunzi-stakeholder-ssr` — that skill pressure-tests a plan; this one
   examines the standing mandate the plan will draw on.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 始計篇:
@@ -96,7 +103,7 @@ want.
 
 ## Workflow
 
-1. **Read the memory first.** `廟算-recalibration.md` if present, then prior
+1. **Read the memory first.** `miaosuan-recalibration.md` if present, then prior
    `mandate-audit.md` — a mandate that needed repair last campaign starts
    this one lower. List artifacts found and missing.
 2. **Fix the decision** this examination gates, and select the mode.

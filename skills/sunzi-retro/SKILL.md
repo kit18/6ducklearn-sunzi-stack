@@ -41,6 +41,13 @@ two scorecards, and writes the recalibration that the *next* campaign's
 - Adapting the live plan to a trigger → `/sunzi-contingency` owns the
   adaptation; this skill records what the trigger's firing *taught*.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 虛實篇:
@@ -91,11 +98,11 @@ because a count that is never checked against outcomes becomes a ritual.
 
 ## Workflow
 
-1. **Gather the artifact trail**: `廟算-scorecard.md`, `maneuver-brief.md`
+1. **Gather the artifact trail**: `miaosuan-scorecard.md`, `maneuver-brief.md`
    (ladder, wedge, contingency, restraint sections), `terrain-survey.md`,
    `window-assessment.md`, `mandate-audit.md`, `command-assessment.md`,
    `operating-model.md`, `intelligence-brief.md` — whichever exist. Also any
-   prior `廟算-recalibration.md`: the retro checks whether its own past
+   prior `miaosuan-recalibration.md`: the retro checks whether its own past
    corrections were absorbed or ignored.
 2. **Select the mode**; `AskUserQuestion` if the campaign's end state is
    itself disputed (it often is).
@@ -110,7 +117,7 @@ because a count that is never checked against outcomes becomes a ritual.
    timing finding.
 6. **Write the inheritance** (Q6): standing corrections, at most three —
    corrections nobody can hold in mind don't correct anything.
-7. **Write the artifact** `廟算-recalibration.md`: the diff, the
+7. **Write the artifact** `miaosuan-recalibration.md`: the diff, the
    attributions, the lens audit, the inheritance. Date-stamped; prior
    recalibrations are appended to, not overwritten — the drift across
    retros is itself signal.
@@ -122,7 +129,7 @@ because a count that is never checked against outcomes becomes a ritual.
 ## Output
 
 ```markdown
-# 廟算 Recalibration (省)
+# 廟算 Recalibration (省) — miaosuan-recalibration.md
 
 Date: · Campaign: · Mode: 
 Original scorecard: [date] / ⚠ none — campaign ran uncounted; baseline reconstructed

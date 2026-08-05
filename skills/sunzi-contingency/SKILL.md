@@ -40,6 +40,13 @@ will *not* do no matter how tempting they become mid-fight.
 - The change being considered is irreversible → `/sunzi-restraint` gates it.
 - Post-campaign learning → `/sunzi-retro`.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 九變篇 — the chapter of variations — first names the deliberate refusals:
@@ -90,7 +97,7 @@ pessimism — it is the substance of readiness.
 ## Workflow
 
 1. **Read the artifacts**: `maneuver-brief.md` (the plan and its stated kill
-   criteria), `廟算-scorecard.md` (the 爭 and 不知 rows are the likeliest
+   criteria), `miaosuan-scorecard.md` (the 爭 and 不知 rows are the likeliest
    trigger sources), `command-assessment.md` (the watch-list becomes
    refusals), `window-assessment.md` (the window's closing event is always a
    trigger). Missing scorecard → foundation warning, proceed.

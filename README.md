@@ -17,11 +17,11 @@ each stage writing a plain-Markdown artifact the next stage reads:
 | Stage | Skills | Artifact |
 |---|---|---|
 | **審** audit the five factors | `sunzi-alignment` 道 · `sunzi-timing` 天 · `sunzi-terrain` 地 · `sunzi-command` 將 · `sunzi-method` 法 | `mandate-audit.md`, `window-assessment.md`, `terrain-survey.md`, `command-assessment.md`, `operating-model.md` |
-| **算** count before fighting | `sunzi-compare` — the 七計 scorecard vs. a named rival, position classification, 廟算 verdict | `廟算-scorecard.md` |
+| **算** count before fighting | `sunzi-compare` — the 七計 scorecard vs. a named rival, position classification, 廟算 verdict | `miaosuan-scorecard.md` |
 | **謀** devise the move | `sunzi-win-without-fighting` (謀攻 cost ladder) · `sunzi-find-the-wedge` (虛實) · `sunzi-contingency` (九變) · `sunzi-intelligence` (用間) | `maneuver-brief.md`, `intelligence-brief.md` |
 | **驗** stress the plan | `sunzi-stakeholder-ssr` + `strategy-analyst-review` | labeled synthetic SSR + review findings |
 | **斷** decide | `sunzi-restraint` (火攻 gate for irreversible moves) → decision memo | restraint verdict, memo |
-| **省** reflect | `sunzi-retro` — re-score the seven comparisons against what happened | `廟算-recalibration.md` (the next count reads it first) |
+| **省** reflect | `sunzi-retro` — re-score the seven comparisons against what happened | `miaosuan-recalibration.md` (the next count reads it first) |
 
 `sunzi-strategy-consultant` is the orchestrator: give it a whole situation and
 it walks the loop, surfacing only the decisions that are genuinely yours (the
@@ -101,6 +101,23 @@ standalone skills; see [Migration](./docs/MIGRATION.md).
 See [examples/campaign-loop-dtc-launch.md](./examples/campaign-loop-dtc-launch.md)
 for one decision run through all six stages, including the unit-economics gate
 catching a cost target that looked like a floor and was actually a trap.
+
+### The quick path
+
+**You do not have to run the whole loop.** Most questions are one stage, and
+running that stage alone is a supported, first-class use — not a shortcut:
+
+| You have | Run just | It takes |
+|---|---|---|
+| A rival and a go/no-go | `sunzi-compare` | one skill, one scorecard |
+| A "why now?" argument you distrust | `sunzi-timing` | one skill, the runway test |
+| An offer whose economics nobody computed | `sunzi-method` (PROVISIONING) | one skill, a break-even |
+| An angry decision about to be made | `sunzi-restraint` | one skill, four tests |
+| A campaign that just ended | `sunzi-retro` | one skill, a recalibration |
+
+Run the full loop when the decision is large, contested, and committing.
+Use `sunzi-strategy-consultant` when you are not sure which stage you are in —
+it triages and dispatches, and it is the right default for a first run.
 
 The architecture and its canonical grounding are documented in
 [docs/ARCHITECTURE-WUSHI.md](./docs/ARCHITECTURE-WUSHI.md).

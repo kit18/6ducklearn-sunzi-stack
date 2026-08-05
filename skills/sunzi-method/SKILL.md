@@ -51,6 +51,13 @@ number is required.
   adapter lane inside this skill only when the SOP question is strategic
   (decision rights, latency, auditability), not editorial.
 
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
+
 ## Canonical grounding
 
 始計篇 defines the factor:
@@ -111,7 +118,7 @@ depth chosen in the output header.
 
 ## Workflow
 
-1. **Read the memory first.** `廟算-recalibration.md` if present, then prior
+1. **Read the memory first.** `miaosuan-recalibration.md` if present, then prior
    `operating-model.md` and `terrain-survey.md` (a 死地 classification changes
    everything below). List artifacts found and missing.
 2. **Fix the decision** this examination gates, and select the deep mode.
