@@ -5,7 +5,7 @@ description: Use to audit a proposed strategy, strategy memo, growth plan, marke
 
 # Strategy Analyst Review
 
-Use this skill as the quality gate for strategy work before action. It is especially useful after `strategic-situation-analysis`, `sunzi-decision-review`, `sunzi-stakeholder-ssr`, `sunzi-growth-review`, `sunzi-operations-sop-review`, or `sunzi-prd-review`, but it also works on ordinary strategy memos.
+Use this skill as the quality gate for strategy work before action. It is especially useful after the 五事 skills, `sunzi-compare`, the maneuver tier (`sunzi-win-without-fighting`, `sunzi-find-the-wedge`, `sunzi-contingency`), `sunzi-decision-review`, or `sunzi-stakeholder-ssr`, but it also works on ordinary strategy memos.
 
 ## Review Workflow
 

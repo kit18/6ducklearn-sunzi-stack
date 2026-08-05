@@ -27,12 +27,12 @@ Source anchors:
 |---|---|---|
 | Decision review | "What should I do?", "Should I act, wait, negotiate, or exit?" | `sunzi-decision-review` |
 | Stakeholder stress reaction | "Simulate their stakeholder-style reaction", "What will engineering/customer/partner say internally?" | `sunzi-stakeholder-ssr` |
-| Strategic diagnosis | "What is happening in this competitive or uncertain situation?" | `strategic-situation-analysis` |
+| Strategic diagnosis | "What is happening in this competitive or uncertain situation?" | `sunzi-terrain` (+ the 五事 siblings as load-bearing) |
 | Defensive reading | "Is someone using tactics against me?", "What traps should I detect?" | `sunzi-decision-review` or `strategy-analyst-review` |
 | Business strategy | "What should the company do?" | `sunzi-strategy-consultant` |
-| Growth plan | "How should we grow or distribute this?" | `sunzi-growth-review` |
-| Operations or SOP | "How should this process/runbook work under pressure?" | `sunzi-operations-sop-review` |
-| Product value / PRD | "Is this worth building?", "Is this PRD ready?" | `sunzi-prd-review` |
+| Growth plan | "How should we grow or distribute this?" | 五事 skills + `references/domain-adapters/growth.md` |
+| Operations or SOP | "How should this process/runbook work under pressure?" | `sunzi-method` + `references/domain-adapters/operations.md` |
+| Product value / PRD | "Is this worth building?", "Is this PRD ready?" | `sunzi-alignment` + `sunzi-method` + `references/domain-adapters/product.md` |
 | Postmortem / learning | "What can I learn from this conflict or failure?" | `sunzi-decision-review` |
 
 ## Daily-Life Translation

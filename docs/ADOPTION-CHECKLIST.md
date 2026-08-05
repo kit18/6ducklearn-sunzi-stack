@@ -19,11 +19,11 @@ Use this checklist before adopting or publishing a modified Sunzi Strategy Stack
 
 ## Skill Quality
 
-- The core skills are present: `sunzi-strategy-consultant`, `strategic-situation-analysis`, `sunzi-stakeholder-ssr`, and `strategy-analyst-review`.
+- The core skills are present: `sunzi-strategy-consultant`, the five 五事 skills (`sunzi-alignment`, `sunzi-timing`, `sunzi-terrain`, `sunzi-command`, `sunzi-method`), `sunzi-compare`, `sunzi-stakeholder-ssr`, and `strategy-analyst-review`.
 - Domain adapters are present for decision review, growth review, operations/SOP review, and product-value/PRD review.
 - The focus-group skill is present for PM/UED review of skill quality, adoption risk, user-intention scoring, stakeholder reactions, dissent, and evidence needed next.
 - The public agent entrypoint is present: `AGENTS.md` and `agents/sunzi-strategy-consultant.yaml`.
-- `strategic-situation-analysis` covers all 36 stratagems exactly once in the source-story reference.
+- `references/thirty-six-stratagems-source-stories.md` covers all 36 stratagems exactly once.
 - The reference pack includes the matrix, domain adapters, market-signal forensics, consulting validation corpus, strategy output template, and ethical-use guardrails.
 - Lens selection uses evidence, falsifiers, and modern business invariants.
 - Each answer can produce a decision memo with source/evidence ledger, action, metric, owner, cadence, decision rule, adoption telemetry, customer economics signal, stop condition, and kill criterion.

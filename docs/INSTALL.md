@@ -24,7 +24,7 @@ Then ask for one of:
 
 - `sunzi-strategy-consultant` for a full business-strategy memo.
 - `sunzi-stakeholder-ssr` for synthetic stakeholder stress-reaction simulation across growth, operations, product/API, pricing, policy, migration, outage, or executive strategy.
-- `strategic-situation-analysis` for first-principles diagnosis and Thirty-Six Stratagems lens selection.
+- `sunzi-terrain` for the ground survey and first-principles diagnosis; stratagem lens selection lives in the maneuver skills (`sunzi-win-without-fighting`, `sunzi-find-the-wedge`).
 - `strategy-analyst-review` for a review gate on an existing memo or plan.
 - `sunzi-focus-group-skill-review` for PM/UED focus-group review, adoption readiness, user-intention scoring, or synthetic industry-leader archetype evaluation.
 
@@ -51,12 +51,20 @@ Expected skill roots:
 
 ```text
 skills/sunzi-strategy-consultant/SKILL.md
-skills/strategic-situation-analysis/SKILL.md
+skills/sunzi-terrain/SKILL.md
+skills/sunzi-compare/SKILL.md
+skills/sunzi-method/SKILL.md
+skills/sunzi-alignment/SKILL.md
+skills/sunzi-timing/SKILL.md
+skills/sunzi-command/SKILL.md
 skills/sunzi-decision-review/SKILL.md
 skills/sunzi-stakeholder-ssr/SKILL.md
-skills/sunzi-growth-review/SKILL.md
-skills/sunzi-operations-sop-review/SKILL.md
-skills/sunzi-prd-review/SKILL.md
+skills/sunzi-win-without-fighting/SKILL.md
+skills/sunzi-find-the-wedge/SKILL.md
+skills/sunzi-contingency/SKILL.md
+skills/sunzi-restraint/SKILL.md
+skills/sunzi-intelligence/SKILL.md
+skills/sunzi-retro/SKILL.md
 skills/sunzi-focus-group-skill-review/SKILL.md
 skills/strategy-analyst-review/SKILL.md
 ```

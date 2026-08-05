@@ -2,6 +2,14 @@
 
 Use the same first-principles map in every domain. Change the evidence lanes and output checks.
 
+Deep adapters with full review contracts, DoD calibration, and mandatory 未戰 (pre-launch) lanes:
+
+- [Growth and ecommerce](./domain-adapters/growth.md)
+- [Operations and SOP](./domain-adapters/operations.md)
+- [Product value and PRD](./domain-adapters/product.md)
+
+The sections below are the quick-reference lane summaries.
+
 ## Growth and ecommerce
 
 Inputs:

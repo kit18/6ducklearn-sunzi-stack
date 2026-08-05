@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -8,11 +8,6 @@
   "license": "Apache-2.0 for validation scripts",
   "content_license": "CC BY 4.0 for skills, references, examples, and docs",
   "skills": [
-    {
-      "name": "strategic-situation-analysis",
-      "path": "skills/strategic-situation-analysis/SKILL.md",
-      "purpose": "First-principles strategic diagnosis with source-grounded Thirty-Six Stratagems lenses."
-    },
     {
       "name": "sunzi-decision-review",
       "path": "skills/sunzi-decision-review/SKILL.md",
@@ -29,21 +24,6 @@
       "purpose": "Quality gate for evidence, falsifiers, ethics, second-order effects, metrics, and kill criteria."
     },
     {
-      "name": "sunzi-growth-review",
-      "path": "skills/sunzi-growth-review/SKILL.md",
-      "purpose": "Growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling."
-    },
-    {
-      "name": "sunzi-operations-sop-review",
-      "path": "skills/sunzi-operations-sop-review/SKILL.md",
-      "purpose": "Operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability."
-    },
-    {
-      "name": "sunzi-prd-review",
-      "path": "skills/sunzi-prd-review/SKILL.md",
-      "purpose": "Product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions."
-    },
-    {
       "name": "sunzi-focus-group-skill-review",
       "path": "skills/sunzi-focus-group-skill-review/SKILL.md",
       "purpose": "PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, dynamic deterministic scoring, dissent, and improvement recommendations."
@@ -52,6 +32,66 @@
       "name": "sunzi-strategy-consultant",
       "path": "skills/sunzi-strategy-consultant/SKILL.md",
       "purpose": "Modern Sunzi-style strategy consultant workflow for business decisions."
+    },
+    {
+      "name": "sunzi-compare",
+      "path": "skills/sunzi-compare/SKILL.md",
+      "purpose": "Pre-commitment 七計 war-room count against a named rival: evidence-gated seven-comparison scorecard, market-position classification, and 廟算 go / no-go verdict."
+    },
+    {
+      "name": "sunzi-terrain",
+      "path": "skills/sunzi-terrain/SKILL.md",
+      "purpose": "地 ground-truth survey: first-principles market map, 九地 ground classification with doctrine, supply lines, the rival's view of the same ground, and withdrawal assessment."
+    },
+    {
+      "name": "sunzi-method",
+      "path": "skills/sunzi-method/SKILL.md",
+      "purpose": "法 operating-system examination: org-vs-strategy capability map, decision rights and latency, incentive conflicts, compliance exposure, and the enforced unit-economics gate with computed break-even."
+    },
+    {
+      "name": "sunzi-alignment",
+      "path": "skills/sunzi-alignment/SKILL.md",
+      "purpose": "道 mandate examination: behavioral pain evidence, constituency and incentive map for 上下同欲, opposed incentives inside and outside the tent, coalition building, and fracture repair."
+    },
+    {
+      "name": "sunzi-timing",
+      "path": "skills/sunzi-timing/SKILL.md",
+      "purpose": "天 window assessment: enabling conditions with falsifiers, cost of waiting vs cost of haste, the runway-vs-market urgency test, rival clocks, prepared waiting (以逸待勞), and late-entry honesty."
+    },
+    {
+      "name": "sunzi-command",
+      "path": "skills/sunzi-command/SKILL.md",
+      "purpose": "將 command assessment: 智信仁勇嚴 scored from cited behavior, 將有五危 exposure screening with bait shapes, the 君不御 chain test, counterpart reads from public record, and per-campaign bench review."
+    },
+    {
+      "name": "sunzi-win-without-fighting",
+      "path": "skills/sunzi-win-without-fighting/SKILL.md",
+      "purpose": "謀攻 cost ladder walked in order (伐謀/伐交/伐兵/攻城) with force-ratio sizing doctrine, 全勝 intact-win statement, and position-weighted lens screening before any head-on move."
+    },
+    {
+      "name": "sunzi-find-the-wedge",
+      "path": "skills/sunzi-find-the-wedge/SKILL.md",
+      "purpose": "虛實 wedge analysis: rival commitments turned into structural weakness, closing-cost test, mandatory 正/奇 split rejecting all-奇 plans, initiative test, and the defensive read of your own 虛."
+    },
+    {
+      "name": "sunzi-contingency",
+      "path": "skills/sunzi-contingency/SKILL.md",
+      "purpose": "九變 contingency layer: owned triggers with pre-agreed adaptations, mandatory refusals list (所不), kill layer with numbers and invocation authority, and the 利害 blend both directions."
+    },
+    {
+      "name": "sunzi-restraint",
+      "path": "skills/sunzi-restraint/SKILL.md",
+      "purpose": "火攻 gate for irreversible and escalatory moves: four written tests (anger, profit, necessity, survival), bait check against the command watch-list, smaller-commitment search, and named dissenting authority."
+    },
+    {
+      "name": "sunzi-intelligence",
+      "path": "skills/sunzi-intelligence/SKILL.md",
+      "purpose": "用間 collection discipline: decision-gated requirements, five channels translated to legitimate sources with an absolute legitimacy line, verification before money moves, and the broadcast (反間) mirror."
+    },
+    {
+      "name": "sunzi-retro",
+      "path": "skills/sunzi-retro/SKILL.md",
+      "purpose": "省 recalibration: the seven comparisons re-scored from outcomes against the written scorecard, evidence-vs-reading attribution, lens and contingency audits, and a max-three-correction inheritance for the next count."
     }
   ],
   "agents": [
@@ -83,7 +123,11 @@
     "references/strategy-focus-group-evaluation.md",
     "references/user-intention-metric-contract.md",
     "skills/sunzi-focus-group-skill-review/references/panel-contract.md",
-    "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
+    "references/thirty-six-stratagems-source-stories.md",
+    "references/unit-economics-gate.md",
+    "references/domain-adapters/growth.md",
+    "references/domain-adapters/operations.md",
+    "references/domain-adapters/product.md"
   ],
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",

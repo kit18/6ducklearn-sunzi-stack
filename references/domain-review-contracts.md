@@ -6,7 +6,7 @@ Use this reference when a Sunzi skill needs domain-specific judgment without blo
 
 | Principle | Sunzi standard |
 |---|---|
-| Composable | Keep each skill narrow enough to combine with `strategic-situation-analysis` and `strategy-analyst-review`. |
+| Composable | Keep each adapter narrow enough to combine with `sunzi-terrain` and `strategy-analyst-review`. |
 | Trigger clarity | The frontmatter description should say when to use the skill, not summarize every step. |
 | Progressive disclosure | Put reusable details here; keep each `SKILL.md` focused on the workflow and output. |
 | Evidence before advice | Every important claim needs a source, artifact, metric, observation, or explicitly marked assumption. |

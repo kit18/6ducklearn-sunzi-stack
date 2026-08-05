@@ -1,8 +1,34 @@
 # 6DuckLearn Sunzi Strategy Stack
 
-Public strategy skills for modern business diagnosis, stakeholder stress-reaction simulation, decision review, and Sunzi-inspired consulting.
+Public strategy skills that run a complete campaign loop for modern business
+decisions: foundation audit, war-room count, maneuver design, stakeholder
+stress test, restraint gate, and post-campaign recalibration — with a
+first-class "do not start" verdict and evidence discipline at every stage.
 
-This repository is intentionally standalone. It is shaped by the install-flow clarity and validation ethos of public agent-skill stacks, but it does not copy `gstack` content and it does not expose private 6DuckLearn product code.
+This repository is intentionally standalone. It is shaped by the install-flow
+clarity and validation ethos of public agent-skill stacks, but it does not
+copy `gstack` content and it does not expose private 6DuckLearn product code.
+
+## The Campaign Loop
+
+The skills run in the order a campaign runs — 審 → 算 → 謀 → 驗 → 斷 → 省 —
+each stage writing a plain-Markdown artifact the next stage reads:
+
+| Stage | Skills | Artifact |
+|---|---|---|
+| **審** audit the five factors | `sunzi-alignment` 道 · `sunzi-timing` 天 · `sunzi-terrain` 地 · `sunzi-command` 將 · `sunzi-method` 法 | `mandate-audit.md`, `window-assessment.md`, `terrain-survey.md`, `command-assessment.md`, `operating-model.md` |
+| **算** count before fighting | `sunzi-compare` — the 七計 scorecard vs. a named rival, position classification, 廟算 verdict | `廟算-scorecard.md` |
+| **謀** devise the move | `sunzi-win-without-fighting` (謀攻 cost ladder) · `sunzi-find-the-wedge` (虛實) · `sunzi-contingency` (九變) · `sunzi-intelligence` (用間) | `maneuver-brief.md`, `intelligence-brief.md` |
+| **驗** stress the plan | `sunzi-stakeholder-ssr` + `strategy-analyst-review` | labeled synthetic SSR + review findings |
+| **斷** decide | `sunzi-restraint` (火攻 gate for irreversible moves) → decision memo | restraint verdict, memo |
+| **省** reflect | `sunzi-retro` — re-score the seven comparisons against what happened | `廟算-recalibration.md` (the next count reads it first) |
+
+`sunzi-strategy-consultant` is the orchestrator: give it a whole situation and
+it walks the loop, surfacing only the decisions that are genuinely yours (the
+rival to count against, position claims, overrides, irreversible moves, the
+kill criterion). The expected output is a decision memo with an artifact
+trail — not a motivational essay — and an engagement that ends at
+`do not start` is a completed engagement.
 
 ## Quick Start
 
@@ -15,34 +41,65 @@ cp -R skills/* ~/.codex/skills/
 cp -R references/* ~/.codex/references/
 ```
 
-Then ask your agent to use `sunzi-strategy-consultant`, `strategic-situation-analysis`, or `sunzi-stakeholder-ssr` on a real decision. The expected output is a decision memo or labeled synthetic SSR artifact, not a motivational essay.
+Then ask your agent to use `sunzi-strategy-consultant` on a real decision —
+or a single stage skill (`sunzi-compare`, `sunzi-timing`, `sunzi-restraint`)
+when you know which question you are asking.
 
 For agent-host wiring, use [AGENTS.md](./AGENTS.md) or the machine-readable profile at [agents/sunzi-strategy-consultant.yaml](./agents/sunzi-strategy-consultant.yaml).
 
 ## Which Skill To Use First
 
-If you are unsure, start with `sunzi-strategy-consultant`. Use the other skills as follow-on gates when the work needs diagnosis, stakeholder pressure testing, domain review, or final go / revise / stop review.
+If you are unsure, start with `sunzi-strategy-consultant` and let it dispatch.
 
 | User need | Start with | Reference example |
 |---|---|---|
-| Full strategy recommendation | `sunzi-strategy-consultant` | [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md) |
-| Stakeholder reaction, backlash, migration objection, or rollout stress test | `sunzi-stakeholder-ssr` | [API migration stakeholder SSR](./examples/api-migration-ssr.md) |
-| Growth loop, GTM, ecommerce, or lifecycle experiment | `sunzi-growth-review` | [Growth loop review](./examples/growth-loop-review.md) |
-| SOP, operations, incident, support, QA, or supply-chain workflow | `sunzi-operations-sop-review` | [Operations SOP review](./examples/operations-sop-review.md) |
-| Product-value, PRD, API, SDK, or requirement review | `sunzi-prd-review` | [Product value PRD review](./examples/product-value-prd-review.md) |
+| Full strategy recommendation, board-ready memo | `sunzi-strategy-consultant` | [Ecommerce growth decision memo](./examples/ecommerce-growth-decision-memo.md) |
+| "Should we enter / can we beat them / go or no-go?" | `sunzi-compare` | — |
+| "Is now the moment?" / "are we too late?" | `sunzi-timing` | — |
+| "What ground are we on?" / market map / exit question | `sunzi-terrain` | — |
+| "Can we afford this / can the org execute it?" | `sunzi-method` | — |
+| "Will anyone follow us?" / mandate or coalition check | `sunzi-alignment` | — |
+| Leadership readiness, rival CEO read, bait-risk check | `sunzi-command` | — |
+| "Do we have to fight?" / cheaper-rung search | `sunzi-win-without-fighting` | — |
+| "Where do we attack / where are we exposed?" | `sunzi-find-the-wedge` | — |
+| Kill criteria, triggers, plan-B design | `sunzi-contingency` | — |
+| Price war, litigation, layoff, public fight — before committing | `sunzi-restraint` | — |
+| "What do we actually know about them?" | `sunzi-intelligence` | — |
+| Post-campaign or post-quarter learning | `sunzi-retro` | — |
+| Everyday or professional decision, negotiation, conflict | `sunzi-decision-review` | [Career negotiation decision review](./examples/career-negotiation-decision-review.md) |
+| Stakeholder reaction, backlash, migration objection, rollout stress test | `sunzi-stakeholder-ssr` | [API migration stakeholder SSR](./examples/api-migration-ssr.md) |
 | Skill quality, adoption readiness, PM/UED focus group, user-intention scoring, or industry-leader archetype review | `sunzi-focus-group-skill-review` | [Industry leader smoke test](./examples/industry-leader-smoke-test.md) |
+
+Growth, operations/SOP, and product/PRD reviews are served by the 五事 skills
+pulling the matching deep [domain adapter](./references/domain-adapters.md)
+([growth](./references/domain-adapters/growth.md) ·
+[operations](./references/domain-adapters/operations.md) ·
+[product](./references/domain-adapters/product.md)) — in v0.2.0 these were
+standalone skills; see [Migration](./docs/MIGRATION.md).
 
 ## Included Skills
 
-- `sunzi-strategy-consultant`: a style-derived modern business consultant for terrain, actors, incentives, timing, restraint, and board-ready decision memos.
-- `sunzi-decision-review`: a root applied-use skill for everyday and professional decisions, negotiation, workplace conflict, defensive tactic detection, waiting, preparation, and retreat.
-- `sunzi-stakeholder-ssr`: the cross-domain stakeholder stress-reaction simulation skill for growth, operations, product/API, pricing, policy, migration, outage, and executive-strategy pressure tests.
-- `strategic-situation-analysis`: first-principles situation diagnosis using the canonical Thirty-Six Stratagems as ethical lenses.
-- `strategy-analyst-review`: a quality gate for proposed strategies, lens choices, risks, falsifiers, and kill criteria.
-- `sunzi-growth-review`: a growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling.
-- `sunzi-operations-sop-review`: an operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability.
-- `sunzi-prd-review`: a product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions.
-- `sunzi-focus-group-skill-review`: a PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, 360 comments, dynamic deterministic scoring, dissent, and improvement recommendations.
+**The loop:**
+
+- `sunzi-strategy-consultant`: the orchestrator — walks 審→算→謀→驗→斷→省 end to end and surfaces only the genuinely human decisions.
+- `sunzi-alignment` (道), `sunzi-timing` (天), `sunzi-terrain` (地), `sunzi-command` (將), `sunzi-method` (法): the five-factor foundation audit, each with modes, forcing questions, and a chained artifact.
+- `sunzi-compare`: the 七計 war-room count against a named rival — evidence-gated rows (勝/負/爭/不知), market-position classification (龍頭/挑戰者/顛覆者/劣勢 + 同盟 overlay), and a 廟算 verdict that includes `do not start`.
+- `sunzi-win-without-fighting`: the 謀攻 cost ladder (伐謀→伐交→伐兵→攻城), walked in order, with force-ratio sizing doctrine.
+- `sunzi-find-the-wedge`: 虛實 weakness-finding via the closing-cost test, with the mandatory 正/奇 split.
+- `sunzi-contingency`: 九變 triggers, refusals (所不), and kill layers with named owners.
+- `sunzi-restraint`: the 火攻 gate for irreversible moves — four written tests; the anger test's only remedy is time.
+- `sunzi-intelligence`: 用間 collection discipline with an absolute legitimacy line and the broadcast (反間) mirror.
+- `sunzi-retro`: 省 recalibration — the diff between what the count predicted and what happened, appended to the pack's memory.
+
+**Standing skills:**
+
+- `sunzi-decision-review`: everyday and professional decisions, negotiation, workplace conflict, defensive tactic detection, waiting, preparation, and retreat.
+- `sunzi-stakeholder-ssr`: cross-domain stakeholder stress-reaction simulation for growth, operations, product/API, pricing, policy, migration, outage, and executive-strategy pressure tests.
+- `strategy-analyst-review`: the quality gate for proposed strategies, lens choices, risks, falsifiers, and kill criteria.
+- `sunzi-focus-group-skill-review`: PM/UED-led multi-stakeholder focus group review for skill quality, adoption risk, user-intention simulation, 360 comments, dynamic deterministic scoring, dissent, and improvement recommendations.
+
+The architecture and its canonical grounding are documented in
+[docs/ARCHITECTURE-WUSHI.md](./docs/ARCHITECTURE-WUSHI.md).
 
 ## Install Options
 
