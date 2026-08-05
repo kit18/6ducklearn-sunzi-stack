@@ -481,6 +481,18 @@ triggers:
 ## Anti-patterns                       ← what a bad run looks like
 ```
 
+The contract is **machine-enforced**, not aspirational. `scripts/validate-stack.mjs`
+asserts, per skill: semver `version`, `allowed-tools`, at least three natural-language
+`triggers`, a `When NOT to invoke` section, a workflow section, `Output`, hard rules,
+the stage-routing block, and ASCII-only artifact filenames. Loop skills additionally
+require `When to invoke this skill`, `Canonical grounding`, `Forcing questions`, and
+`Anti-patterns`. Versions must agree across `package.json`, `stack.json`, the agent
+profile, and every skill's frontmatter. The four retained v0.2.0 skills
+(`sunzi-decision-review`, `sunzi-stakeholder-ssr`, `strategy-analyst-review`,
+`sunzi-focus-group-skill-review`) meet the universal contract; the loop-skill
+additions are scoped to the rebuilt thirteen, and the orchestrator is exempt from
+forcing questions and self-routing only.
+
 Two rules carried from v0.2.0, unchanged, because they are what keep this pack
 honest:
 

@@ -25,6 +25,28 @@ const expectedSkills = [
   'sunzi-retro',
 ];
 
+// Skills rebuilt to the v1.0 authoring contract (docs/ARCHITECTURE-WUSHI.md section 6).
+// The four retained v0.2.0 skills follow the universal contract only.
+const loopSkills = [
+  'sunzi-strategy-consultant',
+  'sunzi-compare',
+  'sunzi-terrain',
+  'sunzi-method',
+  'sunzi-alignment',
+  'sunzi-timing',
+  'sunzi-command',
+  'sunzi-win-without-fighting',
+  'sunzi-find-the-wedge',
+  'sunzi-contingency',
+  'sunzi-restraint',
+  'sunzi-intelligence',
+  'sunzi-retro',
+];
+
+// The orchestrator surfaces user decisions instead of asking forcing questions,
+// and routes to itself, so it is exempt from those two checks only.
+const orchestratorSkill = 'sunzi-strategy-consultant';
+
 const expectedReferences = [
   'references/decision-memo-template.md',
   'references/business-war-room-template.md',
@@ -1237,7 +1259,102 @@ function validateLeakage() {
   }
 }
 
+
+function validateSkillContract() {
+  const packVersion = readJson('package.json').version;
+  const seenVersions = new Set();
+
+  for (const skillName of expectedSkills) {
+    const relativePath = `skills/${skillName}/SKILL.md`;
+    if (!fileExists(relativePath)) continue;
+
+    const content = read(relativePath);
+    const frontmatter = parseFrontmatter(content, relativePath);
+    const isLoopSkill = loopSkills.includes(skillName);
+
+    // --- universal contract: frontmatter shape ---
+    if (!frontmatter.version) {
+      fail(`${relativePath} frontmatter must declare a version`);
+    } else {
+      if (!/^\d+\.\d+\.\d+$/.test(frontmatter.version)) {
+        fail(`${relativePath} version must be semver, got "${frontmatter.version}"`);
+      }
+      seenVersions.add(frontmatter.version);
+    }
+
+    const rawFrontmatter = content.split('---')[1] ?? '';
+    for (const block of ['allowed-tools:', 'triggers:']) {
+      if (!rawFrontmatter.includes(block)) {
+        fail(`${relativePath} frontmatter must declare ${block.replace(':', '')}`);
+      }
+    }
+    const triggerCount = (rawFrontmatter.split('triggers:')[1] ?? '')
+      .split(/^[a-z-]+:/m)[0]
+      .split('\n')
+      .filter((line) => /^\s+-\s+\S/.test(line)).length;
+    if (triggerCount < 3) {
+      fail(`${relativePath} must declare at least 3 natural-language triggers, found ${triggerCount}`);
+    }
+
+    // --- universal contract: required sections ---
+    const universalSections = [
+      { label: 'When NOT to invoke', test: /^## When NOT to invoke/m },
+      { label: 'a workflow section', test: /^## .*Workflow/mi },
+      { label: 'Output', test: /^## Output/m },
+      { label: 'hard rules', test: /^## Hard [Rr]ules/m },
+    ];
+    for (const section of universalSections) {
+      if (!section.test.test(content)) {
+        fail(`${relativePath} must include ${section.label}`);
+      }
+    }
+
+    // --- universal contract: stage routing (orchestrator routes to itself) ---
+    if (skillName !== orchestratorSkill && !content.includes('Not sure this is your stage?')) {
+      fail(`${relativePath} must include the stage-routing block`);
+    }
+
+    // --- loop-skill contract: the full v1.0 authoring shape ---
+    if (isLoopSkill) {
+      const loopSections = [
+        { label: 'When to invoke this skill', test: /^## When to invoke this skill/m },
+        { label: 'Canonical grounding', test: /^## Canonical grounding/m },
+        { label: 'Anti-patterns', test: /^## Anti-patterns/m },
+      ];
+      for (const section of loopSections) {
+        if (!section.test.test(content)) {
+          fail(`${relativePath} must include ${section.label} (v1.0 loop-skill contract)`);
+        }
+      }
+      if (skillName !== orchestratorSkill && !/^## Forcing questions/m.test(content)) {
+        fail(`${relativePath} must include Forcing questions (v1.0 loop-skill contract)`);
+      }
+    }
+
+    // --- artifact filenames must be ASCII-typeable (v1.0.1 accessibility fix) ---
+    for (const match of content.matchAll(/`([^`]*\.md)`/g)) {
+      if (/[\u3400-\u9fff]/.test(match[1])) {
+        fail(`${relativePath} references a non-ASCII artifact filename: ${match[1]}`);
+      }
+    }
+  }
+
+  // --- version alignment across the pack ---
+  if (seenVersions.size > 1) {
+    fail(`skill frontmatter versions must be uniform, found ${[...seenVersions].sort().join(', ')}`);
+  }
+  const [skillVersion] = [...seenVersions];
+  if (skillVersion && skillVersion !== packVersion) {
+    fail(`skill frontmatter version ${skillVersion} must match package.json ${packVersion}`);
+  }
+  const agentProfile = read('agents/sunzi-strategy-consultant.yaml');
+  if (!hasConfigLine(agentProfile, `version: ${packVersion}`)) {
+    fail(`agents/sunzi-strategy-consultant.yaml must declare version: ${packVersion}`);
+  }
+}
+
 validateSkills();
+validateSkillContract();
 validateReferences();
 validateAgents();
 validateExamples();
