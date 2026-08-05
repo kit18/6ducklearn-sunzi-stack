@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -8,11 +8,6 @@
   "license": "Apache-2.0 for validation scripts",
   "content_license": "CC BY 4.0 for skills, references, examples, and docs",
   "skills": [
-    {
-      "name": "strategic-situation-analysis",
-      "path": "skills/strategic-situation-analysis/SKILL.md",
-      "purpose": "First-principles strategic diagnosis with source-grounded Thirty-Six Stratagems lenses."
-    },
     {
       "name": "sunzi-decision-review",
       "path": "skills/sunzi-decision-review/SKILL.md",
@@ -27,21 +22,6 @@
       "name": "strategy-analyst-review",
       "path": "skills/strategy-analyst-review/SKILL.md",
       "purpose": "Quality gate for evidence, falsifiers, ethics, second-order effects, metrics, and kill criteria."
-    },
-    {
-      "name": "sunzi-growth-review",
-      "path": "skills/sunzi-growth-review/SKILL.md",
-      "purpose": "Growth-loop and GTM experiment review for mechanism, metrics, trust guardrails, and ethical scaling."
-    },
-    {
-      "name": "sunzi-operations-sop-review",
-      "path": "skills/sunzi-operations-sop-review/SKILL.md",
-      "purpose": "Operations and SOP review for bottlenecks, state machines, decision rights, exceptions, rollback, and auditability."
-    },
-    {
-      "name": "sunzi-prd-review",
-      "path": "skills/sunzi-prd-review/SKILL.md",
-      "purpose": "Product-value and PRD review for demand reality, business use cases, scope, requirement contracts, QA coverage, release phases, and open questions."
     },
     {
       "name": "sunzi-focus-group-skill-review",
@@ -143,7 +123,11 @@
     "references/strategy-focus-group-evaluation.md",
     "references/user-intention-metric-contract.md",
     "skills/sunzi-focus-group-skill-review/references/panel-contract.md",
-    "skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md"
+    "references/thirty-six-stratagems-source-stories.md",
+    "references/unit-economics-gate.md",
+    "references/domain-adapters/growth.md",
+    "references/domain-adapters/operations.md",
+    "references/domain-adapters/product.md"
   ],
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",

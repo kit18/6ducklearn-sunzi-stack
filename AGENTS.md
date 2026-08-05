@@ -19,15 +19,16 @@ For a new user with a normal business decision, call `sunzi-strategy-consultant`
 1. Start with `sunzi-strategy-consultant` when the user asks for a complete business strategy memo, war-room plan, or board-ready recommendation.
 2. Route everyday or professional choices through `sunzi-decision-review` when the user asks whether to act, wait, negotiate, defend, observe, or retreat.
 3. Route synthetic stakeholder reaction work through `sunzi-stakeholder-ssr` when the user asks for SSR, persona reaction, internal Slack complaint, executive escalation, migration objection, pricing objection, growth backlash, operations burden, or stakeholder-style artifacts.
-4. Route diagnosis through `strategic-situation-analysis` to map terrain, actors, incentives, constraints, timing, information asymmetry, and failure modes.
+4. Route foundation diagnosis through the 五事 skills — `sunzi-alignment` (道), `sunzi-timing` (天), `sunzi-terrain` (地: terrain, actors, incentives, constraints, timing, information asymmetry, failure modes), `sunzi-command` (將), `sunzi-method` (法) — then count with `sunzi-compare` (七計 scorecard, position classification, 廟算 verdict).
 5. Use the Modern Strategy Method Library as a private screen after evidence mapping and before final recommendation; output only 1 to 2 methods when they materially improve diagnosis, presentation, or kill criteria.
 6. When the user provides their own reading notes, convert them into original reader digest / insight brief material and label the source as `user-provided reading notes`.
 7. For deeper book-learning work, route through the Tool-Book Family Tree: strategic lens, consulting diagnosis, advantage / portfolio, operating system, and presentation family.
 8. Use a synthetic consultant-agency presentation review when the work needs executive deck readability; label it as synthetic and check one-slide storyline, evidence, risk, and stop rule.
-9. Route domain artifacts through the narrow domain skill before final review:
-   - `sunzi-growth-review` for growth loops, GTM experiments, ecommerce conversion, community distribution, lifecycle campaigns, referrals, and acquisition.
-   - `sunzi-operations-sop-review` for SOPs, runbooks, handoffs, support workflows, incident procedures, supply-chain processes, QA routines, and operating cadences.
-   - `sunzi-prd-review` for business use cases, product value, PRDs, product requirements, SDK/API/event contracts, acceptance criteria, QA coverage, release phases, and open questions.
+9. Pull the matching domain adapter into the 五事 skills before final review:
+   - `references/domain-adapters/growth.md` for growth loops, GTM experiments, ecommerce conversion, community distribution, lifecycle campaigns, referrals, and acquisition.
+   - `references/domain-adapters/operations.md` for SOPs, runbooks, handoffs, support workflows, incident procedures, supply-chain processes, QA routines, and operating cadences.
+   - `references/domain-adapters/product.md` for business use cases, product value, PRDs, product requirements, SDK/API/event contracts, acceptance criteria, QA coverage, release phases, and open questions.
+   Route maneuver design through `sunzi-win-without-fighting` (the 謀攻 ladder), `sunzi-find-the-wedge` (虛實), `sunzi-contingency` (九變), with `sunzi-intelligence` (用間) filling evidence gaps; gate irreversible moves with `sunzi-restraint` (火攻); close every campaign with `sunzi-retro` (省).
 10. Route skill-quality, PM/UED focus group, adoption-readiness, or "is this skill good?" reviews through `sunzi-focus-group-skill-review` before final recommendation.
 11. When the user asks for industry-leader review, consultation-company smoke testing, or top industry problems, use synthetic industry archetypes, ask for Top 3 Problems, select a case, then run SSR, focus-group review, and `strategy-analyst-review`.
 12. Route end-to-end synthetic industry smoke tests through `sunzi-strategy-consultant` -> `sunzi-stakeholder-ssr` -> `sunzi-focus-group-skill-review` -> `strategy-analyst-review`.

@@ -157,7 +157,7 @@ Exact wording cuts:
    safe-source label, one-slide headline, customer economics scorecard,
    operating cadence, adoption telemetry, metrics, and kill criteria.
 6. Apply: route the final behavior into `sunzi-strategy-consultant`,
-   `strategic-situation-analysis`, narrow domain skills, and
+   `sunzi-terrain`, the domain adapters, and
    `strategy-analyst-review`.
 
 ## Acceptance Criteria

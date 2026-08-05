@@ -6,13 +6,9 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const expectedSkills = [
-  'strategic-situation-analysis',
   'sunzi-decision-review',
   'sunzi-stakeholder-ssr',
   'strategy-analyst-review',
-  'sunzi-growth-review',
-  'sunzi-operations-sop-review',
-  'sunzi-prd-review',
   'sunzi-focus-group-skill-review',
   'sunzi-strategy-consultant',
   'sunzi-compare',
@@ -50,7 +46,11 @@ const expectedReferences = [
   'references/strategy-focus-group-evaluation.md',
   'references/user-intention-metric-contract.md',
   'skills/sunzi-focus-group-skill-review/references/panel-contract.md',
-  'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md',
+  'references/thirty-six-stratagems-source-stories.md',
+  'references/unit-economics-gate.md',
+  'references/domain-adapters/growth.md',
+  'references/domain-adapters/operations.md',
+  'references/domain-adapters/product.md',
 ];
 
 const expectedAgents = [
@@ -307,7 +307,7 @@ function validateReferences() {
     }
   }
 
-  const sourceRef = read('skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md');
+  const sourceRef = read('references/thirty-six-stratagems-source-stories.md');
   if (!sourceRef.includes('Wikisource')) {
     fail('source-story reference must cite Wikisource');
   }
@@ -411,11 +411,16 @@ function validateAgents() {
     'sunzi-strategy-consultant',
     'sunzi-decision-review',
     'sunzi-stakeholder-ssr',
-    'strategic-situation-analysis',
+    'sunzi-alignment',
+    'sunzi-timing',
+    'sunzi-terrain',
+    'sunzi-command',
+    'sunzi-method',
+    'sunzi-compare',
+    'sunzi-win-without-fighting',
+    'sunzi-restraint',
+    'sunzi-retro',
     'strategy-analyst-review',
-    'sunzi-growth-review',
-    'sunzi-operations-sop-review',
-    'sunzi-prd-review',
     'sunzi-focus-group-skill-review',
     'source/evidence ledger',
     'literal historical figure',
@@ -438,11 +443,19 @@ function validateAgents() {
     'literal_historical_persona: false',
     'sunzi-decision-review',
     'sunzi-stakeholder-ssr',
-    'strategic-situation-analysis',
+    'sunzi-alignment',
+    'sunzi-timing',
+    'sunzi-terrain',
+    'sunzi-command',
+    'sunzi-method',
+    'sunzi-compare',
+    'sunzi-win-without-fighting',
+    'sunzi-find-the-wedge',
+    'sunzi-contingency',
+    'sunzi-restraint',
+    'sunzi-intelligence',
+    'sunzi-retro',
     'strategy-analyst-review',
-    'sunzi-growth-review',
-    'sunzi-operations-sop-review',
-    'sunzi-prd-review',
     'sunzi-focus-group-skill-review',
     'sunzi-strategy-consultant',
     'references/ssr-evaluation-scenarios.md',
@@ -688,7 +701,7 @@ function validateDodWorkflowIntegration() {
       required: ['Real-life DoD case map', 'DoD calibration', 'source anchor', 'Stakeholder Reaction'],
     },
     {
-      path: 'skills/sunzi-growth-review/SKILL.md',
+      path: 'references/domain-adapters/growth.md',
       required: [
         'DoD calibration',
         'Community Growth Without Spam',
@@ -700,7 +713,7 @@ function validateDodWorkflowIntegration() {
       ],
     },
     {
-      path: 'skills/sunzi-operations-sop-review/SKILL.md',
+      path: 'references/domain-adapters/operations.md',
       required: [
         'DoD calibration',
         'Manager Delegation Under Pressure',
@@ -712,7 +725,7 @@ function validateDodWorkflowIntegration() {
       ],
     },
     {
-      path: 'skills/sunzi-prd-review/SKILL.md',
+      path: 'references/domain-adapters/product.md',
       required: [
         'DoD calibration',
         'API Or Platform Migration Rollout',

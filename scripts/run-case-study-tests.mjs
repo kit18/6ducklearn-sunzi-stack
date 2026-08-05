@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const caseStudyDir = path.join(root, 'case-studies');
 const sourceStoryReferencePath =
-  'skills/strategic-situation-analysis/references/thirty-six-stratagems-source-stories.md';
+  'references/thirty-six-stratagems-source-stories.md';
 
 function fail(message) {
   console.error(`case-study-test: ${message}`);
