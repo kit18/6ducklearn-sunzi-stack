@@ -1,11 +1,38 @@
 ---
 name: strategy-analyst-review
 description: Use to audit a proposed strategy, strategy memo, growth plan, market-risk thesis, ecommerce plan, negotiation move, or Thirty-Six Stratagems lens selection for evidence quality, falsifiers, ethics, second-order effects, metrics, and kill criteria.
+version: 1.0.1
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - WebSearch
+triggers:
+  - review this strategy
+  - poke holes in this
+  - what would falsify this
+  - is this plan sound
+  - quality gate
 ---
 
 # Strategy Analyst Review
 
 Use this skill as the quality gate for strategy work before action. It is especially useful after the 五事 skills, `sunzi-compare`, the maneuver tier (`sunzi-win-without-fighting`, `sunzi-find-the-wedge`, `sunzi-contingency`), `sunzi-decision-review`, or `sunzi-stakeholder-ssr`, but it also works on ordinary strategy memos.
+
+## When NOT to invoke this skill
+
+- The plan does not exist yet — build it first with the 五事 skills, `sunzi-compare`, or the maneuver tier.
+- The concern is how people will react rather than whether the logic holds → `sunzi-stakeholder-ssr`.
+- The move is irreversible and needs its own gate → `sunzi-restraint`.
+- The campaign is already over → `sunzi-retro`.
+
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
 
 ## Review Workflow
 

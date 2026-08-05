@@ -1,6 +1,6 @@
 ---
 name: sunzi-strategy-consultant
-version: 1.0.0
+version: 1.0.1
 description: Use as the entry point for any full strategy engagement — a market entry, a competitive campaign, a turnaround, a board-ready recommendation — when the user wants the whole campaign loop run for them: foundation audit, war-room count, maneuver design, stress test, restraint gate, and decision memo, with only the genuinely human decisions surfaced along the way.
 allowed-tools:
   - Read

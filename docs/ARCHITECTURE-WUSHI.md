@@ -73,6 +73,14 @@ The pack enforces the sequence structurally:
   output header: `⚠ running without foundation audit — tactics without a base`.
   It runs anyway (the user decides), but it never runs silently.
 
+Each of the five becomes one skill. Not a section of a skill — a skill, with
+its own modes, its own forcing questions, and its own artifact.
+
+> **Style-derived, not persona.** Every skill in this pack is a modern
+> consultant informed by Sunzi. None of them speak as 孫子, and none of them
+> treat a classical line as permission for a modern action. The text supplies
+> structure and diagnostic pressure. Evidence supplies the answer.
+
 ### Provenance — two books, one join
 
 孫子兵法 (Warring States) and 三十六計 (a Ming–Qing folk compilation) are
@@ -86,14 +94,6 @@ to the stratagems is deliberately *not* adopted: 謀攻篇 ranks 不戰而屈人
 winning without the strike — as 善之善者, and the cost ladder 伐謀 → 伐交 →
 伐兵 → 攻城 exists to make the decisive strike the most expensive option, not
 the most glorious one.
-
-Each becomes one skill. Not a section of a skill — a skill, with its own modes,
-its own forcing questions, and its own artifact.
-
-> **Style-derived, not persona.** Every skill in this pack is a modern
-> consultant informed by Sunzi. None of them speak as 孫子, and none of them
-> treat a classical line as permission for a modern action. The text supplies
-> structure and diagnostic pressure. Evidence supplies the answer.
 
 ---
 
@@ -265,10 +265,19 @@ lane:
 
 ## 4. Modes and forcing questions
 
-This is the structural pattern the pack was missing. Every skill gets 2–4 **modes**
-and a set of **forcing questions** it must ask before producing output. Modes
-prevent one-size analysis; forcing questions prevent the agent from writing
-plausible strategy prose without evidence.
+This is the structural pattern the pack was missing. Every skill gets a set of
+**forcing questions** it must ask before producing output, and the diagnostic
+skills get 2–4 **modes**. Forcing questions prevent the agent from writing
+plausible strategy prose without evidence; modes prevent one-size analysis.
+
+Modes are not universal, deliberately. The 五事 skills, `sunzi-compare`, and
+`sunzi-retro` each face genuinely different situations that call for different
+depth — a terrain survey and a withdrawal assessment are not the same job — so
+they carry modes. The maneuver skills do not: their structure *is* the mode.
+The 謀攻 ladder is walked in one order, the wedge is found by one test, the
+contingency layer is built the same way every time, and the restraint gate runs
+all four tests or none. Bolting modes onto them would be ceremony, not
+discipline.
 
 ### 道 — `/sunzi-alignment`
 

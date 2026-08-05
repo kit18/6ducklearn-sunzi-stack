@@ -1,6 +1,6 @@
 ---
 name: sunzi-intelligence
-version: 1.0.0
+version: 1.0.1
 description: Use when the plan depends on knowing something you don't — what the rival intends, what customers actually do, what the channel really thinks — and the knowledge must come from people and legitimate sources rather than guesses; the 用間 discipline of collection, verification, and the ethical line that keeps intelligence from becoming espionage.
 allowed-tools:
   - Read

@@ -1,6 +1,19 @@
 ---
 name: sunzi-stakeholder-ssr
 description: Use when simulating synthetic stakeholder stress reactions to policy changes, API migrations, pricing changes, deprecations, outages, platform shifts, or strategic moves where persona voice, hidden objections, internal complaints, executive translation, and technical blind spots matter.
+version: 1.0.1
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - WebSearch
+triggers:
+  - how will people react
+  - what will they say
+  - simulate the pushback
+  - will there be backlash
+  - stress test this rollout
 ---
 
 # Sunzi Stakeholder SSR
@@ -8,6 +21,20 @@ description: Use when simulating synthetic stakeholder stress reactions to polic
 Use this skill to simulate stakeholder stress reactions under pressure. SSR means Stakeholder Stress-Reaction Simulation. It helps reveal what a stakeholder may feel, say, escalate, misunderstand, or resist before a rollout lands in the real world.
 
 Core rule: simulate pressure honestly, but label it synthetic. The goal is stakeholder empathy and rollout risk discovery, not impersonation, manipulation, or replacement for real research.
+
+## When NOT to invoke this skill
+
+- You need the standing mandate rather than a reaction to a specific move → `sunzi-alignment`.
+- You need a counterpart's capability profile rather than a scenario reaction → `sunzi-command`.
+- You need the logic falsified rather than the people modelled → `strategy-analyst-review`.
+- Real stakeholder evidence exists — use it; SSR is a hypothesis generator, not a substitute.
+
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
 
 ## Workflow
 

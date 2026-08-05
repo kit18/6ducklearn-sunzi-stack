@@ -1,6 +1,20 @@
 ---
 name: sunzi-focus-group-skill-review
 description: Use when evaluating whether a skill, skill pack, agent workflow, prompt library, AI operating method, product concept, or user-intention question is good enough through a PM/UED-led focus group with dynamic segment simulation, a minimum three-response segment gate, convergence checking, scorecards, dissent, risk review, deterministic scoring, and improvement recommendations.
+version: 1.0.1
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - Bash
+  - WebSearch
+triggers:
+  - is this skill good
+  - review this workflow
+  - would people adopt this
+  - score this concept
+  - focus group this
 ---
 
 # Sunzi Focus Group Skill Review
@@ -10,6 +24,19 @@ Use this skill to evaluate skill quality and user intention through a PM/UED-led
 Core rule: never rely on one reviewer. A single expert can miss adoption friction, unsafe incentives, support burden, or user confusion that a cross-functional panel will expose.
 
 Scoring rule: do not let the LLM invent final scores. The LLM may simulate comments, produce 360 comments, draft a dynamic scoring contract, and extract structured signals. Final 1-10 scores must come from the deterministic Node.js scorer or an equivalent deterministic implementation.
+
+## When NOT to invoke this skill
+
+- The artifact is a strategy decision rather than a skill or workflow → `sunzi-strategy-consultant`.
+- You need falsification of a plan's logic → `strategy-analyst-review`.
+- You need reactions to a specific business move → `sunzi-stakeholder-ssr`.
+
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
 
 ## Workflow
 

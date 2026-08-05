@@ -1,6 +1,6 @@
 ---
 name: sunzi-terrain
-version: 1.0.0
+version: 1.0.1
 description: Use when a strategy, market entry, launch, channel choice, or survival question needs a ground-truth map before any move is chosen — market structure, position, supply lines, category boundaries, 九地 ground classification, and where you can and cannot survive; the terrain survey that the 七計 count and the maneuver skills stand on.
 allowed-tools:
   - Read

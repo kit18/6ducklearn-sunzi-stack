@@ -1,6 +1,6 @@
 ---
 name: sunzi-compare
-version: 1.0.0
+version: 1.0.1
 description: Use when a market entry, competitive campaign, product launch, pricing move, or fight-or-wait decision needs a pre-commitment go / no-go count against a named rival — the 七計 scorecard, market-position classification, and 廟算 verdict that the maneuver skills read before any tactic is chosen.
 allowed-tools:
   - Read

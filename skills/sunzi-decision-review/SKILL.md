@@ -1,6 +1,20 @@
 ---
 name: sunzi-decision-review
 description: Use when reviewing everyday or professional decisions, negotiation choices, career moves, workplace conflict, resource tradeoffs, crisis response, defensive tactic detection, or whether to act, wait, prepare, or retreat where terrain, incentives, timing, status quo, and ethical restraint matter.
+version: 1.0.1
+allowed-tools:
+  - Read
+  - Write
+  - Grep
+  - Glob
+  - WebSearch
+  - AskUserQuestion
+triggers:
+  - should I take this
+  - how do I handle this conversation
+  - should I wait or act
+  - how should I respond
+  - someone is pressuring me
 ---
 
 # Sunzi Decision Review
@@ -8,6 +22,19 @@ description: Use when reviewing everyday or professional decisions, negotiation 
 Use this skill when the user needs a decision, not an artifact. This is the root applied-use skill for daily life, work, career, negotiation, conflict, crisis, and opportunity choices.
 
 Core rule: do not start with a stratagem. Start with the terrain, the status quo, the user's agency, and the cost of action versus inaction.
+
+## When NOT to invoke this skill
+
+- The decision is a company-level campaign with a rival and a market → the 五事 skills and `sunzi-compare`.
+- The question is whether the org can execute or afford it → `sunzi-method`.
+- The move is irreversible and organizational (litigation, layoffs, price war) → `sunzi-restraint`.
+
+## Not sure this is your stage?
+
+If you cannot tell which stage your question belongs to, invoke
+`sunzi-strategy-consultant` instead — it triages, dispatches, and carries the
+artifacts. Running this skill alone is also a supported, first-class use; you
+do not have to run the whole loop to get value from one stage.
 
 ## Workflow
 

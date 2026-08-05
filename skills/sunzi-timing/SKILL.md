@@ -1,6 +1,6 @@
 ---
 name: sunzi-timing
-version: 1.0.0
+version: 1.0.1
 description: Use when the question is when, not whether — whether a market window is open, how long it stays open, what the cost of waiting is, whether urgency is real or manufactured by runway, and whether the right move is to strike now, prepare and wait (以逸待勞), or accept being late; the 天 examination behind every "why now?".
 allowed-tools:
   - Read

@@ -1,6 +1,6 @@
 ---
 name: sunzi-command
-version: 1.0.0
+version: 1.0.1
 description: Use when the decision-maker is the variable — assessing whether you or your leadership bench can actually run the campaign being planned, reading a rival CEO's or counterpart negotiator's command profile, or checking a leader's exposure to the five classical command failures (將有五危) before a high-pressure fight.
 allowed-tools:
   - Read
