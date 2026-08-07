@@ -1,6 +1,6 @@
 ---
 name: sunzi-method
-version: 1.0.1
+version: 1.0.2
 description: Use when the question is whether the machine can actually execute and afford the strategy — org structure, decision rights and latency, KPI/OKR and equity incentives, SOP and compliance discipline, burn, and the computed unit economics behind any go / no-go on a money campaign.
 allowed-tools:
   - Read
@@ -197,6 +197,16 @@ The machine can run this strategy: yes / yes-if / no
 Binding constraint: 
 Needed next: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

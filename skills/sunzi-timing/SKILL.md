@@ -1,6 +1,6 @@
 ---
 name: sunzi-timing
-version: 1.0.1
+version: 1.0.2
 description: Use when the question is when, not whether — whether a market window is open, how long it stays open, what the cost of waiting is, whether urgency is real or manufactured by runway, and whether the right move is to strike now, prepare and wait (以逸待勞), or accept being late; the 天 examination behind every "why now?".
 allowed-tools:
   - Read
@@ -190,6 +190,16 @@ Timing: strike / prepared wait / late-different-game / gone / insufficient evide
 Confidence: 
 Needed next: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

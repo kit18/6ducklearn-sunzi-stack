@@ -1,6 +1,6 @@
 ---
 name: sunzi-win-without-fighting
-version: 1.0.1
+version: 1.0.2
 description: Use when a competitive fight is being planned and the cheaper rungs have not been checked — defeating the rival's plan, winning through alliances, or restructuring the situation so the fight never happens; the 謀攻 cost ladder every campaign must walk before any head-on move is approved.
 allowed-tools:
   - Read
@@ -139,6 +139,16 @@ Leading metric: · Trust guardrail: · Kill criterion:
 ## Route
 → /sunzi-restraint required: yes/no · → next skill: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

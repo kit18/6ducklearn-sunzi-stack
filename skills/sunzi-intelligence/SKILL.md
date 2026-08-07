@@ -1,6 +1,6 @@
 ---
 name: sunzi-intelligence
-version: 1.0.1
+version: 1.0.2
 description: Use when the plan depends on knowing something you don't — what the rival intends, what customers actually do, what the channel really thinks — and the knowledge must come from people and legitimate sources rather than guesses; the 用間 discipline of collection, verification, and the ethical line that keeps intelligence from becoming espionage.
 allowed-tools:
   - Read
@@ -157,6 +157,16 @@ Intended: yes/no · Adjustment:
 ## Route
 Unblocked skills: · Remaining 不知 rows: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

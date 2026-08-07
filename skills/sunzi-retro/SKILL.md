@@ -1,6 +1,6 @@
 ---
 name: sunzi-retro
-version: 1.0.1
+version: 1.0.2
 description: Use after a campaign, launch, negotiation, or quarter ends — or when one visibly diverges from plan — to re-score the seven comparisons against what actually happened, diff the prediction against reality, and record which factor was misjudged so the next count starts smarter; the 省 stage that makes the pack compound.
 allowed-tools:
   - Read
@@ -159,6 +159,16 @@ Kill layer: correct number / wrong number / right number, not invoked
 ## Route
 Collection gaps → intelligence: · Reading corrections → [事 skill]: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

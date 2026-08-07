@@ -1,6 +1,6 @@
 ---
 name: sunzi-alignment
-version: 1.0.1
+version: 1.0.2
 description: Use when the question is whether anyone will actually follow — product-pain reality, incentive distribution across shareholders, employees, and customers (上下同欲), coalition strength before a hard push, or repairing a fracture after a broken promise; the mandate examination behind every strategy that needs people to move.
 allowed-tools:
   - Read
@@ -165,6 +165,16 @@ Mandate: strong / conditional / weak / fractured
 The condition (if conditional): 
 Needed next: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

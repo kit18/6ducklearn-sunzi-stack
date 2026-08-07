@@ -73,6 +73,7 @@ const expectedReferences = [
   'references/domain-adapters/growth.md',
   'references/domain-adapters/operations.md',
   'references/domain-adapters/product.md',
+  'references/interactive-questioning.md',
 ];
 
 const expectedAgents = [
@@ -1328,6 +1329,16 @@ function validateSkillContract() {
       }
       if (skillName !== orchestratorSkill && !/^## Forcing questions/m.test(content)) {
         fail(`${relativePath} must include Forcing questions (v1.0 loop-skill contract)`);
+      }
+    }
+
+    // --- interactive fallback: declaring AskUserQuestion requires the protocol ---
+    if (rawFrontmatter.includes('AskUserQuestion')) {
+      if (!/^## Asking the user/m.test(content)) {
+        fail(`${relativePath} declares AskUserQuestion but has no "Asking the user" fallback section`);
+      }
+      if (!content.includes('references/interactive-questioning.md')) {
+        fail(`${relativePath} must link references/interactive-questioning.md for the fallback protocol`);
       }
     }
 

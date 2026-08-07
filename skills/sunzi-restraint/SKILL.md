@@ -1,6 +1,6 @@
 ---
 name: sunzi-restraint
-version: 1.0.1
+version: 1.0.2
 description: Use before any irreversible or escalatory move is approved — price wars, litigation, layoffs, public attacks, burning a partnership, betting the company — the 火攻 gate that tests the move against anger, profit, necessity, and the fact that some destroyed things do not come back.
 allowed-tools:
   - Read
@@ -171,6 +171,16 @@ Named: · Consulted: yes/no · Their read:
 pass / pass-reduced / hold (re-review date: ) / refuse
 Reason: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

@@ -1,6 +1,6 @@
 ---
 name: sunzi-command
-version: 1.0.1
+version: 1.0.2
 description: Use when the decision-maker is the variable — assessing whether you or your leadership bench can actually run the campaign being planned, reading a rival CEO's or counterpart negotiator's command profile, or checking a leader's exposure to the five classical command failures (將有五危) before a high-pressure fight.
 allowed-tools:
   - Read
@@ -192,6 +192,16 @@ Guardrails required (if any):
 Watch-list for /sunzi-restraint: 
 Needed next: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

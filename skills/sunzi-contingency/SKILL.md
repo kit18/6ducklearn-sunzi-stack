@@ -1,6 +1,6 @@
 ---
 name: sunzi-contingency
-version: 1.0.1
+version: 1.0.2
 description: Use when a chosen plan needs its adaptation layer before launch — the triggers that change the plan mid-flight, the kill criteria that stop it, the roads deliberately not taken (九變), and the blended gain-and-harm view that keeps a committed team from marrying its own plan.
 allowed-tools:
   - Read
@@ -148,6 +148,16 @@ Gain inside the worst case:
 Adaptations requiring /sunzi-restraint at invocation: [list / none]
 → strategy-analyst-review
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

@@ -486,7 +486,12 @@ asserts, per skill: semver `version`, `allowed-tools`, at least three natural-la
 `triggers`, a `When NOT to invoke` section, a workflow section, `Output`, hard rules,
 the stage-routing block, and ASCII-only artifact filenames. Loop skills additionally
 require `When to invoke this skill`, `Canonical grounding`, `Forcing questions`, and
-`Anti-patterns`. Versions must agree across `package.json`, `stack.json`, the agent
+`Anti-patterns`. Any skill declaring `AskUserQuestion` must carry an
+`Asking the user` section linking
+[the interactive fallback protocol](../references/interactive-questioning.md) —
+the pack claims host-agnosticism, and that claim is only honest if skills
+degrade to prose questions on hosts without a structured question tool (Codex, OpenCode, Cursor, headless runs) instead of silently skipping their own
+forcing questions. Versions must agree across `package.json`, `stack.json`, the agent
 profile, and every skill's frontmatter. The four retained v0.2.0 skills
 (`sunzi-decision-review`, `sunzi-stakeholder-ssr`, `strategy-analyst-review`,
 `sunzi-focus-group-skill-review`) meet the universal contract; the loop-skill

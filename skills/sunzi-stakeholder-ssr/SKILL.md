@@ -1,7 +1,7 @@
 ---
 name: sunzi-stakeholder-ssr
 description: Use when simulating synthetic stakeholder stress reactions to policy changes, API migrations, pricing changes, deprecations, outages, platform shifts, or strategic moves where persona voice, hidden objections, internal complaints, executive translation, and technical blind spots matter.
-version: 1.0.1
+version: 1.0.2
 allowed-tools:
   - Read
   - Write

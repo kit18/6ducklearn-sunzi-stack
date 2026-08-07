@@ -1,6 +1,6 @@
 ---
 name: sunzi-strategy-consultant
-version: 1.0.1
+version: 1.0.2
 description: Use as the entry point for any full strategy engagement — a market entry, a competitive campaign, a turnaround, a board-ready recommendation — when the user wants the whole campaign loop run for them: foundation audit, war-room count, maneuver design, stress test, restraint gate, and decision memo, with only the genuinely human decisions surfaced along the way.
 allowed-tools:
   - Read
@@ -143,6 +143,16 @@ Kill criterion: · Retro scheduled: [date/trigger]
 Overrides on record: [none / list with owner]
 Artifact trail: [files]
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

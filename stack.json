@@ -1,6 +1,6 @@
 {
   "name": "6ducklearn-sunzi-stack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",
@@ -127,7 +127,8 @@
     "references/unit-economics-gate.md",
     "references/domain-adapters/growth.md",
     "references/domain-adapters/operations.md",
-    "references/domain-adapters/product.md"
+    "references/domain-adapters/product.md",
+    "references/interactive-questioning.md"
   ],
   "examples": [
     "examples/ecommerce-growth-decision-memo.md",

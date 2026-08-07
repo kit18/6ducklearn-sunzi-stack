@@ -1,6 +1,6 @@
 ---
 name: sunzi-find-the-wedge
-version: 1.0.1
+version: 1.0.2
 description: Use when the fight is chosen and the question is where — finding the point the incumbent structurally cannot defend without abandoning what makes them strong, splitting the plan into the orthodox holding line and the unexpected winning move (奇正), and making the rival respond to you rather than you to them.
 allowed-tools:
   - Read
@@ -153,6 +153,16 @@ Leading metric: · Trust guardrail: · Kill criterion:
 ## Route
 → /sunzi-restraint required: yes/no · → next skill: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

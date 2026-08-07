@@ -1,6 +1,6 @@
 ---
 name: sunzi-compare
-version: 1.0.1
+version: 1.0.2
 description: Use when a market entry, competitive campaign, product launch, pricing move, or fight-or-wait decision needs a pre-commitment go / no-go count against a named rival — the 七計 scorecard, market-position classification, and 廟算 verdict that the maneuver skills read before any tactic is chosen.
 allowed-tools:
   - Read
@@ -194,6 +194,16 @@ If 顛覆者 — inapplicable rows and the different game:
 Next skill: 
 Chapter weighting for maneuver screening: 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 

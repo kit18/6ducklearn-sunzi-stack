@@ -1,6 +1,6 @@
 ---
 name: sunzi-terrain
-version: 1.0.1
+version: 1.0.2
 description: Use when a strategy, market entry, launch, channel choice, or survival question needs a ground-truth map before any move is chosen — market structure, position, supply lines, category boundaries, 九地 ground classification, and where you can and cannot survive; the terrain survey that the 七計 count and the maneuver skills stand on.
 allowed-tools:
   - Read
@@ -222,6 +222,16 @@ Withdrawal beats holding when:
 ## Needed Next
 1. 
 ```
+
+
+## Asking the user
+
+This skill's forcing questions may need a direct answer. Use `AskUserQuestion`
+when the host provides it; when it does not — Codex, OpenCode, Cursor, headless
+runs — ask in prose and end the turn rather than guessing, and in genuinely
+non-interactive runs proceed under a header-stated assumption with confidence
+capped at medium. Full protocol and the decisions that may never be assumed:
+[Interactive questioning and fallback](../../references/interactive-questioning.md).
 
 ## Hard rules
 
