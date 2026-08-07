@@ -32,6 +32,23 @@ trail — not a motivational essay — and an engagement that ends at
 
 ## Quick Start
 
+**From npm** (no clone needed):
+
+```bash
+npx --package=6ducklearn-sunzi-stack -c 'mkdir -p ~/.codex/skills ~/.codex/references && cp -R "$(node -p "require.resolve(\"6ducklearn-sunzi-stack/stack.json\")" | xargs dirname)"/skills/* ~/.codex/skills/ && cp -R "$(node -p "require.resolve(\"6ducklearn-sunzi-stack/stack.json\")" | xargs dirname)"/references/* ~/.codex/references/'
+```
+
+Or install it and copy from `node_modules/6ducklearn-sunzi-stack/`:
+
+```bash
+npm install 6ducklearn-sunzi-stack
+mkdir -p ~/.codex/skills ~/.codex/references
+cp -R node_modules/6ducklearn-sunzi-stack/skills/* ~/.codex/skills/
+cp -R node_modules/6ducklearn-sunzi-stack/references/* ~/.codex/references/
+```
+
+**From source:**
+
 ```bash
 git clone https://github.com/kit18/6ducklearn-sunzi-stack.git
 cd 6ducklearn-sunzi-stack
@@ -40,6 +57,9 @@ mkdir -p ~/.codex/skills ~/.codex/references
 cp -R skills/* ~/.codex/skills/
 cp -R references/* ~/.codex/references/
 ```
+
+Adjust the target path for your host — `~/.claude/skills/`, `~/.cursor/skills/`, and so on.
+**Upgrading from v0.2.0?** Remove the four skills deleted in v1.0.0 first — see [Migration](./docs/MIGRATION.md).
 
 Then ask your agent to use `sunzi-strategy-consultant` on a real decision —
 or a single stage skill (`sunzi-compare`, `sunzi-timing`, `sunzi-restraint`)

@@ -1,8 +1,53 @@
 {
   "name": "6ducklearn-sunzi-stack",
   "version": "1.0.2",
-  "private": true,
+  "description": "Sunzi-inspired strategy skills for AI agents: a 17-skill campaign loop (audit / count / devise / test / decide / reflect) built on the Five Factors and Seven Comparisons, with a computed unit-economics gate, an irreversible-move restraint gate, and a first-class 'do not start' verdict.",
+  "keywords": [
+    "sunzi",
+    "sun-tzu",
+    "art-of-war",
+    "strategy",
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "ai-agents",
+    "decision-making",
+    "business-strategy",
+    "competitive-analysis",
+    "unit-economics",
+    "thirty-six-stratagems"
+  ],
+  "homepage": "https://github.com/kit18/6ducklearn-sunzi-stack#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kit18/6ducklearn-sunzi-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kit18/6ducklearn-sunzi-stack/issues"
+  },
+  "license": "Apache-2.0 AND CC-BY-4.0",
   "type": "module",
+  "files": [
+    "skills/",
+    "references/",
+    "agents/",
+    "examples/",
+    "case-studies/",
+    "fixtures/",
+    "scripts/",
+    "docs/INSTALL.md",
+    "docs/MIGRATION.md",
+    "docs/ARCHITECTURE-WUSHI.md",
+    "docs/ADOPTION-CHECKLIST.md",
+    "stack.json",
+    "AGENTS.md",
+    "CONTEXT.md",
+    "LICENSE",
+    "LICENSE-CONTENT",
+    "NOTICE",
+    "SECURITY.md",
+    "TRADEMARK.md"
+  ],
   "scripts": {
     "validate": "node scripts/validate-stack.mjs",
     "test": "node scripts/validate-stack.mjs && node scripts/run-case-study-tests.mjs && node scripts/test-user-intention-scorer.mjs",

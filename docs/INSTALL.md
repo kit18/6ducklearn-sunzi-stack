@@ -39,6 +39,23 @@ Use these examples to confirm the stack is installed and routed correctly.
 | Skill, workflow, or user-intention review | "Use `sunzi-focus-group-skill-review` to simulate comments, generate 360 comments, freeze a dynamic scoring contract, and calculate deterministic scores..." | `examples/focus-group-skill-review.md` |
 | Consultation-company smoke test | "Ask synthetic industry-leader archetypes for Top 3 Problems, select cases, then run SSR and strategy review..." | `examples/industry-leader-smoke-test.md` |
 
+## Package Registry
+
+The pack is published to npm as `6ducklearn-sunzi-stack`. The tarball contains
+`skills/`, `references/`, `agents/`, `examples/`, `case-studies/`, `fixtures/`,
+`scripts/`, and the public docs — no internal enablement material, no private
+drafts, no hosted-runtime configuration.
+
+```bash
+npm install 6ducklearn-sunzi-stack
+mkdir -p ~/.codex/skills ~/.codex/references
+cp -R node_modules/6ducklearn-sunzi-stack/skills/* ~/.codex/skills/
+cp -R node_modules/6ducklearn-sunzi-stack/references/* ~/.codex/references/
+```
+
+Pin a version with `npm install 6ducklearn-sunzi-stack@1.0.2` when you need a
+reproducible skill set across a team.
+
 ## Repository Pointer
 
 For hosts that support repository-based skill loading, point the loader at:
