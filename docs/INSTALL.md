@@ -53,7 +53,7 @@ cp -R node_modules/6ducklearn-sunzi-stack/skills/* ~/.codex/skills/
 cp -R node_modules/6ducklearn-sunzi-stack/references/* ~/.codex/references/
 ```
 
-Pin a version with `npm install 6ducklearn-sunzi-stack@1.0.2` when you need a
+Pin a version with `npm install 6ducklearn-sunzi-stack@1.1.0` when you need a
 reproducible skill set across a team.
 
 ## Repository Pointer

@@ -1,7 +1,7 @@
 ---
 name: strategy-analyst-review
 description: Use to audit a proposed strategy, strategy memo, growth plan, market-risk thesis, ecommerce plan, negotiation move, or Thirty-Six Stratagems lens selection for evidence quality, falsifiers, ethics, second-order effects, metrics, and kill criteria.
-version: 1.0.2
+version: 1.1.0
 allowed-tools:
   - Read
   - Write

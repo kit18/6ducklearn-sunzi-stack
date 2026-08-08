@@ -1,6 +1,6 @@
 ---
 name: sunzi-find-the-wedge
-version: 1.0.2
+version: 1.1.0
 description: Use when the fight is chosen and the question is where — finding the point the incumbent structurally cannot defend without abandoning what makes them strong, splitting the plan into the orthodox holding line and the unexpected winning move (奇正), and making the rival respond to you rather than you to them.
 allowed-tools:
   - Read

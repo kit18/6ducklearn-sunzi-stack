@@ -1,7 +1,7 @@
 ---
 name: sunzi-decision-review
 description: Use when reviewing everyday or professional decisions, negotiation choices, career moves, workplace conflict, resource tradeoffs, crisis response, defensive tactic detection, or whether to act, wait, prepare, or retreat where terrain, incentives, timing, status quo, and ethical restraint matter.
-version: 1.0.2
+version: 1.1.0
 allowed-tools:
   - Read
   - Write

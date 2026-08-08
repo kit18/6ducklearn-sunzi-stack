@@ -1,6 +1,6 @@
 ---
 name: sunzi-alignment
-version: 1.0.2
+version: 1.1.0
 description: Use when the question is whether anyone will actually follow — product-pain reality, incentive distribution across shareholders, employees, and customers (上下同欲), coalition strength before a hard push, or repairing a fracture after a broken promise; the mandate examination behind every strategy that needs people to move.
 allowed-tools:
   - Read
