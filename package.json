@@ -53,7 +53,8 @@
     "test": "node scripts/validate-stack.mjs && node scripts/run-case-study-tests.mjs && node scripts/test-user-intention-scorer.mjs",
     "test:case-studies": "node scripts/run-case-study-tests.mjs",
     "test:scorer": "node scripts/test-user-intention-scorer.mjs",
-    "score:intention": "node scripts/score-user-intention.mjs"
+    "score:intention": "node scripts/score-user-intention.mjs",
+    "generate:hub-seed": "node scripts/generate-hub-seed.mjs"
   },
   "engines": {
     "node": ">=20"

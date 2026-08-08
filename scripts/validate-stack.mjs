@@ -146,6 +146,7 @@ const expectedCaseStudies = [
 
 const expectedScoringArtifacts = [
   'scripts/score-user-intention.mjs',
+  'scripts/generate-hub-seed.mjs',
   'scripts/test-user-intention-scorer.mjs',
   'fixtures/user-intention-scoring/valid/shoe-comments-synthetic.json',
   'fixtures/user-intention-scoring/valid/saas-adoption-real.json',
