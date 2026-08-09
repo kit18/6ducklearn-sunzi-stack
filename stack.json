@@ -1,6 +1,6 @@
 {
-  "name": "6ducklearn-sunzi-stack",
-  "version": "1.1.0",
+  "name": "@6ducklearn/sunzi-stack",
+  "version": "1.2.0",
   "public_repo": "https://github.com/kit18/6ducklearn-sunzi-stack",
   "canonical_source": "6DuckLearn",
   "consultant_model": "style-derived modern business strategy consultant",

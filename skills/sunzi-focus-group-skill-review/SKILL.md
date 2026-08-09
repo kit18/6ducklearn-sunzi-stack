@@ -1,7 +1,7 @@
 ---
 name: sunzi-focus-group-skill-review
 description: Use when evaluating whether a skill, skill pack, agent workflow, prompt library, AI operating method, product concept, or user-intention question is good enough through a PM/UED-led focus group with dynamic segment simulation, a minimum three-response segment gate, convergence checking, scorecards, dissent, risk review, deterministic scoring, and improvement recommendations.
-version: 1.1.0
+version: 1.2.0
 allowed-tools:
   - Read
   - Write

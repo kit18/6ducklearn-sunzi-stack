@@ -1,6 +1,6 @@
 ---
 name: sunzi-contingency
-version: 1.1.0
+version: 1.2.0
 description: Use when a chosen plan needs its adaptation layer before launch — the triggers that change the plan mid-flight, the kill criteria that stop it, the roads deliberately not taken (九變), and the blended gain-and-harm view that keeps a committed team from marrying its own plan.
 allowed-tools:
   - Read

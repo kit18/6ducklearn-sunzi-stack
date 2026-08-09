@@ -41,19 +41,19 @@ Use these examples to confirm the stack is installed and routed correctly.
 
 ## Package Registry
 
-The pack is published to npm as `6ducklearn-sunzi-stack`. The tarball contains
+The pack is published to npm as `@6ducklearn/sunzi-stack`. The tarball contains
 `skills/`, `references/`, `agents/`, `examples/`, `case-studies/`, `fixtures/`,
 `scripts/`, and the public docs — no internal enablement material, no private
 drafts, no hosted-runtime configuration.
 
 ```bash
-npm install 6ducklearn-sunzi-stack
+npm install @6ducklearn/sunzi-stack
 mkdir -p ~/.codex/skills ~/.codex/references
-cp -R node_modules/6ducklearn-sunzi-stack/skills/* ~/.codex/skills/
-cp -R node_modules/6ducklearn-sunzi-stack/references/* ~/.codex/references/
+cp -R node_modules/@6ducklearn/sunzi-stack/skills/* ~/.codex/skills/
+cp -R node_modules/@6ducklearn/sunzi-stack/references/* ~/.codex/references/
 ```
 
-Pin a version with `npm install 6ducklearn-sunzi-stack@1.1.0` when you need a
+Pin a version with `npm install @6ducklearn/sunzi-stack@1.2.0` when you need a
 reproducible skill set across a team.
 
 ## Repository Pointer

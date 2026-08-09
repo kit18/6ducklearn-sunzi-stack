@@ -1,6 +1,6 @@
 ---
 name: sunzi-restraint
-version: 1.1.0
+version: 1.2.0
 description: Use before any irreversible or escalatory move is approved — price wars, litigation, layoffs, public attacks, burning a partnership, betting the company — the 火攻 gate that tests the move against anger, profit, necessity, and the fact that some destroyed things do not come back.
 allowed-tools:
   - Read

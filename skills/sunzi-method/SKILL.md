@@ -1,6 +1,6 @@
 ---
 name: sunzi-method
-version: 1.1.0
+version: 1.2.0
 description: Use when the question is whether the machine can actually execute and afford the strategy — org structure, decision rights and latency, KPI/OKR and equity incentives, SOP and compliance discipline, burn, and the computed unit economics behind any go / no-go on a money campaign.
 allowed-tools:
   - Read

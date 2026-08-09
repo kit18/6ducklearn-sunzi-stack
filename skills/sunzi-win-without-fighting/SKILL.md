@@ -1,6 +1,6 @@
 ---
 name: sunzi-win-without-fighting
-version: 1.1.0
+version: 1.2.0
 description: Use when a competitive fight is being planned and the cheaper rungs have not been checked — defeating the rival's plan, winning through alliances, or restructuring the situation so the fight never happens; the 謀攻 cost ladder every campaign must walk before any head-on move is approved.
 allowed-tools:
   - Read

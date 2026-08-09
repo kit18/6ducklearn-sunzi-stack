@@ -1,6 +1,6 @@
 ---
 name: sunzi-retro
-version: 1.1.0
+version: 1.2.0
 description: Use after a campaign, launch, negotiation, or quarter ends — or when one visibly diverges from plan — to re-score the seven comparisons against what actually happened, diff the prediction against reality, and record which factor was misjudged so the next count starts smarter; the 省 stage that makes the pack compound.
 allowed-tools:
   - Read

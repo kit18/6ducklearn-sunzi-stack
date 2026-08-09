@@ -1,6 +1,6 @@
 {
-  "name": "6ducklearn-sunzi-stack",
-  "version": "1.1.0",
+  "name": "@6ducklearn/sunzi-stack",
+  "version": "1.2.0",
   "description": "Sunzi-inspired strategy skills for AI agents: a 17-skill campaign loop (audit / count / devise / test / decide / reflect) built on the Five Factors and Seven Comparisons, with a computed unit-economics gate, an irreversible-move restraint gate, and a first-class 'do not start' verdict.",
   "keywords": [
     "sunzi",

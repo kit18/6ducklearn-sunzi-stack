@@ -35,16 +35,18 @@ trail — not a motivational essay — and an engagement that ends at
 **From npm** (no clone needed):
 
 ```bash
-npx --package=6ducklearn-sunzi-stack -c 'mkdir -p ~/.codex/skills ~/.codex/references && cp -R "$(node -p "require.resolve(\"6ducklearn-sunzi-stack/stack.json\")" | xargs dirname)"/skills/* ~/.codex/skills/ && cp -R "$(node -p "require.resolve(\"6ducklearn-sunzi-stack/stack.json\")" | xargs dirname)"/references/* ~/.codex/references/'
+npm install @6ducklearn/sunzi-stack && mkdir -p ~/.codex/skills ~/.codex/references \
+  && cp -R node_modules/@6ducklearn/sunzi-stack/skills/* ~/.codex/skills/ \
+  && cp -R node_modules/@6ducklearn/sunzi-stack/references/* ~/.codex/references/
 ```
 
-Or install it and copy from `node_modules/6ducklearn-sunzi-stack/`:
+Or install it and copy from `node_modules/@6ducklearn/sunzi-stack/`:
 
 ```bash
-npm install 6ducklearn-sunzi-stack
+npm install @6ducklearn/sunzi-stack
 mkdir -p ~/.codex/skills ~/.codex/references
-cp -R node_modules/6ducklearn-sunzi-stack/skills/* ~/.codex/skills/
-cp -R node_modules/6ducklearn-sunzi-stack/references/* ~/.codex/references/
+cp -R node_modules/@6ducklearn/sunzi-stack/skills/* ~/.codex/skills/
+cp -R node_modules/@6ducklearn/sunzi-stack/references/* ~/.codex/references/
 ```
 
 **From source:**
